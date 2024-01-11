@@ -1,0 +1,14 @@
+{
+  "name": "tractor-store-blueprint",
+  "version": "1.0.0",
+  "description": "## What is The Tractor Store?",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "author": "neuland",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
