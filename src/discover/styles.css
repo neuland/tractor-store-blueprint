@@ -1,0 +1,26 @@
+body {
+  padding: 2rem;
+}
+
+h1 {
+  color: red;
+}
+
+[data-boundary] {
+  outline: 2px solid red;
+  position: relative;
+}
+
+[data-boundary]::after {
+  content: attr(data-boundary);
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  background: red;
+  padding: 0 0.5rem;
+  line-height: 1.5;
+  font-family: sans-serif;
+  font-weight: bold;
+  pointer-events: none;
+}
