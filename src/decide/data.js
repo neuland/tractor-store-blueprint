@@ -3,9 +3,8 @@ export default {
     {
       name: "Super Tractor",
       price: 1000,
-      sku: "ST-001",
+      id: "ST-001",
       description: "This is a super tractor",
-      image: "st001.webp",
       variants: [
         { name: "Red", image: "st001-red.webp", sku: "ST-001-RD" },
         { name: "Blue", image: "st001-blue.webp", sku: "ST-001-BL" },
@@ -16,17 +15,17 @@ export default {
     {
       name: "Mega Tractor",
       price: 2000,
-      sku: "MT-001",
+      id: "MT-001",
       description: "This is a mega tractor",
-      image: "mt001.webp",
+      variants: [{ name: "Basic", image: "mt001.webp", sku: "MT-001-BS" }],
       rating: 4.5,
     },
     {
       name: "Ultra Tractor",
       price: 3000,
-      sku: "UT-001",
+      id: "UT-001",
       description: "This is an ultra tractor",
-      image: "ut001.webp",
+      variants: [{ name: "Basic", image: "ut001.webp", sku: "UT-001-BS" }],
       rating: 4.5,
     },
   ],

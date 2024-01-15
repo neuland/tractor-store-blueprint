@@ -1,0 +1,26 @@
+@import url("./components/MiniCart.css");
+@import url("./components/BuyButton.css");
+
+body {
+  padding: 2rem;
+  --super-cool-green: limegreen;
+}
+
+[data-boundary^="buy-"] {
+  outline: 2px solid green;
+  position: relative;
+}
+
+[data-boundary^="buy-"]::after {
+  content: attr(data-boundary);
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  background: green;
+  padding: 0 0.5rem;
+  line-height: 1.5;
+  font-family: sans-serif;
+  font-weight: bold;
+  pointer-events: none;
+}

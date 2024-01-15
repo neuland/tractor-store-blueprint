@@ -2,22 +2,22 @@ body {
   padding: 2rem;
 }
 
-h1 {
-  color: red;
+h2 {
+  color: blue;
 }
 
-[data-boundary] {
-  outline: 2px solid red;
+[data-boundary^="decide-"] {
+  outline: 2px solid blue;
   position: relative;
 }
 
-[data-boundary]::after {
+[data-boundary^="decide-"]::after {
   content: attr(data-boundary);
   position: absolute;
   top: 0;
   right: 0;
   color: white;
-  background: red;
+  background: blue;
   padding: 0 0.5rem;
   line-height: 1.5;
   font-family: sans-serif;

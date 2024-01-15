@@ -4,12 +4,14 @@
   "description": "## What is The Tractor Store?",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "nodemon src/server.js"
   },
   "type": "module",
   "author": "neuland",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "node-dev": "^8.0.0",
+    "nodemon": "^3.0.2"
   }
 }
