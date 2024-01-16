@@ -1,4 +1,9 @@
 .MiniCart {
   background: var(--super-cool-green);
   padding: 2rem;
+  width: 100px;
+}
+
+.MiniCart__icon {
+  font-size: 2rem;
 }

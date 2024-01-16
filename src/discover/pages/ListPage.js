@@ -2,8 +2,10 @@ import data from "../data.js";
 import Header from "../components/Header.js";
 import Product from "../components/Product.js";
 
-export default ({ search }) => {
+export default ({ category, search }) => {
   const products = data.products.filter(
+    (p) => !category || p.category.includes(category)
+  ).filter(
     (p) => !search || p.name.includes(search)
   );
   return `<!DOCTYPE html>

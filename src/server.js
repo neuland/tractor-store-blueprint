@@ -9,7 +9,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.send(ListPage({ search: req.query.search }));
+  res.send(ListPage({ search: req.query.search, category: req.query.category }));
 });
 
 app.get("/product/:id", (req, res) => {
