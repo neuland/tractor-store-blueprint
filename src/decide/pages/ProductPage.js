@@ -3,8 +3,8 @@ import Variant from "../components/Variant.js";
 import Header from "../../discover/components/Header.js";
 import BuyButton from "../../buy/components/BuyButton.js";
 
-export default ({ id, sku }) => {
-  const { name, price, variants } = data.products.find((p) => p.id === id);
+export default ({ id, sku, req }) => {
+  const { name, variants } = data.products.find((p) => p.id === id);
   const variant = variants.find((v) => v.sku === sku) || variants[0];
   return `<!DOCTYPE html>
 <html>
@@ -17,9 +17,9 @@ export default ({ id, sku }) => {
 </head>
 <body data-boundary="decide-product">
     <div>
-        ${Header()}
+        ${Header(req)}
         <h2>${name}</h2>
-        <p>Price ${price} EUR</p>
+        <p>Price ${variant.price} EUR</p>
         <p>Variants:</p>
         <ul>${variants
           .map((v) => Variant({ ...v, selected: v.sku === variant.sku }))

@@ -2,12 +2,9 @@ import data from "../data.js";
 import Header from "../components/Header.js";
 import Product from "../components/Product.js";
 
-export default ({ category, search }) => {
-  const products = data.products.filter(
-    (p) => !category || p.category.includes(category)
-  ).filter(
-    (p) => !search || p.name.includes(search)
-  );
+export default ({ category, search, req }) => {
+  let title = "All Products";
+  const products = data.categories.flatMap((c) => c.products);
   return `<!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +16,7 @@ export default ({ category, search }) => {
 </head>
 <body data-boundary="discover-list">
     <div>
-        ${Header()}
+        ${Header(req)}
         <h2>Products</h2>
         <p>There are ${products.length} products available.</p>
         <ul>${products.map(Product).join("")}</ul>

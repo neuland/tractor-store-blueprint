@@ -1,10 +1,15 @@
-import state from "./state.js";
+import { readFromCookie, writeToCookie } from "./state.js";
 
-export function handleAddToCart({ sku }) {
-  const lineItem = state.lineItems.find((lineItem) => lineItem.sku === sku);
+export function handleAddToCart(req, res) {
+  const sku = req.body.sku;
+
+  const items = readFromCookie(req);
+
+  const lineItem = items.find((i) => i.sku === sku);
   if (lineItem) {
     lineItem.quantity++;
   } else {
-    state.lineItems.push({ sku, quantity: 1 });
+    items.push({ sku, quantity: 1 });
   }
+  writeToCookie(items, res);
 }

@@ -1,9 +1,9 @@
 import Header from "../../discover/components/Header.js";
 import LineItem from "../components/LineItem.js";
-import state from "../state.js";
+import { readFromCookie } from "../state.js";
 
-export default () => {
-  const { lineItems } = state;
+export default (req) => {
+  const lineItems = readFromCookie(req);
   return `<!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +15,7 @@ export default () => {
 </head>
 <body data-boundary="buy-product">
     <div>
-        ${Header()}
+        ${Header(req)}
         <h2>Warenkorb</h2>
         <p>${lineItems.length} Produkte im Warenkorb</p>
         <ul>

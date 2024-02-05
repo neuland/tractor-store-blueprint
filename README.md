@@ -9,4 +9,19 @@ The idea is similar to [TodoMVC](http://todomvc.com/) or [Movies](https://tastej
 
 ## About this implementation
 
-##
+### Boundaries 📄
+
+- 🔴 Discover
+  - 📄 Home & Catalog
+  - 📄 Search
+  - 🧩 Header (🔴🔵🟢 every page, except checkout)
+  - 🧩 Footer (🔴🔵🟢 every page)
+  - 🧩 Recommendations (🔵 product details)
+- 🔵 Decide
+  - 📄 Product Details
+- 🟢 Buy
+  - 📄 Cart
+  - 📄 Checkout
+  - 📄 Confirmation
+  - 🧩 Mini Cart (🔴 header)
+  - 🧩 Buy Button (🔵 product details)
