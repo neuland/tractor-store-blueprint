@@ -3,7 +3,7 @@ const QTY_SEP = "_";
 const COOKIE = "buy_cart";
 
 export function readFromCookie(req) {
-  const cookieStr = req.cookies[COOKIE];
+  const cookieStr = req.cookies[COOKIE] || "";
 
   return cookieStr.split(ITEM_SEP).map((item) => {
     const [sku, quantity] = item.split(QTY_SEP);
