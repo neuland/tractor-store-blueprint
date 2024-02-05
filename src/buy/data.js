@@ -1,4 +1,4 @@
-import products from "../../products";
+import products from "../../products.js";
 
 const inventory = {
   "ST-001-RD": 10,

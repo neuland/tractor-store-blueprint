@@ -1,5 +1,7 @@
+@import url("./pages/CartPage.css");
 @import url("./components/MiniCart.css");
 @import url("./components/BuyButton.css");
+@import url("./components/LineItem.css");
 
 body {
   padding: 2rem;

@@ -3,7 +3,11 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import { ListPage } from "./discover/index.js";
 import { ProductPage } from "./decide/index.js";
-import { CartPage, handleAddToCart } from "./buy/index.js";
+import {
+  CartPage,
+  handleAddToCart,
+  handleRemoveFromCart,
+} from "./buy/index.js";
 
 const app = express();
 
@@ -24,8 +28,13 @@ app.get("/buy/cart", (req, res) => {
   res.send(CartPage(req));
 });
 
-app.post("/buy/addtocart", (req, res) => {
+app.post("/buy/cart/add", (req, res) => {
   handleAddToCart(req, res);
+  res.redirect("/buy/cart");
+});
+
+app.post("/buy/cart/remove", (req, res) => {
+  handleRemoveFromCart(req, res);
   res.redirect("/buy/cart");
 });
 
