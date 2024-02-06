@@ -1,5 +1,6 @@
 @import url("./components/NavigationBar.css");
 @import url("./components/Navigation.css");
+@import url("./components/Footer.css");
 
 body {
   padding: 2rem;

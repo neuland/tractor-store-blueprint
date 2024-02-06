@@ -11,12 +11,18 @@ function recosForSkus(skus) {
 }
 
 export default ({ skus }) => {
-  return `<div data-boundary="discover-recommendations">
+  const recos = recosForSkus(skus);
+  return recos.length
+    ? `<div data-boundary="discover-recommendations">
     <h2>Recommendations</h2>
     <ul>
-      ${recosForSkus(skus)
-        .map((sku) => `<li>${sku}</li>`)
+      ${recos
+        .map(
+          (p) =>
+            `<li><a href="${p.url}">${p.name}</a><br/><small>${p.sku} / ${p.price} Øcken</small></li>`
+        )
         .join("")}
     </ul>
-  </div>`;
+  </div>`
+    : "";
 };

@@ -4,7 +4,7 @@ import { readFromCookie } from "../state.js";
 import data from "../data.js";
 import Recommendations from "../../discover/components/Recommendations.js";
 
-export default (req) => {
+export default ({ req }) => {
   const lineItems = readFromCookie(req).map(({ sku, quantity }) => {
     const variant = data.variants.find((p) => p.sku === sku);
     return { ...variant, quantity };
@@ -21,12 +21,15 @@ export default (req) => {
 </head>
 <body data-boundary="buy-product">
     <div>
-        ${Header(req)}
+        ${Header({ req })}
         <h2>Warenkorb</h2>
         <p>${lineItems.length} Produkte im Warenkorb</p>
         <ul class="CartPage__lineItems">
             ${lineItems.map(LineItem).join("")}
         </ul>
+        <form action="/buy/checkout" method="get">
+          <button>checkout</button>
+        </form>
         ${Recommendations({ skus })}
     </div>
 </body>

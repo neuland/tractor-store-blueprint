@@ -14,10 +14,8 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-app.get("/", (req, res) => {
-  res.send(
-    ListPage({ search: req.query.search, category: req.query.category, req })
-  );
+app.get("/:category?", (req, res) => {
+  res.send(ListPage({ category: req.params.category, req }));
 });
 
 app.get("/product/:id", (req, res) => {
@@ -25,7 +23,11 @@ app.get("/product/:id", (req, res) => {
 });
 
 app.get("/buy/cart", (req, res) => {
-  res.send(CartPage(req));
+  res.send(CartPage({ req }));
+});
+
+app.get("/buy/checkout", (req, res) => {
+  res.send("checkout");
 });
 
 app.post("/buy/cart/add", (req, res) => {

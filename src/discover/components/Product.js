@@ -1,3 +1,3 @@
-export default ({ name, id }) => {
-  return `<li><a href="/product/${id}">${name}</a></li>`;
+export default ({ name, url }) => {
+  return `<li><a href="${url}">${name}</a></li>`;
 };

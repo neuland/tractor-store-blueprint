@@ -1,3 +1,15 @@
 .BuyButton {
   padding: 2rem;
 }
+
+.BuyButton__Inventory {
+  display: block;
+}
+
+.BuyButton__Inventory--instock {
+  color: green;
+}
+
+.BuyButton__Inventory--outofstock {
+  color: red;
+}

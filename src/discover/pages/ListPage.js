@@ -1,10 +1,26 @@
 import data from "../data.js";
 import Header from "../components/Header.js";
+import Footer from "../components/Footer.js";
 import Product from "../components/Product.js";
+import { escapeHtml } from "../utils.js";
 
-export default ({ category, search, req }) => {
-  let title = "All Products";
-  const products = data.categories.flatMap((c) => c.products);
+export default ({ category, req }) => {
+  let products, title;
+  const search = req.query.q;
+  console.log({ search });
+  if (category) {
+    const cat = data.categories.find((c) => c.key === category);
+    products = cat.products;
+    title = cat.name;
+  } else if (search) {
+    products = data.categories
+      .flatMap((c) => c.products)
+      .filter((p) => p.name.toLowerCase().includes(search.toLowerCase()));
+    title = `Search Results for "${escapeHtml(search)}"`;
+  } else {
+    products = data.categories.flatMap((c) => c.products);
+    title = "All Products";
+  }
   return `<!DOCTYPE html>
 <html>
 <head>
@@ -16,10 +32,11 @@ export default ({ category, search, req }) => {
 </head>
 <body data-boundary="discover-list">
     <div>
-        ${Header(req)}
-        <h2>Products</h2>
-        <p>There are ${products.length} products available.</p>
+        ${Header({ req })}
+        <h2>${title}</h2>
+        <p>${products.length} products</p>
         <ul>${products.map(Product).join("")}</ul>
+        ${Footer()}
     </div>
 </body>
 </html>`;

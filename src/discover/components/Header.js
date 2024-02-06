@@ -1,11 +1,19 @@
 import BuyMiniCart from "../../buy/components/MiniCart.js";
 import Navigation from "./Navigation.js";
+import { escapeHtml } from "../utils.js";
 
-export default (req) => {
+export default ({ req }) => {
+  const search = req.query.q || "";
   return `<header data-boundary="discover-header">
       <h1>The Tractor Store</h1>
       <div class="NavigationBar">
       ${Navigation()}
-      ${BuyMiniCart(req)}
+      <form action="/" method="get">
+        <input type="search" value="${escapeHtml(
+          search
+        )}" placeholder="Search" name="q" />
+        <button>🔍</button>
+      </form>
+      ${BuyMiniCart({ req })}
     </header>`;
 };

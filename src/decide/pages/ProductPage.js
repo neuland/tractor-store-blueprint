@@ -2,6 +2,7 @@ import data from "../data.js";
 import Variant from "../components/Variant.js";
 import Header from "../../discover/components/Header.js";
 import BuyButton from "../../buy/components/BuyButton.js";
+import Recommendations from "../../discover/components/Recommendations.js";
 
 export default ({ id, sku, req }) => {
   const { name, variants } = data.products.find((p) => p.id === id);
@@ -17,7 +18,7 @@ export default ({ id, sku, req }) => {
 </head>
 <body data-boundary="decide-product">
     <div>
-        ${Header(req)}
+        ${Header({ req })}
         <h2>${name}</h2>
         <p>Price ${variant.price} EUR</p>
         <p>Variants:</p>
@@ -25,6 +26,7 @@ export default ({ id, sku, req }) => {
           .map((v) => Variant({ ...v, selected: v.sku === variant.sku }))
           .join("")}</ul>
         ${BuyButton({ sku: variant.sku })}
+        ${Recommendations({ skus: [variant.sku] })}
     </div>
 </body>
 </html>`;
