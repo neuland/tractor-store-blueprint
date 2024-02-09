@@ -1,5 +1,9 @@
+import { html } from "../utils.js";
+
 export default ({ sku, name, selected }) => {
-  return `<li>${
-    selected ? `<strong>${name}</strong>` : `<a href="?sku=${sku}">${name}</a>`
-  }</li>`;
+  return html`<li>
+    ${selected
+      ? html`<strong>${name}</strong>`
+      : html`<a href="?sku=${sku}">${name}</a>`}
+  </li>`;
 };

@@ -11,7 +11,7 @@ The idea is similar to [TodoMVC](http://todomvc.com/) or [Movies](https://tastej
 
 ### Boundaries 📄
 
-- 🔴 Discover
+- 🔴 Explore
   - 📄 Home & Catalog
   - 📄 Search
   - 🧩 Header (🔴🔵🟢 every page, except checkout)

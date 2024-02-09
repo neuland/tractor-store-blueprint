@@ -10,12 +10,12 @@ header h1 {
   color: red;
 }
 
-[data-boundary^="discover-"] {
+[data-boundary^="explore-"] {
   outline: 2px solid red;
   position: relative;
 }
 
-[data-boundary^="discover-"]::after {
+[data-boundary^="explore-"]::after {
   content: attr(data-boundary);
   position: absolute;
   top: 0;
