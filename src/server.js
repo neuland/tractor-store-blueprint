@@ -7,6 +7,7 @@ import { ListPage } from "./explore/index.js";
 import { ProductPage } from "./decide/index.js";
 import {
   CartPage,
+  Checkout,
   handleAddToCart,
   handleRemoveFromCart,
 } from "./buy/index.js";
@@ -58,7 +59,7 @@ app.get("/buy/cart", (req, res) => {
 });
 
 app.get("/buy/checkout", (req, res) => {
-  res.send("checkout");
+  res.send(Checkout());
 });
 
 app.post("/buy/cart/add", (req, res) => {

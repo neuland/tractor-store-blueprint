@@ -7,17 +7,17 @@ export default ({ sku }) => {
   return html`<form
     action="/buy/cart/add"
     method="POST"
-    class="BuyButton"
+    class="buy_AddToCart"
     data-boundary="buy-button"
   >
     <input type="hidden" name="sku" value="${sku}" />
     <p>price: ${product.price} Øcken</p>
     <button ${outOfStock ? "disabled" : ""}>add to cart</button>
     ${product.inventory > 0
-      ? html`<p class="BuyButton__Inventory BuyButton__Inventory--instock">
+      ? html`<p class="buy_AddToCart__stock buy_AddToCart__stock--ok">
           ${product.inventory} in stock, free shipping
         </p>`
-      : html`<p class="BuyButton__Inventory BuyButton__Inventory--outofstock">
+      : html`<p class="buy_AddToCart__stock buy_AddToCart__stock--empty">
           out of stock
         </p>`}
   </form>`;

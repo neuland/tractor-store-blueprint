@@ -12,16 +12,34 @@ The idea is similar to [TodoMVC](http://todomvc.com/) or [Movies](https://tastej
 ### Boundaries 📄
 
 - 🔴 Explore
-  - 📄 Home & Catalog
-  - 📄 Search
+  - 📄 Home / Category
+  - 📄 Stores
   - 🧩 Header (🔴🔵🟢 every page, except checkout)
   - 🧩 Footer (🔴🔵🟢 every page)
-  - 🧩 Recommendations (🔵 product details)
+  - 🧩 Recommendations (🔵 product details, 🔴 cart)
+  - 🧩 Store Picker (🟢 checkout)
 - 🔵 Decide
   - 📄 Product Details
 - 🟢 Buy
   - 📄 Cart
   - 📄 Checkout
-  - 📄 Confirmation
+  - 📄 Thank you
   - 🧩 Mini Cart (🔴 header)
   - 🧩 Buy Button (🔵 product details)
+
+### Concepts 🧠
+
+- Inter-team navigation (server- and/or client-side)
+- Communication parent-child (variant change > recommendations, add to cart)
+- Communication sibling (add to cart > mini cart)
+- Communication child-parent (in store pickup > explore )
+- Potential client-side interactions (variant change, remove from cart, form validation)
+- Nested integration (page > header > mini cart)
+- [Bonus] Shared UI components / pattern library (button)
+- [Bonus] Login / authentication
+
+### Infrastructure 🏗️
+
+- Deployment
+- Integration service
+- Ende-zu-Ende-Tests

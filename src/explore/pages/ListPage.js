@@ -2,27 +2,16 @@ import data from "../data.js";
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import Product from "../components/Product.js";
-import { escapeHtml, html } from "../utils.js";
+import { html } from "../utils.js";
 
 export default ({ category, req }) => {
-  let products = [];
-  let title = "";
-  const search = req.query.q;
-  if (category) {
-    const cat = data.categories.find((c) => c.key === category);
-    if (cat) {
-      products = cat.products;
-      title = cat.name;
-    }
-  } else if (search) {
-    products = data.categories
-      .flatMap((c) => c.products)
-      .filter((p) => p.name.toLowerCase().includes(search.toLowerCase()));
-    title = `Search Results for "${escapeHtml(search)}"`;
-  } else {
-    products = data.categories.flatMap((c) => c.products);
-    title = "All Products";
-  }
+  const cat = category && data.categories.find((c) => c.key === category);
+
+  const title = cat ? cat.name : "All Products";
+  const products = cat
+    ? cat.products
+    : data.categories.flatMap((c) => c.products);
+
   return html`<!doctype html>
     <html>
       <head>

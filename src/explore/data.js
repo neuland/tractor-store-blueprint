@@ -50,4 +50,20 @@ export default {
     "LW-001-LG": ["LW-001-XL", "PT-001-GD"].map(skuToProduct),
     "LW-001-XL": ["PT-001-GD", "GC-001-BK"].map(skuToProduct),
   },
+  stores: [
+    {
+      id: "s1",
+      name: "Flagship Store North",
+      street: "Main Street 2",
+      city: "Harwixts",
+      image: "store/flagship-north.webp",
+    },
+    {
+      id: "s2",
+      name: "Micro Machines Center",
+      street: "Long Field Road 1",
+      city: "Weisterwas",
+      image: "store/micro-machines-center.webp",
+    },
+  ],
 };

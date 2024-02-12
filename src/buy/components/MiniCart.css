@@ -1,9 +1,9 @@
-.MiniCart {
-  background: var(--super-cool-green);
+.buy_MiniCart {
+  background: limegreen;
   padding: 2rem;
   width: 100px;
 }
 
-.MiniCart__icon {
+.buy_MiniCart__icon {
   font-size: 2rem;
 }

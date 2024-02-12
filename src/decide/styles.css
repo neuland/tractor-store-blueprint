@@ -2,10 +2,6 @@ body {
   padding: 2rem;
 }
 
-h2 {
-  color: blue;
-}
-
 [data-boundary^="decide-"] {
   outline: 2px solid blue;
   position: relative;

@@ -1,6 +1,6 @@
 import Variant from "../components/Variant.js";
 import Header from "../../explore/components/Header.js";
-import BuyButton from "../../buy/components/BuyButton.js";
+import AddToCart from "../../buy/components/AddToCart.js";
 import Recommendations from "../../explore/components/Recommendations.js";
 import { html } from "../utils.js";
 import data from "../data.js";
@@ -28,7 +28,7 @@ export default ({ id, sku, req }) => {
               .map((v) => Variant({ ...v, selected: v.sku === variant.sku }))
               .join("")}
           </ul>
-          ${BuyButton({ sku: variant.sku })}
+          ${AddToCart({ sku: variant.sku })}
           ${Recommendations({ skus: [variant.sku] })}
         </div>
       </body>

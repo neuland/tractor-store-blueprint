@@ -1,0 +1,15 @@
+.buy_AddToCart {
+  padding: 2rem;
+}
+
+.buy_AddToCart__stock {
+  display: block;
+}
+
+.buy_AddToCart__stock--ok {
+  color: green;
+}
+
+.buy_AddToCart__stock--empty {
+  color: red;
+}

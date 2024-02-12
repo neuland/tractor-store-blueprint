@@ -1,0 +1,7 @@
+.exp_Header__title {
+  color: red;
+}
+
+.exp_Header__inner {
+  display: flex;
+}
