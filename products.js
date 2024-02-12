@@ -8,19 +8,19 @@ export default [
     variants: [
       {
         name: "Red",
-        image: "st001-red.webp",
+        image: "/cdn/img/product/red.png",
         sku: "ST-001-RD",
         price: 1200,
       },
       {
         name: "Blue",
-        image: "st001-blue.webp",
+        image: "/cdn/img/product/blue.png",
         sku: "ST-001-BL",
         price: 1100,
       },
       {
-        name: "Green",
-        image: "st001-green.webp",
+        name: "Purple",
+        image: "/cdn/img/product/purple.png",
         sku: "ST-001-GN",
         price: 1000,
       },
@@ -35,21 +35,27 @@ export default [
     variants: [
       {
         name: "Silver",
-        image: "pt001-silver.webp",
+        image: "/cdn/img/product/silver.png",
         sku: "PT-001-SL",
         price: 2300,
       },
       {
         name: "Gold",
-        image: "pt001-gold.webp",
+        image: "/cdn/img/product/gold.png",
         sku: "PT-001-GD",
         price: 2400,
       },
       {
         name: "Platinum",
-        image: "pt001-platinum.webp",
+        image: "/cdn/img/product/platinum.png",
         sku: "PT-001-PT",
         price: 2500,
+      },
+      {
+        name: "Rainbow",
+        image: "/cdn/img/product/rainbow.png",
+        sku: "PT-001-RB",
+        price: 5300,
       },
     ],
   },

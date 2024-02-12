@@ -10,7 +10,7 @@ export default () => {
           .map(
             (s) =>
               html`<li>
-                <img src="${s.image}" /><br />
+                <img src="${s.image}" width="200" /><br />
                 ${s.name}<br />
                 ${s.street}$<br />
                 ${s.city}<br />

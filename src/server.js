@@ -77,6 +77,8 @@ app.get("/buy/styles.css", async (req, res) => {
   res.send(await inlinedCss("./src/buy/styles.css"));
 });
 
+app.use("/cdn", express.static("cdn"));
+
 app.listen(3000, () => {
   console.log("Server is listening on port http://localhost:3000/");
 });

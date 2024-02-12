@@ -56,14 +56,14 @@ export default {
       name: "Flagship Store North",
       street: "Main Street 2",
       city: "Harwixts",
-      image: "store/flagship-north.webp",
+      image: "/cdn/img/store/s1.png",
     },
     {
       id: "s2",
       name: "Micro Machines Center",
       street: "Long Field Road 1",
       city: "Weisterwas",
-      image: "store/micro-machines-center.webp",
+      image: "/cdn/img/store/s2.png",
     },
   ],
 };

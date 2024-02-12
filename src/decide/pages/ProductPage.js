@@ -21,6 +21,7 @@ export default ({ id, sku, req }) => {
         <div>
           ${Header({ req })}
           <h2>${name}</h2>
+          <img src="${variant.image}" width="400" />
           <p>Price ${variant.price} EUR</p>
           <p>Variants:</p>
           <ul>
