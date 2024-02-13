@@ -5,10 +5,10 @@ export default ({ req }) => {
   const lineItems = readFromCookie(req);
   const quantity = lineItems.reduce((t, { quantity }) => t + quantity, 0);
   return html`<a
-    href="/buy/cart"
-    class="buy_MiniCart"
-    data-boundary="buy-minicart"
+    href="/checkout/cart"
+    class="che_MiniCart"
+    data-boundary="che-minicart"
   >
-    <div class="buy_MiniCart__icon">🛒 ${quantity}</div>
+    <div class="che_MiniCart__icon">🛒 ${quantity}</div>
   </a>`;
 };

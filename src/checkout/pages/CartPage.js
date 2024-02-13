@@ -22,7 +22,7 @@ export default ({ req }) => {
     <ul class="CartPage__lineItems">
       ${lineItems.map(LineItem).join("")}
     </ul>
-    <form action="/buy/checkout" method="get">
+    <form action="/checkout/checkout" method="get">
       <button>checkout</button>
     </form>
     ${Recommendations({ skus })} ${Footer()}

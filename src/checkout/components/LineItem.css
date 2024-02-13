@@ -1,25 +1,25 @@
-.buy_LineItem {
+.che_LineItem {
   display: flex;
   margin-bottom: 2rem;
 }
 
-.buy_LineItem__image {
+.che_LineItem__image {
   flex-basis: 150px;
   padding-right: 2rem;
 }
 
-.buy_LineItem__image img {
+.che_LineItem__image img {
   display: block;
   aspect-ratio: 1 / 1;
   width: 100%;
 }
 
-.buy_LineItem__name {
+.che_LineItem__name {
   padding-right: 2rem;
   flex-grow: 1;
 }
 
-.buy_LineItem__quantity {
+.che_LineItem__quantity {
   flex-basis: 100px;
   text-align: center;
 }

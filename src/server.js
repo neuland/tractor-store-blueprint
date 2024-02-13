@@ -10,7 +10,7 @@ import {
   Checkout,
   handleAddToCart,
   handleRemoveFromCart,
-} from "./buy/index.js";
+} from "./checkout/index.js";
 
 const app = express();
 
@@ -37,6 +37,10 @@ app.get("/explore/styles.css", async (req, res) => {
   res.send(await inlinedCss("./src/explore/styles.css"));
 });
 
+app.get("/explore/scripts.js", (req, res) => {
+  res.sendFile("src/explore/scripts.js", { root: "." });
+});
+
 /**
  * Team Decide
  */
@@ -50,31 +54,39 @@ app.get("/decide/styles.css", async (req, res) => {
   res.send(await inlinedCss("./src/decide/styles.css"));
 });
 
+app.get("/decide/scripts.js", (req, res) => {
+  res.sendFile("src/decide/scripts.js", { root: "." });
+});
+
 /**
  * Team Buy
  */
 
-app.get("/buy/cart", (req, res) => {
+app.get("/checkout/cart", (req, res) => {
   res.send(CartPage({ req }));
 });
 
-app.get("/buy/checkout", (req, res) => {
+app.get("/checkout/checkout", (req, res) => {
   res.send(Checkout());
 });
 
-app.post("/buy/cart/add", (req, res) => {
+app.post("/checkout/cart/add", (req, res) => {
   handleAddToCart(req, res);
-  res.redirect("/buy/cart");
+  res.redirect("/checkout/cart");
 });
 
-app.post("/buy/cart/remove", (req, res) => {
+app.post("/checkout/cart/remove", (req, res) => {
   handleRemoveFromCart(req, res);
-  res.redirect("/buy/cart");
+  res.redirect("/checkout/cart");
 });
 
-app.get("/buy/styles.css", async (req, res) => {
+app.get("/checkout/styles.css", async (req, res) => {
   res.setHeader("Content-Type", "text/css");
-  res.send(await inlinedCss("./src/buy/styles.css"));
+  res.send(await inlinedCss("./src/checkout/styles.css"));
+});
+
+app.get("/checkout/scripts.js", (req, res) => {
+  res.sendFile("src/checkout/scripts.js", { root: "." });
 });
 
 app.use("/cdn", express.static("cdn"));

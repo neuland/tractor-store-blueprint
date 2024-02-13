@@ -1,4 +1,4 @@
-import BuyMiniCart from "../../buy/components/MiniCart.js";
+import BuyMiniCart from "../../checkout/components/MiniCart.js";
 import Navigation from "./Navigation.js";
 import { html } from "../utils.js";
 

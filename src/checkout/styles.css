@@ -7,12 +7,12 @@ body {
   padding: 2rem;
 }
 
-[data-boundary^="buy-"] {
+[data-boundary^="che-"] {
   outline: 2px solid green;
   position: relative;
 }
 
-[data-boundary^="buy-"]::after {
+[data-boundary^="che-"]::after {
   content: attr(data-boundary);
   position: absolute;
   top: 0;

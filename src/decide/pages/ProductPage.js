@@ -1,6 +1,6 @@
 import Variant from "../components/Variant.js";
 import Header from "../../explore/components/Header.js";
-import AddToCart from "../../buy/components/AddToCart.js";
+import AddToCart from "../../checkout/components/AddToCart.js";
 import Recommendations from "../../explore/components/Recommendations.js";
 import { html } from "../utils.js";
 import data from "../data.js";
@@ -14,7 +14,7 @@ export default ({ id, sku, req }) => {
         <title>Tractor Store</title>
         <link rel="stylesheet" href="/explore/styles.css" />
         <link rel="stylesheet" href="/decide/styles.css" />
-        <link rel="stylesheet" href="/buy/styles.css" />
+        <link rel="stylesheet" href="/checkout/styles.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body data-boundary="decide-page">
