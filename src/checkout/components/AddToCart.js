@@ -8,7 +8,7 @@ export default ({ sku }) => {
     action="/checkout/cart/add"
     method="POST"
     class="che_AddToCart"
-    data-boundary="che-button"
+    data-boundary="checkout-button"
   >
     <input type="hidden" name="sku" value="${sku}" />
     <p>price: ${product.price} Øcken</p>

@@ -7,12 +7,12 @@ body {
   padding: 2rem;
 }
 
-[data-boundary^="che-"] {
+[data-boundary^="checkout-"] {
   outline: 2px solid green;
   position: relative;
 }
 
-[data-boundary^="che-"]::after {
+[data-boundary^="checkout-"]::after {
   content: attr(data-boundary);
   position: absolute;
   top: 0;

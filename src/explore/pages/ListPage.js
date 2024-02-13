@@ -31,6 +31,9 @@ export default ({ category, req }) => {
           </ul>
           ${Footer()}
         </div>
+        <script src="/explore/scripts.js" async></script>
+        <script src="/decide/scripts.js" async></script>
+        <script src="/checkout/scripts.js" async></script>
       </body>
     </html>`;
 };

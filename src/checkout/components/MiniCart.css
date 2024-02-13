@@ -1,9 +1,31 @@
 .che_MiniCart {
   background: limegreen;
-  padding: 2rem;
-  width: 100px;
+  position: relative;
 }
 
 .che_MiniCart__icon {
+  display: block;
+  padding: 2rem 4rem;
   font-size: 2rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.che_MiniCart__button {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  padding: 1rem;
+  text-align: center;
+}
+
+.che_MiniCart:hover .che_MiniCart__button,
+.che_MiniCart--highlight .che_MiniCart__button {
+  background: rgba(255, 255, 255, 0.75);
+  display: block;
 }

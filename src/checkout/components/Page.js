@@ -10,7 +10,7 @@ export default ({ content }) => {
         <link rel="stylesheet" href="/checkout/styles.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body data-boundary="che-page">
+      <body data-boundary="checkout-page">
         ${content}
         <script src="/explore/scripts.js" async></script>
         <script src="/decide/scripts.js" async></script>

@@ -8,6 +8,7 @@ import { ProductPage } from "./decide/index.js";
 import {
   CartPage,
   Checkout,
+  MiniCart,
   handleAddToCart,
   handleRemoveFromCart,
 } from "./checkout/index.js";
@@ -68,6 +69,10 @@ app.get("/checkout/cart", (req, res) => {
 
 app.get("/checkout/checkout", (req, res) => {
   res.send(Checkout());
+});
+
+app.get("/checkout/mini-cart", (req, res) => {
+  res.send(MiniCart({ req }));
 });
 
 app.post("/checkout/cart/add", (req, res) => {

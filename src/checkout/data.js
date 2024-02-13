@@ -24,7 +24,7 @@ export default {
         sku: v.sku,
         price: v.price,
         image: v.image,
-        inventory: inventory[v.sku],
+        inventory: inventory[v.sku] || 0,
       };
     });
   }),

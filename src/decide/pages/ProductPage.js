@@ -21,17 +21,26 @@ export default ({ id, sku, req }) => {
         <div>
           ${Header({ req })}
           <h2>${name}</h2>
-          <img src="${variant.image}" width="400" />
-          <p>Price ${variant.price} EUR</p>
-          <p>Variants:</p>
-          <ul>
-            ${variants
-              .map((v) => Variant({ ...v, selected: v.sku === variant.sku }))
-              .join("")}
-          </ul>
-          ${AddToCart({ sku: variant.sku })}
+          <div class="dec_ProductPage_main">
+            <img src="${variant.image}" width="400" />
+            <div>
+              <p>Price ${variant.price} EUR</p>
+              <p>Variants:</p>
+              <ul>
+                ${variants
+                  .map((v) =>
+                    Variant({ ...v, selected: v.sku === variant.sku }),
+                  )
+                  .join("")}
+              </ul>
+            </div>
+            ${AddToCart({ sku: variant.sku })}
+          </div>
           ${Recommendations({ skus: [variant.sku] })}
         </div>
+        <script src="/explore/scripts.js" async></script>
+        <script src="/decide/scripts.js" async></script>
+        <script src="/checkout/scripts.js" async></script>
       </body>
     </html>`;
 };
