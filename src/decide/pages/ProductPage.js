@@ -21,7 +21,7 @@ export default ({ id, sku, req }) => {
         <div>
           ${Header({ req })}
           <h2>${name}</h2>
-          <div class="dec_ProductPage_main">
+          <div class="d_ProductPage_main">
             <img src="${variant.image}" width="400" />
             <div>
               <p>Price ${variant.price} EUR</p>
@@ -41,6 +41,7 @@ export default ({ id, sku, req }) => {
         <script src="/explore/scripts.js" async></script>
         <script src="/decide/scripts.js" async></script>
         <script src="/checkout/scripts.js" async></script>
+        <script src="/cdn/js/helper.js" async></script>
       </body>
     </html>`;
 };

@@ -1,24 +1,10 @@
 @import url("./pages/ProductPage.css");
 
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
 body {
   padding: 2rem;
-}
-
-[data-boundary^="decide-"] {
-  outline: 2px solid blue;
-  position: relative;
-}
-
-[data-boundary^="decide-"]::after {
-  content: attr(data-boundary);
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
-  background: blue;
-  padding: 0 0.5rem;
-  line-height: 1.5;
-  font-family: sans-serif;
-  font-weight: bold;
-  pointer-events: none;
 }

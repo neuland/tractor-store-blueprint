@@ -3,7 +3,7 @@
 /* client side javascript */
 
 /* checkout page */
-const $storePicker = document.querySelector(".che_Checkout_store");
+const $storePicker = document.querySelector(".c_Checkout_store");
 if ($storePicker) {
   $storePicker.addEventListener("explore:store-selected", function (e) {
     console.log("checkout: store-selected", e.detail);
@@ -15,7 +15,7 @@ if ($storePicker) {
 
 /* mini cart */
 document.addEventListener("checkout:cart-updated", async function () {
-  const $miniCart = document.querySelector(".che_MiniCart");
+  const $miniCart = document.querySelector(".c_MiniCart");
   if ($miniCart) {
     // update mini cart
     const res = await fetch("/checkout/mini-cart");
@@ -23,16 +23,16 @@ document.addEventListener("checkout:cart-updated", async function () {
     $miniCart.outerHTML = html;
 
     // highlight updated mini cart
-    const $newMiniCart = document.querySelector(".che_MiniCart");
-    $newMiniCart.classList.add("che_MiniCart--highlight");
+    const $newMiniCart = document.querySelector(".c_MiniCart");
+    $newMiniCart.classList.add("c_MiniCart--highlight");
     setTimeout(() => {
-      $newMiniCart.classList.remove("che_MiniCart--highlight");
+      $newMiniCart.classList.remove("c_MiniCart--highlight");
     }, 5000);
   }
 });
 
 /* add to cart */
-const $addToCart = document.querySelector(".che_AddToCart");
+const $addToCart = document.querySelector(".c_AddToCart");
 if ($addToCart) {
   console.log("init");
   $addToCart.addEventListener("submit", async function (e) {

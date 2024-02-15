@@ -2,26 +2,14 @@
 @import url("./components/Navigation.css");
 @import url("./components/Footer.css");
 @import url("./components/StorePicker.css");
+@import url("./components/Product.css");
+@import url("./pages/ListPage.css");
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
 
 body {
   padding: 2rem;
-}
-
-[data-boundary^="explore-"] {
-  outline: 2px solid red;
-  position: relative;
-}
-
-[data-boundary^="explore-"]::after {
-  content: attr(data-boundary);
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
-  background: red;
-  padding: 0 0.5rem;
-  line-height: 1.5;
-  font-family: sans-serif;
-  font-weight: bold;
-  pointer-events: none;
 }

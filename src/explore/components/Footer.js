@@ -1,7 +1,7 @@
 import { html } from "../utils.js";
 
 export default () => {
-  return html`<footer class="exp_Footer" data-boundary="explore-footer">
+  return html`<footer class="e_Footer" data-boundary="explore-footer">
     <p>The Tractor Store / reference implementation<br /></p>
     <p>
       build by <a href="https://neuland-bfi.de">neuland Büro für Informatik</a

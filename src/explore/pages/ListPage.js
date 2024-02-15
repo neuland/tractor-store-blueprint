@@ -26,7 +26,7 @@ export default ({ category, req }) => {
           ${Header({ req })}
           <h2>${title}</h2>
           <p>${products.length} products</p>
-          <ul>
+          <ul class="e_ListPage_list">
             ${products.map(Product).join("")}
           </ul>
           ${Footer()}
@@ -34,6 +34,7 @@ export default ({ category, req }) => {
         <script src="/explore/scripts.js" async></script>
         <script src="/decide/scripts.js" async></script>
         <script src="/checkout/scripts.js" async></script>
+        <script src="/cdn/js/helper.js" async></script>
       </body>
     </html>`;
 };

@@ -4,7 +4,7 @@
 
 /* store picker */
 
-const $picker = document.querySelector(".exp_StorePicker");
+const $picker = document.querySelector(".e_StorePicker");
 if ($picker) {
   const dialog = $picker.querySelector("dialog");
   const showButton = $picker.querySelector("dialog + button");

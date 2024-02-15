@@ -1,0 +1,32 @@
+.e_Product {
+  margin: 0;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.e_Product:hover {
+  transform: scale(1.05);
+}
+
+.e_Product_link {
+  text-decoration: none;
+  color: black;
+}
+
+.e_Product_link:hover {
+  text-decoration: underline;
+}
+
+.e_Product_image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  display: block;
+}
+
+.e_Product_name {
+  margin: 1rem 0;
+  color: black;
+  text-align: center;
+  display: block;
+}

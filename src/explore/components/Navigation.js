@@ -4,7 +4,7 @@ import { html } from "../utils.js";
 
 export default () => {
   const categories = data.categories;
-  return html`<nav class="exp_Navigation">
+  return html`<nav class="e_Navigation">
     <ul>
       <li><a href="/">Home</a></li>
       ${categories.map(MenuItem).join("")}

@@ -18,7 +18,7 @@ export default () => {
       </fieldset>
       <h3>Shipping Address</h3>
       <fieldset>
-        <div class="che_Checkout_store">${StorePicker()}</div>
+        <div class="c_Checkout_store">${StorePicker()}</div>
         <input type="hidden" id="storeId" name="storeId" />
         <label for="street">Street</label>
         <input type="text" id="street" name="street" required /><br />

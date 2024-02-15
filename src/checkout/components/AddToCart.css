@@ -1,15 +1,15 @@
-.che_AddToCart {
+.c_AddToCart {
   padding: 2rem;
 }
 
-.che_AddToCart__stock {
+.c_AddToCart__stock {
   display: block;
 }
 
-.che_AddToCart__stock--ok {
+.c_AddToCart__stock--ok {
   color: green;
 }
 
-.che_AddToCart__stock--empty {
+.c_AddToCart__stock--empty {
   color: red;
 }

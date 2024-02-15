@@ -14,8 +14,7 @@ function skuToProduct(sku) {
   };
 }
 
-function idToProduct(id) {
-  const product = products.find((p) => p.id === id);
+function toProduct(product) {
   return {
     name: product.name,
     id: product.id,
@@ -30,25 +29,29 @@ function idToProduct(id) {
 export default {
   categories: [
     {
-      key: "tractors",
-      name: "Tractors",
-      products: ["ST-001", "PT-001"].map(idToProduct),
+      key: "classic",
+      name: "Classics",
+      products: products.filter((p) => p.category === "classic").map(toProduct),
     },
     {
-      key: "tools",
-      name: "Tools",
-      products: ["GC-001", "SP-001", "LW-001"].map(idToProduct),
+      key: "autonomous",
+      name: "Autonomous",
+      products: products
+        .filter((p) => p.category === "autonomous")
+        .map(toProduct),
     },
   ],
   recommendations: {
+    /*
     "ST-001-RD": ["GC-001-BK", "SP-001-BK"].map(skuToProduct),
     "ST-001-BL": ["GC-001-BK", "SP-001-BK"].map(skuToProduct),
     "ST-001-GN": ["GC-001-GE", "SP-001-GE"].map(skuToProduct),
     "PT-001-SL": ["LW-001-LG", "SP-001-BK"].map(skuToProduct),
     "PT-001-GD": ["LW-001-XL", "SP-001-BK"].map(skuToProduct),
     "PT-001-PT": ["LW-001-XL", "SP-001-BK"].map(skuToProduct),
-    "LW-001-LG": ["LW-001-XL", "PT-001-GD"].map(skuToProduct),
-    "LW-001-XL": ["PT-001-GD", "GC-001-BK"].map(skuToProduct),
+    "LW-001-LG": ["LW-001-XL"].map(skuToProduct),
+    "LW-001-XL": ["GC-001-BK"].map(skuToProduct),
+    */
   },
   stores: [
     {

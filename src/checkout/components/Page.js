@@ -15,6 +15,7 @@ export default ({ content }) => {
         <script src="/explore/scripts.js" async></script>
         <script src="/decide/scripts.js" async></script>
         <script src="/checkout/scripts.js" async></script>
+        <script src="/cdn/js/helper.js" async></script>
       </body>
     </html>`;
 };

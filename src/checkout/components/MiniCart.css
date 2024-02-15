@@ -1,9 +1,9 @@
-.che_MiniCart {
+.c_MiniCart {
   background: limegreen;
   position: relative;
 }
 
-.che_MiniCart__icon {
+.c_MiniCart__icon {
   display: block;
   padding: 2rem 4rem;
   font-size: 2rem;
@@ -11,7 +11,7 @@
   text-align: center;
 }
 
-.che_MiniCart__button {
+.c_MiniCart__button {
   display: none;
   position: absolute;
   top: 100%;
@@ -24,8 +24,8 @@
   text-align: center;
 }
 
-.che_MiniCart:hover .che_MiniCart__button,
-.che_MiniCart--highlight .che_MiniCart__button {
+.c_MiniCart:hover .c_MiniCart__button,
+.c_MiniCart--highlight .c_MiniCart__button {
   background: rgba(255, 255, 255, 0.75);
   display: block;
 }

@@ -1,6 +1,6 @@
 const ITEM_SEP = "|";
 const QTY_SEP = "_";
-const COOKIE = "che_cart";
+const COOKIE = "c_cart";
 
 export function readFromCookie(req) {
   const cookieStr = req.cookies[COOKIE];
