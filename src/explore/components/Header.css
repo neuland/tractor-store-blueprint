@@ -1,7 +1,28 @@
+.e_Header {
+  display: block;
+  margin: 0 0 2rem;
+  border-bottom: 1px solid #eeebe2;
+  box-shadow: 0 0 20px 10px #eb5b5920;
+  padding: 1rem;
+}
+
 .e_Header__title {
-  color: red;
+  margin: 0;
+  line-height: 0.75em;
+}
+
+.e_Header__title small {
+  font-size: 0.5em;
+}
+
+.e_Header__link {
+  text-decoration: none;
+  color: #ff5a55;
 }
 
 .e_Header__inner {
   display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
 }

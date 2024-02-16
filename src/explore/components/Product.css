@@ -13,10 +13,6 @@
   color: black;
 }
 
-.e_Product_link:hover {
-  text-decoration: underline;
-}
-
 .e_Product_image {
   width: 100%;
   height: auto;

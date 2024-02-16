@@ -34,7 +34,6 @@ document.addEventListener("checkout:cart-updated", async function () {
 /* add to cart */
 const $addToCart = document.querySelector(".c_AddToCart");
 if ($addToCart) {
-  console.log("init");
   $addToCart.addEventListener("submit", async function (e) {
     e.preventDefault();
     const formData = new URLSearchParams(new FormData($addToCart));

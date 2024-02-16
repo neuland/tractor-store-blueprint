@@ -17,15 +17,17 @@ export default ({ req }) => {
   const skus = lineItems.map(({ sku }) => sku);
   const content = html`
     ${Header({ req })}
-    <h2>Warenkorb</h2>
-    <p>${lineItems.length} Produkte im Warenkorb</p>
-    <ul class="CartPage__lineItems">
-      ${lineItems.map(LineItem).join("")}
-    </ul>
-    <form action="/checkout/checkout" method="get">
-      <button>checkout</button>
-    </form>
-    ${Recommendations({ skus })} ${Footer()}
+    <main class="c_CartPage">
+      <h2>Warenkorb</h2>
+      <p>${lineItems.length} Produkte im Warenkorb</p>
+      <ul class="c_CartPage__lineItems">
+        ${lineItems.map(LineItem).join("")}
+      </ul>
+      <form action="/checkout/checkout" method="get">
+        <button>checkout</button>
+      </form>
+      ${Recommendations({ skus })} ${Footer()}
+    </main>
   `;
   return Page({ content });
 };

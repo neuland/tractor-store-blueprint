@@ -1,8 +1,12 @@
+.e_ListPage {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .e_ListPage_list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  max-width: 800px;
-  margin: 0 auto;
   grid-gap: 40px;
+  padding: 0;
   list-style-type: none;
 }

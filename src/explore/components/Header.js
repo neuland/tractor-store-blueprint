@@ -3,8 +3,15 @@ import Navigation from "./Navigation.js";
 import { html } from "../utils.js";
 
 export default ({ req }) => {
-  return html`<header data-boundary="explore-header">
-    <h1 class="e_Header__title"><a href="/">The Tractor Store</a></h1>
-    <div class="e_Header__inner">${Navigation()} ${BuyMiniCart({ req })}</div>
+  return html`<header class="e_Header" data-boundary="explore-header">
+    <div class="e_Header__inner">
+      <h1 class="e_Header__title">
+        <a class="e_Header__link" href="/">
+          <small>Micro Frontends</small><br />
+          Tractor Store
+        </a>
+      </h1>
+      ${Navigation()} ${BuyMiniCart({ req })}
+    </div>
   </header>`;
 };

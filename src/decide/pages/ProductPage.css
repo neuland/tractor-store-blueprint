@@ -1,4 +1,9 @@
-.d_ProductPage_main {
+.d_ProductPage {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.d_ProductPage_details {
   display: flex;
   justify-content: space-between;
 }

@@ -1,4 +1,9 @@
-.CartPage__lineItems {
+.c_CartPage {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.c_CartPage__lineItems {
   list-style: none;
   padding: 0;
 }

@@ -22,19 +22,19 @@ export default ({ category, req }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body data-boundary="explore-page">
-        <div>
-          ${Header({ req })}
+        ${Header({ req })}
+        <main class="e_ListPage">
           <h2>${title}</h2>
           <p>${products.length} products</p>
           <ul class="e_ListPage_list">
             ${products.map(Product).join("")}
           </ul>
-          ${Footer()}
-        </div>
+        </main>
+        ${Footer()}
         <script src="/explore/scripts.js" async></script>
         <script src="/decide/scripts.js" async></script>
         <script src="/checkout/scripts.js" async></script>
-        <script src="/cdn/js/helper.js" async></script>
+        <script src="/cdn/js/helper.js" type="module"></script>
       </body>
     </html>`;
 };
