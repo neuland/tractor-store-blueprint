@@ -2,7 +2,7 @@ import data from "../data.js";
 import { html } from "../utils.js";
 
 export default () => {
-  return html`<div class="e_StorePicker">
+  return html`<div class="e_StorePicker" data-boundary="explore-storepicker">
     <dialog>
       <h2>Stores</h2>
       <ul>
