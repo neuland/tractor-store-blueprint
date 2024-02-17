@@ -1,5 +1,5 @@
 import { html } from "../utils.js";
 
 export default ({ name, key }) => {
-  return html`<li><a href="/${key}">${name}</a></li>`;
+  return html`<li class="e_MenuItem"><a href="/${key}">${name}</a></li>`;
 };

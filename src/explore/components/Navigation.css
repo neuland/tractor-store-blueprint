@@ -10,3 +10,10 @@
   justify-content: center;
   gap: 2rem;
 }
+
+.e_Navigation_item a {
+  text-decoration: none;
+  letter-spacing: 5px;
+  color: #000;
+}
+

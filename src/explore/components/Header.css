@@ -6,23 +6,14 @@
   padding: 1rem;
 }
 
-.e_Header__title {
-  margin: 0;
-  line-height: 0.75em;
-}
-
-.e_Header__title small {
-  font-size: 0.5em;
-}
-
-.e_Header__link {
-  text-decoration: none;
-  color: #ff5a55;
-}
-
 .e_Header__inner {
   display: flex;
   max-width: 800px;
   margin: 0 auto;
   align-items: center;
+}
+
+.e_Header__logo {
+  display: block;
+  width: 210px;
 }

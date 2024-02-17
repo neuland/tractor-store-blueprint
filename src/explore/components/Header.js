@@ -5,12 +5,13 @@ import { html } from "../utils.js";
 export default ({ req }) => {
   return html`<header class="e_Header" data-boundary="explore-header">
     <div class="e_Header__inner">
-      <h1 class="e_Header__title">
-        <a class="e_Header__link" href="/">
-          <small>Micro Frontends</small><br />
-          Tractor Store
-        </a>
-      </h1>
+      <a class="e_Header__link" href="/">
+        <img
+          class="e_Header__logo"
+          src="/cdn/img/logo.svg"
+          alt="Micro Frontends - Tractor Store"
+        />
+      </a>
       ${Navigation()} ${BuyMiniCart({ req })}
     </div>
   </header>`;

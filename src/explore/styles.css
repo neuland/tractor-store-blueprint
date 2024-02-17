@@ -1,12 +1,22 @@
 @import url("./components/Header.css");
 @import url("./components/Navigation.css");
+@import url("./components/Menuitem.css");
 @import url("./components/Footer.css");
 @import url("./components/StorePicker.css");
 @import url("./components/Product.css");
 @import url("./pages/ListPage.css");
 
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../cdn/font/Raleway-Regular.woff2") format("woff2"),
+    url("../cdn/font/Raleway-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 
