@@ -86,6 +86,26 @@ function toggleBoundaries(active) {
 // call generateRoughBoundaries() when viewports are resized
 window.addEventListener("resize", generateRoughBoundaries);
 
+function writeBoundaryToCache(svgNode, boundary, width, height) {
+  const serializer = new XMLSerializer();
+  const svgStr = serializer.serializeToString(svgNode);
+  const entry = { width, height, svg: svgStr };
+  window.sessionStorage.setItem(`boundary-${boundary}`, JSON.stringify(entry));
+}
+
+function readBoundaryFromCache(boundary, width, height) {
+  const svgStr = window.sessionStorage.getItem(`boundary-${boundary}`);
+  if (!svgStr) {
+    return null;
+  }
+  const entry = JSON.parse(svgStr);
+  if (entry.width !== width || entry.height !== height) {
+    return null;
+  }
+  const parser = new window.DOMParser();
+  return parser.parseFromString(entry.svg, "image/svg+xml").firstChild;
+}
+
 function generateRoughBoundaries() {
   window.requestAnimationFrame(() => {
     [...document.querySelectorAll("[data-boundary]")].forEach((el) => {
@@ -93,12 +113,13 @@ function generateRoughBoundaries() {
       const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       svg.setAttribute("width", width);
       svg.setAttribute("height", height);
-      const rc = roughjs.svg(svg);
 
-      const inset = 10;
+      const boundary = el.dataset.boundary;
+      const team = boundary.split("-")[0];
+      const isPage = boundary.split("-")[1] === "page";
 
-      const team = el.dataset.boundary.split("-")[0];
-      //const isPage = el.dataset.boundary.split("-")[1] === "page";
+      const inset = isPage ? 0 : 10;
+      const strokeWidth = isPage ? 0 : 2;
 
       const rectangle = roundedRectanglePath(
         inset,
@@ -118,33 +139,39 @@ function generateRoughBoundaries() {
       svg.appendChild(bgNode);
 
       // rough rectangle
-      const node = rc.path(rectangle, {
-        roughness: 5,
-        strokeWidth: 2,
-        fillStyle: "sunburst",
-        fill: "rgb(10,150,10,0.5)",
-        fillWeight: 0.5,
-        hachureGap: 10,
-        disableMultiStroke: true,
-        strokeLineDash: [10, 5],
-        preserveVertices: true,
-        bowing: 0.5,
-        ...config[team],
-      });
+      const rc = roughjs.svg(svg);
+      let node = readBoundaryFromCache(boundary, width, height);
+      if (!node) {
+        node = rc.path(rectangle, {
+          roughness: 5,
+          strokeWidth,
+          fillStyle: "sunburst",
+          fill: "rgb(10,150,10,0.5)",
+          fillWeight: 0.5,
+          hachureGap: 10,
+          disableMultiStroke: true,
+          strokeLineDash: [10, 5],
+          preserveVertices: true,
+          bowing: 0.5,
+          ...config[team],
+        });
+        console.log(node);
+        writeBoundaryToCache(node, boundary, width, height);
+      }
 
       // add gausien blur filter to node
-      const filter = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "filter",
-      );
-      filter.setAttribute("id", "blur");
-      const feGaussianBlur = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "feGaussianBlur",
-      );
-      feGaussianBlur.setAttribute("in", "SourceGraphic");
-      feGaussianBlur.setAttribute("stdDeviation", "1");
-      filter.appendChild(feGaussianBlur);
+      //const filter = document.createElementNS(
+      //  "http://www.w3.org/2000/svg",
+      //  "filter",
+      //);
+      //filter.setAttribute("id", "blur");
+      //const feGaussianBlur = document.createElementNS(
+      //  "http://www.w3.org/2000/svg",
+      //  "feGaussianBlur",
+      //);
+      //feGaussianBlur.setAttribute("in", "SourceGraphic");
+      //feGaussianBlur.setAttribute("stdDeviation", "1");
+      //filter.appendChild(feGaussianBlur);
       //svg.appendChild(filter);
       //node.setAttribute("filter", "url(#blur)");
 
