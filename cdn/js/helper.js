@@ -109,7 +109,9 @@ function readBoundaryFromCache(boundary, width, height) {
 function generateRoughBoundaries() {
   window.requestAnimationFrame(() => {
     [...document.querySelectorAll("[data-boundary]")].forEach((el) => {
-      const { width, height } = el.getBoundingClientRect();
+      const clientRect = el.getBoundingClientRect();
+      const width = Math.round(clientRect.width);
+      const height = Math.round(clientRect.height);
       const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
       svg.setAttribute("width", width);
       svg.setAttribute("height", height);
@@ -126,7 +128,7 @@ function generateRoughBoundaries() {
         inset,
         width - 2 * inset,
         height - 2 * inset,
-        80,
+        800,
       );
 
       // white background rectangle without rough.js
