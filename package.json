@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node --watch src/server.js",
+    "database": "node src/explore/database/import.js && node src/decide/database/import.js && node src/checkout/database/import.js",
     "lint": "eslint .",
     "format": "prettier --write ."
   },

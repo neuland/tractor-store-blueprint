@@ -1,0 +1,131 @@
+{
+  "categories": [
+    {
+      "key": "classic",
+      "name": "Classics",
+      "products": [
+        {
+          "name": "Harvest King Classic 480V",
+          "id": "CL-001",
+          "image": "/cdn/img/product/CL-001.png",
+          "startPrice": 1000,
+          "url": "/product/CL-001"
+        },
+        {
+          "name": "Azure Skyfarmer Classic 500B",
+          "id": "CL-002",
+          "image": "/cdn/img/product/CL-002.png",
+          "startPrice": 1000,
+          "url": "/product/CL-002"
+        },
+        {
+          "name": "Terra Trooper Deluxe 320G",
+          "id": "CL-003",
+          "image": "/cdn/img/product/CL-003.png",
+          "startPrice": 1000,
+          "url": "/product/CL-003"
+        },
+        {
+          "name": "Sapphire Sunworker 460R",
+          "id": "CL-004",
+          "image": "/cdn/img/product/CL-004.png",
+          "startPrice": 1000,
+          "url": "/product/CL-004"
+        },
+        {
+          "name": "Golden Grain Harvester 520L",
+          "id": "CL-005",
+          "image": "/cdn/img/product/CL-005.png",
+          "startPrice": 1000,
+          "url": "/product/CL-005"
+        },
+        {
+          "name": "Jasper Journeyman 670H",
+          "id": "CL-006",
+          "image": "/cdn/img/product/CL-006.png",
+          "startPrice": 1000,
+          "url": "/product/CL-006"
+        },
+        {
+          "name": "Garnet Grove Guardian 560S",
+          "id": "CL-007",
+          "image": "/cdn/img/product/CL-007.png",
+          "startPrice": 1000,
+          "url": "/product/CL-007"
+        },
+        {
+          "name": "Sienna Soil Sovereign 370X",
+          "id": "CL-008",
+          "image": "/cdn/img/product/CL-008.png",
+          "startPrice": 1000,
+          "url": "/product/CL-008"
+        },
+        {
+          "name": "Maroon Meadow Marshal 530Q",
+          "id": "CL-009",
+          "image": "/cdn/img/product/CL-009.png",
+          "startPrice": 1000,
+          "url": "/product/CL-009"
+        },
+        {
+          "name": "Quartz Quarry Queen 360L",
+          "id": "CL-010",
+          "image": "/cdn/img/product/CL-010.png",
+          "startPrice": 1000,
+          "url": "/product/CL-010"
+        },
+        {
+          "name": "Steel Seed Sower 470W",
+          "id": "CL-011",
+          "image": "/cdn/img/product/CL-011.png",
+          "startPrice": 1000,
+          "url": "/product/CL-011"
+        },
+        {
+          "name": "Cobalt Countryside Cruiser 340M",
+          "id": "CL-012",
+          "image": "/cdn/img/product/CL-012.png",
+          "startPrice": 1000,
+          "url": "/product/CL-012"
+        },
+        {
+          "name": "Cerulean Crop Commander 310A",
+          "id": "CL-013",
+          "image": "/cdn/img/product/CL-013.png",
+          "startPrice": 1000,
+          "url": "/product/CL-013"
+        }
+      ]
+    },
+    {
+      "key": "autonomous",
+      "name": "Autonomous",
+      "products": [
+        {
+          "name": "Futuro Fieldmaster 800Xi",
+          "id": "AU-001",
+          "image": "/cdn/img/product/AU-001.png",
+          "startPrice": 1000,
+          "url": "/product/AU-001"
+        }
+      ]
+    }
+  ],
+  "recommendations": {},
+  "stores": [
+    {
+      "id": "s1",
+      "name": "Flagship Store North",
+      "street": "Main Street 2",
+      "city": "Harwixts",
+      "image": "/cdn/img/store/s1.png"
+    },
+    {
+      "id": "s2",
+      "name": "Micro Machines Center",
+      "street": "Long Field Road 1",
+      "city": "Weisterwas",
+      "image": "/cdn/img/store/s2.png"
+    }
+  ]
+}
