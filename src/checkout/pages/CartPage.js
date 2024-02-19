@@ -1,6 +1,6 @@
 import Page from "../components/Page.js";
 import LineItem from "../components/LineItem.js";
-import data from "../data.js";
+import data from "../database/database.json" assert { type: "json" };
 import { readFromCookie } from "../state.js";
 import { html } from "../utils.js";
 

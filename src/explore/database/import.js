@@ -1,17 +1,20 @@
-import products from "../../products.js";
-import { productUrl } from "./utils.js";
+// reads product data from a central source and writes the necessary data for this system.
+// here we are reading from a js file and writing to a json file.
+// in a real world scenario, you would read from a product service and write to a database.
 
-function skuToProduct(sku) {
-  const product = products.find((p) => p.variants.some((v) => v.sku === sku));
-  const variant = product.variants.find((v) => v.sku === sku);
-  return {
-    name: `${product.name} ${variant.name}`,
-    id: product.id,
-    sku: variant.sku,
-    image: variant.image,
-    price: variant.price,
-    url: productUrl(product.id, variant.sku),
-  };
+import fs from "fs";
+import path from "path";
+import products from "../../../products.js";
+
+export function productUrl(id, sku) {
+  const query = sku ? `?sku=${sku}` : "";
+  return `/product/${id}${query}`;
+}
+
+function startPrice(variants) {
+  return variants.reduce((min, variant) => {
+    return Math.min(min, variant.price);
+  }, Infinity);
 }
 
 function toProduct(product) {
@@ -19,14 +22,12 @@ function toProduct(product) {
     name: product.name,
     id: product.id,
     image: product.variants[0].image,
-    startPrice: product.variants.reduce((min, variant) => {
-      return Math.min(min, variant.price);
-    }, Infinity),
+    startPrice: startPrice(product.variants),
     url: productUrl(product.id),
   };
 }
 
-export default {
+const database = {
   categories: [
     {
       key: "classic",
@@ -70,3 +71,8 @@ export default {
     },
   ],
 };
+
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const databaseFile = path.resolve(__dirname, "./database.json");
+console.log("Writing database to", databaseFile);
+fs.writeFileSync(databaseFile, JSON.stringify(database, null, 2));

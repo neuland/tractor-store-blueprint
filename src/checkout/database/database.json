@@ -1,0 +1,228 @@
+{
+  "variants": [
+    {
+      "id": "CL-001",
+      "name": "Harvest King Classic 480V 100hp",
+      "sku": "CL-001-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-001.png",
+      "inventory": 75
+    },
+    {
+      "id": "CL-001",
+      "name": "Harvest King Classic 480V 200hp",
+      "sku": "CL-001-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-001.png",
+      "inventory": 99
+    },
+    {
+      "id": "CL-002",
+      "name": "Azure Skyfarmer Classic 500B 100hp",
+      "sku": "CL-002-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-002.png",
+      "inventory": 45
+    },
+    {
+      "id": "CL-002",
+      "name": "Azure Skyfarmer Classic 500B 200hp",
+      "sku": "CL-002-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-002.png",
+      "inventory": 91
+    },
+    {
+      "id": "CL-003",
+      "name": "Terra Trooper Deluxe 320G 100hp",
+      "sku": "CL-003-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-003.png",
+      "inventory": 16
+    },
+    {
+      "id": "CL-003",
+      "name": "Terra Trooper Deluxe 320G 200hp",
+      "sku": "CL-003-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-003.png",
+      "inventory": 45
+    },
+    {
+      "id": "CL-004",
+      "name": "Sapphire Sunworker 460R 100hp",
+      "sku": "CL-004-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-004.png",
+      "inventory": 64
+    },
+    {
+      "id": "CL-004",
+      "name": "Sapphire Sunworker 460R 200hp",
+      "sku": "CL-004-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-004.png",
+      "inventory": 56
+    },
+    {
+      "id": "CL-005",
+      "name": "Golden Grain Harvester 520L 100hp",
+      "sku": "CL-005-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-005.png",
+      "inventory": 9
+    },
+    {
+      "id": "CL-005",
+      "name": "Golden Grain Harvester 520L 200hp",
+      "sku": "CL-005-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-005.png",
+      "inventory": 31
+    },
+    {
+      "id": "CL-006",
+      "name": "Jasper Journeyman 670H 100hp",
+      "sku": "CL-006-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-006.png",
+      "inventory": 63
+    },
+    {
+      "id": "CL-006",
+      "name": "Jasper Journeyman 670H 200hp",
+      "sku": "CL-006-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-006.png",
+      "inventory": 50
+    },
+    {
+      "id": "CL-007",
+      "name": "Garnet Grove Guardian 560S 100hp",
+      "sku": "CL-007-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-007.png",
+      "inventory": 87
+    },
+    {
+      "id": "CL-007",
+      "name": "Garnet Grove Guardian 560S 200hp",
+      "sku": "CL-007-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-007.png",
+      "inventory": 36
+    },
+    {
+      "id": "CL-008",
+      "name": "Sienna Soil Sovereign 370X 100hp",
+      "sku": "CL-008-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-008.png",
+      "inventory": 32
+    },
+    {
+      "id": "CL-008",
+      "name": "Sienna Soil Sovereign 370X 200hp",
+      "sku": "CL-008-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-008.png",
+      "inventory": 21
+    },
+    {
+      "id": "CL-009",
+      "name": "Maroon Meadow Marshal 530Q 100hp",
+      "sku": "CL-009-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-009.png",
+      "inventory": 92
+    },
+    {
+      "id": "CL-009",
+      "name": "Maroon Meadow Marshal 530Q 200hp",
+      "sku": "CL-009-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-009.png",
+      "inventory": 97
+    },
+    {
+      "id": "CL-010",
+      "name": "Quartz Quarry Queen 360L 100hp",
+      "sku": "CL-010-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-010.png",
+      "inventory": 56
+    },
+    {
+      "id": "CL-010",
+      "name": "Quartz Quarry Queen 360L 200hp",
+      "sku": "CL-010-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-010.png",
+      "inventory": 10
+    },
+    {
+      "id": "CL-011",
+      "name": "Steel Seed Sower 470W 100hp",
+      "sku": "CL-011-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-011.png",
+      "inventory": 56
+    },
+    {
+      "id": "CL-011",
+      "name": "Steel Seed Sower 470W 200hp",
+      "sku": "CL-011-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-011.png",
+      "inventory": 97
+    },
+    {
+      "id": "CL-012",
+      "name": "Cobalt Countryside Cruiser 340M 100hp",
+      "sku": "CL-012-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-012.png",
+      "inventory": 6
+    },
+    {
+      "id": "CL-012",
+      "name": "Cobalt Countryside Cruiser 340M 200hp",
+      "sku": "CL-012-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-012.png",
+      "inventory": 98
+    },
+    {
+      "id": "CL-013",
+      "name": "Cerulean Crop Commander 310A 100hp",
+      "sku": "CL-013-100",
+      "price": 1000,
+      "image": "/cdn/img/product/CL-013.png",
+      "inventory": 50
+    },
+    {
+      "id": "CL-013",
+      "name": "Cerulean Crop Commander 310A 200hp",
+      "sku": "CL-013-200",
+      "price": 2000,
+      "image": "/cdn/img/product/CL-013.png",
+      "inventory": 68
+    },
+    {
+      "id": "AU-001",
+      "name": "Futuro Fieldmaster 800Xi 100hp",
+      "sku": "AU-001-100",
+      "price": 1000,
+      "image": "/cdn/img/product/AU-001.png",
+      "inventory": 72
+    },
+    {
+      "id": "AU-001",
+      "name": "Futuro Fieldmaster 800Xi 200hp",
+      "sku": "AU-001-200",
+      "price": 2000,
+      "image": "/cdn/img/product/AU-001.png",
+      "inventory": 87
+    }
+  ]
+}

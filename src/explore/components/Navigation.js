@@ -1,4 +1,4 @@
-import data from "../data.js";
+import data from "../database/database.json" assert { type: "json" };
 import MenuItem from "./MenuItem.js";
 import { html } from "../utils.js";
 

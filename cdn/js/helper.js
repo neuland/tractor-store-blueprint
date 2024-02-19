@@ -198,7 +198,7 @@ function generateRoughBoundaries() {
         inset,
         width - 2 * inset,
         height - 2 * inset,
-        0,
+        10,
         150,
       );
 
