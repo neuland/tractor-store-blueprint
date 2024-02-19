@@ -5,34 +5,6 @@
       "name": "Classics",
       "products": [
         {
-          "name": "Harvest King Classic 480V",
-          "id": "CL-001",
-          "image": "/cdn/img/product/CL-001.png",
-          "startPrice": 1000,
-          "url": "/product/CL-001"
-        },
-        {
-          "name": "Azure Skyfarmer Classic 500B",
-          "id": "CL-002",
-          "image": "/cdn/img/product/CL-002.png",
-          "startPrice": 1000,
-          "url": "/product/CL-002"
-        },
-        {
-          "name": "Terra Trooper Deluxe 320G",
-          "id": "CL-003",
-          "image": "/cdn/img/product/CL-003.png",
-          "startPrice": 1000,
-          "url": "/product/CL-003"
-        },
-        {
-          "name": "Sapphire Sunworker 460R",
-          "id": "CL-004",
-          "image": "/cdn/img/product/CL-004.png",
-          "startPrice": 1000,
-          "url": "/product/CL-004"
-        },
-        {
           "name": "Golden Grain Harvester 520L",
           "id": "CL-005",
           "image": "/cdn/img/product/CL-005.png",
@@ -101,6 +73,55 @@
       "key": "autonomous",
       "name": "Autonomous",
       "products": [
+        {
+          "name": "TerraFirma AutoCultivator T-300",
+          "id": "AU-01",
+          "image": "/cdn/img/product/AU-01-SI.png",
+          "startPrice": 1000,
+          "url": "/product/AU-01"
+        },
+        {
+          "name": "AgriTech Titan",
+          "id": "AU-02",
+          "image": "/cdn/img/product/AU-02-OG.png",
+          "startPrice": 1000,
+          "url": "/product/AU-02"
+        },
+        {
+          "name": "AgriMaster Navigator",
+          "id": "AU-03",
+          "image": "/cdn/img/product/AU-03-TQ.png",
+          "startPrice": 1600,
+          "url": "/product/AU-03"
+        },
+        {
+          "name": "Sapphire Sunworker 460R",
+          "id": "AU-04",
+          "image": "/cdn/img/product/AU-04-RD.png",
+          "startPrice": 4000,
+          "url": "/product/AU-04"
+        },
+        {
+          "name": "AgriTech Crop Commander",
+          "id": "AU-05",
+          "image": "/cdn/img/product/AU-05-ZH.png",
+          "startPrice": 3400,
+          "url": "/product/AU-05"
+        },
+        {
+          "name": "AgriTech Field Sovereign",
+          "id": "AU-06",
+          "image": "/cdn/img/product/AU-06-CZ.png",
+          "startPrice": 2100,
+          "url": "/product/AU-06"
+        },
+        {
+          "name": "Verde Voyager",
+          "id": "AU-07",
+          "image": "/cdn/img/product/AU-07-MT.png",
+          "startPrice": 4000,
+          "url": "/product/AU-07"
+        },
         {
           "name": "Futuro Fieldmaster 800Xi",
           "id": "AU-001",

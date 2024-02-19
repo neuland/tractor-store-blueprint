@@ -1,68 +1,124 @@
 {
   "variants": [
     {
-      "id": "CL-001",
-      "name": "Harvest King Classic 480V 100hp",
-      "sku": "CL-001-100",
+      "id": "AU-01",
+      "name": "TerraFirma AutoCultivator T-300 Silver",
+      "sku": "AU-01-SI",
       "price": 1000,
-      "image": "/cdn/img/product/CL-001.png",
-      "inventory": 75
+      "image": "/cdn/img/product/AU-01-SI.png",
+      "inventory": 57
     },
     {
-      "id": "CL-001",
-      "name": "Harvest King Classic 480V 200hp",
-      "sku": "CL-001-200",
-      "price": 2000,
-      "image": "/cdn/img/product/CL-001.png",
-      "inventory": 99
-    },
-    {
-      "id": "CL-002",
-      "name": "Azure Skyfarmer Classic 500B 100hp",
-      "sku": "CL-002-100",
+      "id": "AU-02",
+      "name": "AgriTech Titan Cosmic Sapphire",
+      "sku": "AU-02-BL",
       "price": 1000,
-      "image": "/cdn/img/product/CL-002.png",
-      "inventory": 45
+      "image": "/cdn/img/product/AU-02-BL.png",
+      "inventory": 23
     },
     {
-      "id": "CL-002",
-      "name": "Azure Skyfarmer Classic 500B 200hp",
-      "sku": "CL-002-200",
-      "price": 2000,
-      "image": "/cdn/img/product/CL-002.png",
+      "id": "AU-02",
+      "name": "AgriTech Titan Verdant Shadow",
+      "sku": "AU-02-GG",
+      "price": 1000,
+      "image": "/cdn/img/product/AU-02-GG.png",
+      "inventory": 15
+    },
+    {
+      "id": "AU-02",
+      "name": "AgriTech Titan Sunset Copper",
+      "sku": "AU-02-OG",
+      "price": 1100,
+      "image": "/cdn/img/product/AU-02-OG.png",
+      "inventory": 46
+    },
+    {
+      "id": "AU-03",
+      "name": "AgriMaster Navigator Majestic Violet",
+      "sku": "AU-03-PL",
+      "price": 1700,
+      "image": "/cdn/img/product/AU-03-PL.png",
       "inventory": 91
     },
     {
-      "id": "CL-003",
-      "name": "Terra Trooper Deluxe 320G 100hp",
-      "sku": "CL-003-100",
-      "price": 1000,
-      "image": "/cdn/img/product/CL-003.png",
-      "inventory": 16
+      "id": "AU-03",
+      "name": "AgriMaster Navigator Scarlet Dynamo",
+      "sku": "AU-03-RD",
+      "price": 1900,
+      "image": "/cdn/img/product/AU-03-RD.png",
+      "inventory": 73
     },
     {
-      "id": "CL-003",
-      "name": "Terra Trooper Deluxe 320G 200hp",
-      "sku": "CL-003-200",
-      "price": 2000,
-      "image": "/cdn/img/product/CL-003.png",
-      "inventory": 45
-    },
-    {
-      "id": "CL-004",
-      "name": "Sapphire Sunworker 460R 100hp",
-      "sku": "CL-004-100",
-      "price": 1000,
-      "image": "/cdn/img/product/CL-004.png",
-      "inventory": 64
-    },
-    {
-      "id": "CL-004",
-      "name": "Sapphire Sunworker 460R 200hp",
-      "sku": "CL-004-200",
-      "price": 2000,
-      "image": "/cdn/img/product/CL-004.png",
+      "id": "AU-03",
+      "name": "AgriMaster Navigator Turquoise Titan",
+      "sku": "AU-03-TQ",
+      "price": 1600,
+      "image": "/cdn/img/product/AU-03-TQ.png",
       "inventory": 56
+    },
+    {
+      "id": "AU-03",
+      "name": "AgriMaster Navigator Sunbeam Yellow",
+      "sku": "AU-03-YE",
+      "price": 1800,
+      "image": "/cdn/img/product/AU-03-YE.png",
+      "inventory": 59
+    },
+    {
+      "id": "AU-04",
+      "name": "Sapphire Sunworker 460R Midnight Onyx",
+      "sku": "AU-04-BK",
+      "price": 4000,
+      "image": "/cdn/img/product/AU-04-BK.png",
+      "inventory": 11
+    },
+    {
+      "id": "AU-04",
+      "name": "Sapphire Sunworker 460R Ruby Red",
+      "sku": "AU-04-RD",
+      "price": 5000,
+      "image": "/cdn/img/product/AU-04-RD.png",
+      "inventory": 93
+    },
+    {
+      "id": "AU-05",
+      "name": "AgriTech Crop Commander Zestful Horizon",
+      "sku": "AU-05-ZH",
+      "price": 3400,
+      "image": "/cdn/img/product/AU-05-ZH.png",
+      "inventory": 60
+    },
+    {
+      "id": "AU-06",
+      "name": "AgriTech Field Sovereign Canary Zenith",
+      "sku": "AU-06-CZ",
+      "price": 2200,
+      "image": "/cdn/img/product/AU-06-CZ.png",
+      "inventory": 15
+    },
+    {
+      "id": "AU-06",
+      "name": "AgriTech Field Sovereign Minted Jade",
+      "sku": "AU-06-MT",
+      "price": 2100,
+      "image": "/cdn/img/product/AU-06-MT.png",
+      "inventory": 98
+    },
+    {
+      "id": "AU-07",
+      "name": "Verde Voyager Glacial Mint",
+      "sku": "AU-07-MT",
+      "price": 4000,
+      "image": "/cdn/img/product/AU-07-MT.png",
+      "inventory": 87
+    },
+    {
+      "id": "AU-07",
+      "name": "Verde Voyager Sunbeam Yellow",
+      "sku": "AU-07-YE",
+      "price": 5000,
+      "image": "/cdn/img/product/AU-07-YE.png",
+      "inventory": 36
     },
     {
       "id": "CL-005",
@@ -70,7 +126,7 @@
       "sku": "CL-005-100",
       "price": 1000,
       "image": "/cdn/img/product/CL-005.png",
-      "inventory": 9
+      "inventory": 98
     },
     {
       "id": "CL-005",
@@ -78,7 +134,7 @@
       "sku": "CL-005-200",
       "price": 2000,
       "image": "/cdn/img/product/CL-005.png",
-      "inventory": 31
+      "inventory": 71
     },
     {
       "id": "CL-006",
@@ -86,7 +142,7 @@
       "sku": "CL-006-100",
       "price": 1000,
       "image": "/cdn/img/product/CL-006.png",
-      "inventory": 63
+      "inventory": 14
     },
     {
       "id": "CL-006",
@@ -94,7 +150,7 @@
       "sku": "CL-006-200",
       "price": 2000,
       "image": "/cdn/img/product/CL-006.png",
-      "inventory": 50
+      "inventory": 83
     },
     {
       "id": "CL-007",
@@ -102,7 +158,7 @@
       "sku": "CL-007-100",
       "price": 1000,
       "image": "/cdn/img/product/CL-007.png",
-      "inventory": 87
+      "inventory": 82
     },
     {
       "id": "CL-007",
@@ -110,7 +166,7 @@
       "sku": "CL-007-200",
       "price": 2000,
       "image": "/cdn/img/product/CL-007.png",
-      "inventory": 36
+      "inventory": 26
     },
     {
       "id": "CL-008",
@@ -118,7 +174,7 @@
       "sku": "CL-008-100",
       "price": 1000,
       "image": "/cdn/img/product/CL-008.png",
-      "inventory": 32
+      "inventory": 65
     },
     {
       "id": "CL-008",
@@ -126,7 +182,7 @@
       "sku": "CL-008-200",
       "price": 2000,
       "image": "/cdn/img/product/CL-008.png",
-      "inventory": 21
+      "inventory": 52
     },
     {
       "id": "CL-009",
@@ -134,7 +190,7 @@
       "sku": "CL-009-100",
       "price": 1000,
       "image": "/cdn/img/product/CL-009.png",
-      "inventory": 92
+      "inventory": 83
     },
     {
       "id": "CL-009",
@@ -142,7 +198,7 @@
       "sku": "CL-009-200",
       "price": 2000,
       "image": "/cdn/img/product/CL-009.png",
-      "inventory": 97
+      "inventory": 10
     },
     {
       "id": "CL-010",
@@ -150,7 +206,7 @@
       "sku": "CL-010-100",
       "price": 1000,
       "image": "/cdn/img/product/CL-010.png",
-      "inventory": 56
+      "inventory": 34
     },
     {
       "id": "CL-010",
@@ -158,7 +214,7 @@
       "sku": "CL-010-200",
       "price": 2000,
       "image": "/cdn/img/product/CL-010.png",
-      "inventory": 10
+      "inventory": 0
     },
     {
       "id": "CL-011",
@@ -166,7 +222,7 @@
       "sku": "CL-011-100",
       "price": 1000,
       "image": "/cdn/img/product/CL-011.png",
-      "inventory": 56
+      "inventory": 60
     },
     {
       "id": "CL-011",
@@ -174,7 +230,7 @@
       "sku": "CL-011-200",
       "price": 2000,
       "image": "/cdn/img/product/CL-011.png",
-      "inventory": 97
+      "inventory": 48
     },
     {
       "id": "CL-012",
@@ -182,7 +238,7 @@
       "sku": "CL-012-100",
       "price": 1000,
       "image": "/cdn/img/product/CL-012.png",
-      "inventory": 6
+      "inventory": 22
     },
     {
       "id": "CL-012",
@@ -190,7 +246,7 @@
       "sku": "CL-012-200",
       "price": 2000,
       "image": "/cdn/img/product/CL-012.png",
-      "inventory": 98
+      "inventory": 62
     },
     {
       "id": "CL-013",
@@ -198,7 +254,7 @@
       "sku": "CL-013-100",
       "price": 1000,
       "image": "/cdn/img/product/CL-013.png",
-      "inventory": 50
+      "inventory": 68
     },
     {
       "id": "CL-013",
@@ -206,7 +262,7 @@
       "sku": "CL-013-200",
       "price": 2000,
       "image": "/cdn/img/product/CL-013.png",
-      "inventory": 68
+      "inventory": 28
     },
     {
       "id": "AU-001",
@@ -214,7 +270,7 @@
       "sku": "AU-001-100",
       "price": 1000,
       "image": "/cdn/img/product/AU-001.png",
-      "inventory": 72
+      "inventory": 46
     },
     {
       "id": "AU-001",
@@ -222,7 +278,7 @@
       "sku": "AU-001-200",
       "price": 2000,
       "image": "/cdn/img/product/AU-001.png",
-      "inventory": 87
+      "inventory": 94
     }
   ]
 }
