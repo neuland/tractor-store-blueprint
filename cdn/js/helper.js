@@ -71,6 +71,76 @@ function roundedRectanglePath(x, y, width, height, borderRadius) {
           Z`;
 }
 
+function createRoundedRectanglePathWithControlPoints(
+  x,
+  y,
+  width,
+  height,
+  borderRadius,
+  segmentLength,
+) {
+  const maxRadius = Math.min(width / 2, height / 2);
+  borderRadius = Math.min(borderRadius, maxRadius);
+
+  // Adjusts line segments to include control points every `segmentLength` pixels
+  function generateLineSegments(startX, startY, endX, endY, segmentLength) {
+    let points = "";
+    const dx = endX - startX;
+    const dy = endY - startY;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    const steps = Math.floor(distance / segmentLength);
+    const stepX = dx / steps;
+    const stepY = dy / steps;
+
+    for (let i = 1; i <= steps; i++) {
+      const nextX = startX + stepX * i;
+      const nextY = startY + stepY * i;
+      points += `L${nextX},${nextY} `;
+    }
+
+    return points;
+  }
+
+  const pathData = [
+    `M${x + borderRadius},${y}`,
+    generateLineSegments(
+      x + borderRadius,
+      y,
+      x + width - borderRadius,
+      y,
+      segmentLength,
+    ),
+    `Q${x + width},${y} ${x + width},${y + borderRadius}`,
+    generateLineSegments(
+      x + width,
+      y + borderRadius,
+      x + width,
+      y + height - borderRadius,
+      segmentLength,
+    ),
+    `Q${x + width},${y + height} ${x + width - borderRadius},${y + height}`,
+    generateLineSegments(
+      x + width - borderRadius,
+      y + height,
+      x + borderRadius,
+      y + height,
+      segmentLength,
+    ),
+    `Q${x},${y + height} ${x},${y + height - borderRadius}`,
+    generateLineSegments(
+      x,
+      y + height - borderRadius,
+      x,
+      y + borderRadius,
+      segmentLength,
+    ),
+    `Q${x},${y} ${x + borderRadius},${y}`,
+    "Z",
+  ];
+
+  return pathData.join(" ");
+}
+
 function toggleBoundaries(active) {
   document.documentElement.classList.toggle("showBoundaries", active);
   window.localStorage.setItem("showBoundaries", active);
@@ -123,12 +193,13 @@ function generateRoughBoundaries() {
       const inset = isPage ? 0 : 10;
       const strokeWidth = isPage ? 0 : 2;
 
-      const rectangle = roundedRectanglePath(
+      const rectangle = createRoundedRectanglePathWithControlPoints(
         inset,
         inset,
         width - 2 * inset,
         height - 2 * inset,
-        800,
+        0,
+        150,
       );
 
       // white background rectangle without rough.js
@@ -145,7 +216,7 @@ function generateRoughBoundaries() {
       let node = readBoundaryFromCache(boundary, width, height);
       if (!node) {
         node = rc.path(rectangle, {
-          roughness: 5,
+          roughness: 3,
           strokeWidth,
           fillStyle: "sunburst",
           fill: "rgb(10,150,10,0.5)",
