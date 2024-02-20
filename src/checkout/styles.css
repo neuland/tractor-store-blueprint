@@ -11,6 +11,9 @@
   font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-family: raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
