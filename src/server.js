@@ -1,5 +1,4 @@
 import fs from "fs";
-import * as url from "url";
 import express from "express";
 import cookieParser from "cookie-parser";
 import postcss from "postcss";
@@ -19,21 +18,10 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-let __rootDir = url.fileURLToPath(new URL("..", import.meta.url));
-
-// fix render.com path resolution
-if (__rootDir.endsWith("src/")) {
-  __rootDir = __rootDir.slice(0, -4);
-}
-
 // inline @import rules to deliver a single CSS file
-async function inlinedCss(cssFile) {
-  const cssPath = `${__rootDir}${cssFile}`;
-
-  const css = fs.readFileSync(cssPath, "utf8");
-  const result = await postcss()
-    .use(atImport())
-    .process(css, { from: cssPath });
+async function inlinedCss(path) {
+  const css = fs.readFileSync(path, "utf8");
+  const result = await postcss().use(atImport()).process(css, { from: path });
   return result.css;
 }
 
@@ -47,7 +35,7 @@ app.get("/:category?", (req, res) => {
 
 app.get("/explore/styles.css", async (req, res) => {
   res.setHeader("Content-Type", "text/css");
-  res.send(await inlinedCss("src/explore/styles.css"));
+  res.send(await inlinedCss("./src/explore/styles.css"));
 });
 
 app.get("/explore/scripts.js", (req, res) => {
@@ -64,7 +52,7 @@ app.get("/product/:id", (req, res) => {
 
 app.get("/decide/styles.css", async (req, res) => {
   res.setHeader("Content-Type", "text/css");
-  res.send(await inlinedCss("src/decide/styles.css"));
+  res.send(await inlinedCss("./src/decide/styles.css"));
 });
 
 app.get("/decide/scripts.js", (req, res) => {
@@ -99,7 +87,7 @@ app.post("/checkout/cart/remove", (req, res) => {
 
 app.get("/checkout/styles.css", async (req, res) => {
   res.setHeader("Content-Type", "text/css");
-  res.send(await inlinedCss("src/checkout/styles.css"));
+  res.send(await inlinedCss("./src/checkout/styles.css"));
 });
 
 app.get("/checkout/scripts.js", (req, res) => {
