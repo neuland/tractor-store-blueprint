@@ -2,8 +2,9 @@
 
 @font-face {
   font-family: "Raleway";
-  src: url("../cdn/font/Raleway-Regular.woff2") format("woff2"),
-    url("../cdn/font/Raleway-Regular.woff") format("woff");
+  src:
+    url("/cdn/font/Raleway-Regular.woff2") format("woff2"),
+    url("/cdn/font/Raleway-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
