@@ -6,20 +6,25 @@ import fs from "fs";
 import path from "path";
 import products from "../../../products.js";
 
-function getInventory() {
-  return Math.floor(Math.random() * 100);
+function getInventory(name) {
+  // generate deterministic inventory (0-10) based on the name
+  const hash = name
+    .split("")
+    .reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  return hash % 11;
 }
 
 const database = {
   variants: products.flatMap((p) => {
     return p.variants.map((v) => {
+      const name = `${p.name} ${v.name}`;
       return {
         id: p.id,
-        name: `${p.name} ${v.name}`,
+        name,
         sku: v.sku,
         price: v.price,
         image: v.image,
-        inventory: getInventory(),
+        inventory: getInventory(name),
       };
     });
   }),

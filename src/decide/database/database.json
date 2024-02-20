@@ -29,6 +29,12 @@
       ],
       "variants": [
         {
+          "name": "Sunset Copper",
+          "image": "/cdn/img/product/AU-02-OG.png",
+          "sku": "AU-02-OG",
+          "price": 1100
+        },
+        {
           "name": "Cosmic Sapphire",
           "image": "/cdn/img/product/AU-02-BL.png",
           "sku": "AU-02-BL",
@@ -39,12 +45,6 @@
           "image": "/cdn/img/product/AU-02-GG.png",
           "sku": "AU-02-GG",
           "price": 1000
-        },
-        {
-          "name": "Sunset Copper",
-          "image": "/cdn/img/product/AU-02-OG.png",
-          "sku": "AU-02-OG",
-          "price": 1100
         }
       ]
     },
@@ -59,6 +59,12 @@
       ],
       "variants": [
         {
+          "name": "Turquoise Titan",
+          "image": "/cdn/img/product/AU-03-TQ.png",
+          "sku": "AU-03-TQ",
+          "price": 1600
+        },
+        {
           "name": "Majestic Violet",
           "image": "/cdn/img/product/AU-03-PL.png",
           "sku": "AU-03-PL",
@@ -69,12 +75,6 @@
           "image": "/cdn/img/product/AU-03-RD.png",
           "sku": "AU-03-RD",
           "price": 1900
-        },
-        {
-          "name": "Turquoise Titan",
-          "image": "/cdn/img/product/AU-03-TQ.png",
-          "sku": "AU-03-TQ",
-          "price": 1600
         },
         {
           "name": "Sunbeam Yellow",
@@ -95,16 +95,16 @@
       ],
       "variants": [
         {
-          "name": "Midnight Onyx",
-          "image": "/cdn/img/product/AU-04-BK.png",
-          "sku": "AU-04-BK",
-          "price": 4000
-        },
-        {
           "name": "Ruby Red",
           "image": "/cdn/img/product/AU-04-RD.png",
           "sku": "AU-04-RD",
           "price": 5000
+        },
+        {
+          "name": "Midnight Onyx",
+          "image": "/cdn/img/product/AU-04-BK.png",
+          "sku": "AU-04-BK",
+          "price": 4000
         }
       ]
     },
