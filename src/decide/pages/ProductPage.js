@@ -4,7 +4,7 @@ import Footer from "../../explore/components/Footer.js";
 import AddToCart from "../../checkout/components/AddToCart.js";
 import Recommendations from "../../explore/components/Recommendations.js";
 import { html } from "../utils.js";
-import data from "../database/database.json" assert { type: "json" };
+import data from "../database/index.js";
 
 export default ({ id, sku, req }) => {
   const {

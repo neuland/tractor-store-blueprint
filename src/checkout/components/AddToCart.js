@@ -1,4 +1,4 @@
-import data from "../database/database.json" assert { type: "json" };
+import data from "../database/index.js";
 import { html } from "../utils.js";
 
 export default ({ sku }) => {

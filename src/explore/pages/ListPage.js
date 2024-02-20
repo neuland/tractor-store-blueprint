@@ -1,4 +1,4 @@
-import data from "../database/database.json" assert { type: "json" };
+import data from "../database/index.js";
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import Product from "../components/Product.js";

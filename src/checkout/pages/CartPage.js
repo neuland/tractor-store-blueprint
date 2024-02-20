@@ -1,10 +1,8 @@
 import Page from "../components/Page.js";
 import LineItem from "../components/LineItem.js";
-import data from "../database/database.json" assert { type: "json" };
+import data from "../database/index.js";
 import { readFromCookie } from "../state.js";
 import { html } from "../utils.js";
-
-// imports from other teams -> fragments
 import Header from "../../explore/components/Header.js";
 import Footer from "../../explore/components/Footer.js";
 import Recommendations from "../../explore/components/Recommendations.js";

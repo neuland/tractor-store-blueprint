@@ -55,22 +55,6 @@ html:not(.showBoundaries) [data-boundary]:after { display: none; }
 `;
 document.head.appendChild(style);
 
-function roundedRectanglePath(x, y, width, height, borderRadius) {
-  const maxRadius = Math.min(width / 2, height / 2);
-  borderRadius = Math.min(borderRadius, maxRadius);
-
-  return `M${x + borderRadius},${y} 
-          H${x + width - borderRadius} 
-          Q${x + width},${y} ${x + width},${y + borderRadius} 
-          V${y + height - borderRadius} 
-          Q${x + width},${y + height} ${x + width - borderRadius},${y + height} 
-          H${x + borderRadius} 
-          Q${x},${y + height} ${x},${y + height - borderRadius} 
-          V${y + borderRadius} 
-          Q${x},${y} ${x + borderRadius},${y} 
-          Z`;
-}
-
 function createRoundedRectanglePathWithControlPoints(
   x,
   y,
