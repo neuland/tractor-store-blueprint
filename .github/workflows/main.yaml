@@ -28,3 +28,4 @@ jobs:
         with:
           service-id: ${{ secrets.RENDER_COM_SERVICE_ID }}
           api-key: ${{ secrets.RENDER_COM_API_KEY }}
+          wait-for-deployment: true
