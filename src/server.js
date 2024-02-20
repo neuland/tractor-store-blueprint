@@ -18,6 +18,9 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+const __dirname = new URL(".", import.meta.url).pathname;
+console.log({ __dirname });
+
 // inline @import rules to deliver a single CSS file
 async function inlinedCss(path) {
   const css = fs.readFileSync(path, "utf8");

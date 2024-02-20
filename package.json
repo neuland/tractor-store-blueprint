@@ -2,7 +2,7 @@
   "name": "tractor-store-blueprint",
   "version": "1.0.0",
   "description": "## What is The Tractor Store?",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
