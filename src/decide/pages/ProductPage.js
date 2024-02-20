@@ -7,7 +7,7 @@ import { html } from "../utils.js";
 import data from "../database/database.json" assert { type: "json" };
 
 export default ({ id, sku, req }) => {
-  const { name, variants } = data.products.find((p) => p.id === id);
+  const { name, variants, highlights } = data.products.find((p) => p.id === id);
   const variant = variants.find((v) => v.sku === sku) || variants[0];
   return html`<!doctype html>
     <html>
@@ -29,13 +29,18 @@ export default ({ id, sku, req }) => {
               width="400"
             />
             <div>
-              <p>Price ${variant.price} EUR</p>
-              <p>Variants:</p>
+              <h3>Colors</h3>
               <ul>
                 ${variants
                   .map((v) =>
                     Variant({ ...v, selected: v.sku === variant.sku }),
                   )
+                  .join("")}
+              </ul>
+              <h3>Highlights</h3>
+              <ul>
+                ${highlights
+                  .map((highlight) => html`<li>${highlight}</li>`)
                   .join("")}
               </ul>
             </div>
