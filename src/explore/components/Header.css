@@ -1,19 +1,21 @@
 .e_Header {
-  display: block;
+  height: 135px;
+  display: flex;
   margin: 0 0 2rem;
   border-bottom: 1px solid #eeebe2;
   box-shadow: 0 0 20px 10px #eb5b5920;
-  padding: 1rem;
+  align-items: center;
 }
 
 .e_Header__inner {
   display: flex;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   align-items: center;
+  flex: 1;
 }
 
 .e_Header__logo {
   display: block;
-  width: 210px;
+  width: 270px;
 }

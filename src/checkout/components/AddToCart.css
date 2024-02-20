@@ -1,5 +1,5 @@
 .c_AddToCart {
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .c_AddToCart__stock {
@@ -12,4 +12,93 @@
 
 .c_AddToCart__stock--empty {
   color: red;
+}
+
+.c_AddToCart__button {
+  --accent-color: #ff5a55;
+  display: block;
+  height: 50px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 2px;
+  border: 0;
+  background: linear-gradient(180deg, rgb(168, 168, 168), rgb(255, 255, 255)),
+    var(--accent-color);
+  box-shadow:
+    0 -2px 3px rgb(229, 229, 229),
+    0 2px 3px 2px rgb(255, 255, 255),
+    0 0 25px rgba(0, 0, 0, 0.05),
+    0 -10px 5px rgb(255, 255, 255) inset;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: all 0.3s;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.c_AddToCart__button::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  left: 0;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.19),
+      rgba(255, 255, 255, 0.3)
+    ),
+    var(--accent-color);
+  content: "";
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.1);
+  display: block;
+  transition:
+    all 0.3s,
+    background 0.1s 0.2s;
+}
+
+.c_AddToCart__inner {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: var(--accent-color);
+  height: 46px;
+  border-radius: inherit;
+  display: grid;
+  place-content: center;
+  transition: all 0.3s;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+  white-space: nowrap;
+}
+
+.c_AddToCart__button:hover .c_AddToCart__inner {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
+    var(--accent-color);
+}
+
+.c_AddToCart__button:active::before {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.16)),
+    var(--accent-color);
+  box-shadow:
+    0 0 3px rgba(0, 0, 0, 0.6) inset,
+    0 2px 1px -1px rgba(0, 0, 0, 0.1);
+  transform: scale(0.97);
+  transition:
+    all 0.1s,
+    background 0.05s;
+}
+
+.c_AddToCart__button:active .c_AddToCart__inner {
+  transform: scale(0.97);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    var(--accent-color);
+  transition: all 0.1s;
+  box-shadow:
+    0 5px 5px rgba(0, 0, 0, 0.2) inset,
+    0 -3px 3px rgba(255, 255, 255, 0.2) inset;
 }

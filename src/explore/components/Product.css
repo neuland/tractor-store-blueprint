@@ -26,3 +26,10 @@
   text-align: center;
   display: block;
 }
+
+.e_Product_price {
+  margin: 1rem 0;
+  color: black;
+  text-align: center;
+  display: block;
+}

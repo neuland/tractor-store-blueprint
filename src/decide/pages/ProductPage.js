@@ -25,7 +25,6 @@ export default ({ id, sku, req }) => {
       <body data-boundary="decide-page">
         ${Header({ req })}
         <main class="d_ProductPage">
-          <h2>${name}</h2>
           <div class="d_ProductPage_details">
             <img
               class="d_ProductPage_image"
@@ -33,22 +32,21 @@ export default ({ id, sku, req }) => {
               width="400"
             />
             <div>
-              <h3>Colors</h3>
-              <ul>
+              <h2 class="d_ProductPage__title">${name}</h2>
+              <ul class="d_ProductPage__highlights">
+                ${highlights
+                  .map((highlight) => html`<li>${highlight}</li>`)
+                  .join("")}
+              </ul>
+              <ul class="d_ProductPage__variants">
                 ${variants
                   .map((v) =>
                     Variant({ ...v, selected: v.sku === variant.sku }),
                   )
                   .join("")}
               </ul>
-              <h3>Highlights</h3>
-              <ul>
-                ${highlights
-                  .map((highlight) => html`<li>${highlight}</li>`)
-                  .join("")}
-              </ul>
+              ${AddToCart({ sku: variant.sku })}
             </div>
-            ${AddToCart({ sku: variant.sku })}
           </div>
         </main>
         ${Recommendations({ skus: [variant.sku] })} ${Footer()}

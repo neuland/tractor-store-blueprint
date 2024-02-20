@@ -2,16 +2,16 @@
   position: relative;
 }
 
-.c_MiniCart__icon {
+.c_MiniCart__button {
   display: block;
   height: 66px;
   border-radius: 33px;
   padding: 2px;
   border: 0;
   background: linear-gradient(180deg, rgb(168, 168, 168), rgb(255, 255, 255));
-  box-shadow: 
-    0 -2px 3px rgb(229, 229, 229), 
-    0 2px 3px 2px rgb(255, 255, 255), 
+  box-shadow:
+    0 -2px 3px rgb(229, 229, 229),
+    0 2px 3px 2px rgb(255, 255, 255),
     0 0 25px rgba(0, 0, 0, 0.05),
     0 -10px 5px rgb(255, 255, 255) inset;
   position: relative;
@@ -23,7 +23,7 @@
   text-decoration: none;
 }
 
-.c_MiniCart__icon::before {
+.c_MiniCart__button::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -34,10 +34,12 @@
   content: "";
   box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.1);
   display: block;
-  transition: all 0.3s, background 0.1s 0.2s;
+  transition:
+    all 0.3s,
+    background 0.1s 0.2s;
 }
 
-.c_MiniCart__icon__content {
+.c_MiniCart__inner {
   position: relative;
   padding-left: 25px;
   padding-right: 25px;
@@ -53,56 +55,81 @@
   white-space: nowrap;
 }
 
-.c_MiniCart__icon:hover .c_MiniCart__icon__content {
-  background-color: rgb(250, 250, 250)
+.c_MiniCart__button:hover .c_MiniCart__inner {
+  background-color: rgb(250, 250, 250);
 }
 
-
-.c_MiniCart__icon:active::before {
+.c_MiniCart__button:active::before {
   background: linear-gradient(0deg, rgb(220, 220, 220), rgb(205, 205, 205));
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6) inset, 0 2px 1px -1px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 0 3px rgba(0, 0, 0, 0.6) inset,
+    0 2px 1px -1px rgba(0, 0, 0, 0.1);
   transform: scale(0.97);
-  transition: all 0.1s, background 0.05s;
+  transition:
+    all 0.1s,
+    background 0.05s;
 }
 
-.c_MiniCart__icon:active .c_MiniCart__icon__content {
+.c_MiniCart__button:active .c_MiniCart__inner {
   transform: scale(0.97);
   background-color: rgb(240, 240, 240);
   transition: all 0.1s;
-  box-shadow: 
-    0 5px 5px rgba(0, 0, 0, 0.2) inset, 
+  box-shadow:
+    0 5px 5px rgba(0, 0, 0, 0.2) inset,
     0 -3px 3px rgba(255, 255, 255, 0.2) inset;
 }
 
-.c_MiniCart__button {
-  display: none;
+.c_MiniCart__quantity {
   position: absolute;
-  top: 100%;
-  width: 200px;
-  right: 0;
-  backdrop-filter: blur(10px);
-  border-right: 1px solid #eeebe2;
-  border-bottom: 1px solid #eeebe2;
-  border-left: 1px solid #eeebe2;
-  box-shadow: 0 20px 20px -10px #eb5b5920;
-  padding: 1rem;
+  top: 0px;
+  right: 0px;
+  background-color: #ff5a55;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  letter-spacing: normal;
+  height: 20px;
+  min-width: 20px;
+  display: grid;
+  place-content: center;
   text-align: center;
-  transform: translateY(1rem);
-  border-radius: 0 0 33px 33px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  font-variant-numeric: tabular-nums;
+  /* transform: scale(0);
+  opacity: 0; */
 }
 
-.c_MiniCart__button::before {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1rem;
-  top: -1rem;
-  left: 0;
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  33% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-.c_MiniCart:hover .c_MiniCart__button,
-.c_MiniCart--highlight .c_MiniCart__button {
-  background: rgb(255, 255, 255);
-  display: block;
+.c_MiniCart--highlight .c_MiniCart__inner svg {
+  animation: bounce 0.2s ease-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(-6deg);
+  }
+}
+
+.c_MiniCart--highlight .c_MiniCart__inner svg g {
+  transform-origin: center 7px;
+  animation: shake 0.2s infinite ease-in-out;
 }

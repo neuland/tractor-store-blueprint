@@ -11,14 +11,18 @@ export default ({ sku }) => {
     data-boundary="checkout-button"
   >
     <input type="hidden" name="sku" value="${sku}" />
-    <p>price: ${product.price} Øcken</p>
-    <button ${outOfStock ? "disabled" : ""}>add to cart</button>
-    ${product.inventory > 0
-      ? html`<p class="c_AddToCart__stock c_AddToCart__stock--ok">
-          ${product.inventory} in stock, free shipping
-        </p>`
-      : html`<p class="c_AddToCart__stock c_AddToCart__stock--empty">
-          out of stock
-        </p>`}
+    <div>
+      <p>price: ${product.price} Øcken</p>
+      ${product.inventory > 0
+        ? html`<p class="c_AddToCart__stock c_AddToCart__stock--ok">
+            ${product.inventory} in stock, free shipping
+          </p>`
+        : html`<p class="c_AddToCart__stock c_AddToCart__stock--empty">
+            out of stock
+          </p>`}
+    </div>
+    <button ${outOfStock ? "disabled" : ""} class="c_AddToCart__button">
+      <div class="c_AddToCart__inner">add to basket</div>
+    </button>
   </form>`;
 };

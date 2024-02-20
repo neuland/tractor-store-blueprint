@@ -1,9 +1,36 @@
 .d_ProductPage {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .d_ProductPage_details {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+}
+
+.d_ProductPage__title {
+  margin: 0;
+  font-size: 40px;
+}
+
+.d_ProductPage__highlights {
+  padding: 0;
+  list-style: none;
+}
+
+.d_ProductPage__highlights li {
+  margin-bottom: 1rem;
+}
+
+.d_ProductPage__variants {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.d_ProductPage__variants li {
+  white-space: nowrap;
+  padding: 0 0.5rem 0 0;
 }

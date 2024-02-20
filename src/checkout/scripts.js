@@ -27,7 +27,7 @@ document.addEventListener("checkout:cart-updated", async function () {
     $newMiniCart.classList.add("c_MiniCart--highlight");
     setTimeout(() => {
       $newMiniCart.classList.remove("c_MiniCart--highlight");
-    }, 5000);
+    }, 600);
   }
 });
 
