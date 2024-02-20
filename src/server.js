@@ -19,12 +19,16 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-const __rootDir = url.fileURLToPath(new URL("..", import.meta.url));
-console.log({ __rootDir });
+let __rootDir = url.fileURLToPath(new URL("..", import.meta.url));
+
+// fix render.com path resolution
+if (__rootDir.endsWith("src/")) {
+  __rootDir = __rootDir.slice(0, -4);
+}
 
 // inline @import rules to deliver a single CSS file
 async function inlinedCss(cssFile) {
-  const cssPath = `${__rootDir}/${cssFile}`;
+  const cssPath = `${__rootDir}${cssFile}`;
 
   const css = fs.readFileSync(cssPath, "utf8");
   const result = await postcss()

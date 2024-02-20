@@ -7,7 +7,11 @@ import { html } from "../utils.js";
 import data from "../database/database.json" assert { type: "json" };
 
 export default ({ id, sku, req }) => {
-  const { name, variants, highlights } = data.products.find((p) => p.id === id);
+  const {
+    name,
+    variants,
+    highlights = [],
+  } = data.products.find((p) => p.id === id);
   const variant = variants.find((v) => v.sku === sku) || variants[0];
   return html`<!doctype html>
     <html>
