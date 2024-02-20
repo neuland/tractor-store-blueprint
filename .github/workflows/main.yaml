@@ -24,7 +24,7 @@ jobs:
       - name: Run lint
         run: npm run lint
       - name: Deploy to production
-        uses: johnbeynon/render-deploy-action@v0.0.8
+        uses: johnbeynon/render-deploy-action@master
         with:
           service-id: ${{ secrets.RENDER_COM_SERVICE_ID }}
           api-key: ${{ secrets.RENDER_COM_API_KEY }}
