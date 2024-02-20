@@ -1,4 +1,5 @@
 import fs from "fs";
+import * as url from "url";
 import express from "express";
 import cookieParser from "cookie-parser";
 import postcss from "postcss";
@@ -18,13 +19,17 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-const __dirname = new URL(".", import.meta.url).pathname;
-console.log({ __dirname });
+const __rootDir = url.fileURLToPath(new URL("..", import.meta.url));
+console.log({ __rootDir });
 
 // inline @import rules to deliver a single CSS file
-async function inlinedCss(path) {
-  const css = fs.readFileSync(path, "utf8");
-  const result = await postcss().use(atImport()).process(css, { from: path });
+async function inlinedCss(cssFile) {
+  const cssPath = `${__rootDir}/${cssFile}`;
+
+  const css = fs.readFileSync(cssPath, "utf8");
+  const result = await postcss()
+    .use(atImport())
+    .process(css, { from: cssPath });
   return result.css;
 }
 
