@@ -11,8 +11,8 @@ export default ({ sku }) => {
     data-boundary="checkout-button"
   >
     <input type="hidden" name="sku" value="${sku}" />
-    <div>
-      <p>price: ${product.price} Øcken</p>
+    <div class="c_AddToCart__information">
+      <p>${product.price} €</p>
       ${product.inventory > 0
         ? html`<p class="c_AddToCart__stock c_AddToCart__stock--ok">
             ${product.inventory} in stock, free shipping
