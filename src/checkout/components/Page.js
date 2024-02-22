@@ -12,9 +12,9 @@ export default ({ content }) => {
       </head>
       <body data-boundary="checkout-page">
         ${content}
-        <script src="/explore/scripts.js" async></script>
-        <script src="/decide/scripts.js" async></script>
-        <script src="/checkout/scripts.js" async></script>
+        <script src="/explore/scripts.js" type="module"></script>
+        <script src="/decide/scripts.js" type="module"></script>
+        <script src="/checkout/scripts.js" type="module"></script>
         <script src="/cdn/js/helper.js" type="module"></script>
       </body>
     </html>`;

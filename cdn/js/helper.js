@@ -160,6 +160,23 @@ function readBoundaryFromCache(boundary, width, height) {
   return parser.parseFromString(entry.svg, "image/svg+xml").firstChild;
 }
 
+function setBackgroundImage(boundary, svgNode) {
+  const serializer = new XMLSerializer();
+  const svgStr = serializer.serializeToString(svgNode);
+  const encodedSvg = encodeURIComponent(svgStr);
+  const url = `url("data:image/svg+xml,${encodedSvg}")`;
+
+  // create or update existing (by boudary name) an inline stylesheet
+  const id = `${boundary}-style`;
+  let style = document.getElementById(id);
+  if (!style) {
+    style = document.createElement("style");
+    style.id = id;
+    document.head.appendChild(style);
+  }
+  style.innerHTML = `[data-boundary="${boundary}"] { background-image: ${url}; }`;
+}
+
 function generateRoughBoundaries() {
   window.requestAnimationFrame(() => {
     [...document.querySelectorAll("[data-boundary]")].forEach((el) => {
@@ -234,12 +251,7 @@ function generateRoughBoundaries() {
 
       svg.appendChild(node);
 
-      const serializer = new XMLSerializer();
-      const svgStr = serializer.serializeToString(svg);
-      const encodedSvg = encodeURIComponent(svgStr);
-      const url = `url("data:image/svg+xml,${encodedSvg}")`;
-      //el.style.backgroundColor = "white";
-      el.style.backgroundImage = url;
+      setBackgroundImage(boundary, svg);
     });
   });
 }
