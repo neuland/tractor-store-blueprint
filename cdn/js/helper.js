@@ -42,8 +42,12 @@ style.innerHTML = `
   font-style: normal;
 }
 body[data-boundary]::after {
-  top: auto;
-  bottom: 0.3rem;
+  top: 250px;
+  left: 0rem;
+  bottom: auto;
+  right: auto;
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
 }
 [data-boundary^="explore-"]::after { background-color: ${config.explore.stroke}; color: white }
 [data-boundary^="decide-"]::after { background-color: ${config.decide.stroke}; }
@@ -191,8 +195,8 @@ function generateRoughBoundaries() {
       const team = boundary.split("-")[0];
       const isPage = boundary.split("-")[1] === "page";
 
-      const inset = isPage ? 0 : 10;
-      const strokeWidth = isPage ? 0 : 2;
+      const inset = isPage ? -2 : 10;
+      const strokeWidth = isPage ? 15 : 3;
 
       const rectangle = createRoundedRectanglePathWithControlPoints(
         inset,
@@ -217,15 +221,15 @@ function generateRoughBoundaries() {
       let node = readBoundaryFromCache(boundary, width, height);
       if (!node) {
         node = rc.path(rectangle, {
-          roughness: 3,
+          roughness: isPage ? 6 : 3,
           strokeWidth,
           fillStyle: "sunburst",
-          fill: "rgb(10,150,10,0.5)",
           fillWeight: 0.5,
           hachureGap: 10,
-          disableMultiStroke: true,
-          strokeLineDash: [10, 5],
+          disableMultiStroke: false,
+          strokeLineDash: null,
           preserveVertices: true,
+          fill: isPage ? null : "rgb(10,150,10,0.5)",
           bowing: 0.5,
           ...config[team],
         });
