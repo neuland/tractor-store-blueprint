@@ -18,7 +18,6 @@ const config = {
     hachureAngle: 90 + Math.random() * 10, // angle of hachure,
   },
 };
-
 const style = document.createElement("style");
 style.innerHTML = `
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
@@ -139,6 +138,7 @@ function toggleBoundaries(active) {
 
 // call generateRoughBoundaries() when viewports are resized
 window.addEventListener("resize", generateRoughBoundaries);
+window.addEventListener("click", generateRoughBoundaries);
 
 function writeBoundaryToCache(svgNode, boundary, width, height) {
   const serializer = new XMLSerializer();
@@ -229,28 +229,9 @@ function generateRoughBoundaries() {
           bowing: 0.5,
           ...config[team],
         });
-        console.log(node);
         writeBoundaryToCache(node, boundary, width, height);
       }
-
-      // add gausien blur filter to node
-      //const filter = document.createElementNS(
-      //  "http://www.w3.org/2000/svg",
-      //  "filter",
-      //);
-      //filter.setAttribute("id", "blur");
-      //const feGaussianBlur = document.createElementNS(
-      //  "http://www.w3.org/2000/svg",
-      //  "feGaussianBlur",
-      //);
-      //feGaussianBlur.setAttribute("in", "SourceGraphic");
-      //feGaussianBlur.setAttribute("stdDeviation", "1");
-      //filter.appendChild(feGaussianBlur);
-      //svg.appendChild(filter);
-      //node.setAttribute("filter", "url(#blur)");
-
       svg.appendChild(node);
-
       setBackgroundImage(boundary, svg);
     });
   });

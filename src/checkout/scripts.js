@@ -2,16 +2,29 @@
 
 /* client side javascript */
 
-/* checkout page */
+/* checkout page store select */
 const $storePicker = document.querySelector(".c_Checkout_store");
 if ($storePicker) {
   $storePicker.addEventListener("explore:store-selected", function (e) {
     console.log("checkout: store-selected", e.detail);
-    document.getElementById("storeId").value = e.detail.storeId;
-    document.getElementById("street").value = e.detail.street;
-    document.getElementById("city").value = e.detail.city;
+    document.getElementById("storeId").value = e.detail;
   });
 }
+
+/* checkout page address */
+const $tabs = document.querySelectorAll(".c_Checkout_delivery details");
+$tabs.forEach((detail) => {
+  detail.querySelector("summary").addEventListener("click", (e) => {
+    e.preventDefault();
+    const wasOpen = detail.hasAttribute("open");
+    $tabs.forEach((d) => {
+      d.removeAttribute("open");
+    });
+    if (!wasOpen) {
+      detail.setAttribute("open", true);
+    }
+  });
+});
 
 /* mini cart */
 document.addEventListener("checkout:cart-updated", async function () {

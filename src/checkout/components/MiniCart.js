@@ -23,7 +23,7 @@ export default ({ req }) => {
             <clipPath id="a"><path fill="#fff" d="M0 0h33v33H0z" /></clipPath>
           </defs>
         </svg>
-        <div class="c_MiniCart__quantity">${quantity}</div>
+        <div class="c_MiniCart__quantity">${quantity || ""}</div>
       </div>
     </a>
   </div>`;

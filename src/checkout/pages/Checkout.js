@@ -16,15 +16,14 @@ export default () => {
         <label for="email">E-Mail</label>
         <input type="email" id="email" name="email" required />
       </fieldset>
-      <h3>Shipping Address</h3>
+
+      <h3>Store Pickup</h3>
       <fieldset>
         <div class="c_Checkout_store">${StorePicker()}</div>
-        <input type="hidden" id="storeId" name="storeId" />
-        <label for="street">Street</label>
-        <input type="text" id="street" name="street" required /><br />
-        <label for="city">City</label>
-        <input type="text" id="city" name="city" required />
+        <label for="street">Store ID</label>
+        <input type="text" id="storeId" name="storeId" readonly /><br />
       </fieldset>
+
       <button>place order</button>
     </form>
     <a href="/checkout/cart">back to cart</a>

@@ -1,3 +1,15 @@
 .e_StorePicker dialog::backdrop {
   backdrop-filter: blur(1px);
 }
+
+.e_StorePicker:not(.e_StorePicker--selected) .e_StorePicker_unselect {
+  display: none;
+}
+
+.e_StorePicker_dialog {
+  overflow: visible;
+}
+
+.e_StorePicker {
+  padding: 1rem;
+}
