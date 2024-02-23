@@ -1,11 +1,5 @@
 .e_Product {
   margin: 0;
-  transform: scale(1);
-  transition: transform 0.3s ease;
-}
-
-.e_Product:hover {
-  transform: scale(1.05);
 }
 
 .e_Product_link {

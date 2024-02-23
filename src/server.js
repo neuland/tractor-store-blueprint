@@ -13,10 +13,30 @@ import {
   handleRemoveFromCart,
 } from "./checkout/index.js";
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+
+// add cache header for static files
+app.use((req, res, next) => {
+  if (!isProduction) {
+    res.setHeader("Cache-Control", "no-store");
+  }
+  if (
+    req.url.endsWith(".css") ||
+    req.url.endsWith(".js") ||
+    req.url.startsWith("/cdn")
+  ) {
+    res.setHeader(
+      "Cache-Control",
+      `public, max-age=${isProduction ? 31536000 : 0}`,
+    );
+  }
+  next();
+});
 
 // inline @import rules to deliver a single CSS file
 async function inlinedCss(path) {

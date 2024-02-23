@@ -4,7 +4,7 @@
   "description": "## What is The Tractor Store?",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "NODE_ENV=production node src/server.js",
     "dev": "node --watch src/server.js",
     "database": "node src/explore/database/import.js && node src/decide/database/import.js && node src/checkout/database/import.js",
     "lint": "eslint .",

@@ -1,25 +1,28 @@
 /* globals document, window, XMLSerializer */
 import roughjs from "https://cdn.jsdelivr.net/npm/roughjs@4.6.6/+esm";
 
+// team specific styles
 const config = {
   explore: {
     fill: "rgba(255, 90, 84, 0.3)",
     stroke: "rgba(255, 90, 84, 1)",
-    hachureAngle: 30 + Math.random() * 10,
+    hachureAngle: 30,
   },
   decide: {
     fill: "rgba(84, 255, 144, 0.3)",
     stroke: "rgba(84, 255, 144, 1)",
-    hachureAngle: 60 + Math.random() * 10, // angle of hachure,
+    hachureAngle: 60,
   },
   checkout: {
     fill: "rgba(255, 222, 84, 0.3)",
     stroke: "rgba(255, 222, 84, 1)",
-    hachureAngle: 90 + Math.random() * 10, // angle of hachure,
+    hachureAngle: 90,
   },
 };
-const style = document.createElement("style");
-style.innerHTML = `
+
+function setBasicStyles() {
+  const style = document.createElement("style");
+  style.innerHTML = `
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
 [data-boundary] {
@@ -41,7 +44,7 @@ style.innerHTML = `
   font-weight: 400;
   font-style: normal;
 }
-body[data-boundary]::after {
+[data-boundary$="-page"]::after {
   top: 250px;
   left: 0rem;
   bottom: auto;
@@ -55,17 +58,20 @@ body[data-boundary]::after {
 
 html:not(.showBoundaries) [data-boundary] { background-image: none !important;}
 html:not(.showBoundaries) [data-boundary]:after { display: none; }
+html.showBoundaries img { mix-blend-mode: multiply; }
 `;
-document.head.appendChild(style);
+  document.head.appendChild(style);
+}
 
-function createRoundedRectanglePathWithControlPoints(
+// generates an svg path for a rounded rectangle with defined control points
+function generateRoundedRectangle({
   x,
   y,
   width,
   height,
   borderRadius,
   segmentLength,
-) {
+}) {
   const maxRadius = Math.min(width / 2, height / 2);
   borderRadius = Math.min(borderRadius, maxRadius);
 
@@ -128,22 +134,6 @@ function createRoundedRectanglePathWithControlPoints(
   return pathData.join(" ");
 }
 
-function toggleBoundaries(active) {
-  document.documentElement.classList.toggle("showBoundaries", active);
-  window.localStorage.setItem("showBoundaries", active);
-
-  if (!active) {
-    return;
-  }
-  generateRoughBoundaries();
-}
-
-//setInterval(generateRoughBoundaries, 100);
-
-// call generateRoughBoundaries() when viewports are resized
-window.addEventListener("resize", generateRoughBoundaries);
-window.addEventListener("click", generateRoughBoundaries);
-
 function writeBoundaryToCache(svgNode, boundary, width, height) {
   const serializer = new XMLSerializer();
   const svgStr = serializer.serializeToString(svgNode);
@@ -164,13 +154,13 @@ function readBoundaryFromCache(boundary, width, height) {
   return parser.parseFromString(entry.svg, "image/svg+xml").firstChild;
 }
 
-function setBackgroundImage(boundary, svgNode) {
+// creates or updates a style tag with the svg as background
+function setCssBackground(boundary, svgNode) {
   const serializer = new XMLSerializer();
   const svgStr = serializer.serializeToString(svgNode);
   const encodedSvg = encodeURIComponent(svgStr);
   const url = `url("data:image/svg+xml,${encodedSvg}")`;
 
-  // create or update existing (by boudary name) an inline stylesheet
   const id = `${boundary}-style`;
   let style = document.getElementById(id);
   if (!style) {
@@ -181,80 +171,118 @@ function setBackgroundImage(boundary, svgNode) {
   style.innerHTML = `[data-boundary="${boundary}"] { background-image: ${url}; }`;
 }
 
-function generateRoughBoundaries() {
-  window.requestAnimationFrame(() => {
-    [...document.querySelectorAll("[data-boundary]")].forEach((el) => {
-      const clientRect = el.getBoundingClientRect();
-      const width = Math.round(clientRect.width);
-      const height = Math.round(clientRect.height);
-      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-      svg.setAttribute("width", width);
-      svg.setAttribute("height", height);
+// generate a white background
+function generateWhiteBackground(rectangle) {
+  const bgNode = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  bgNode.setAttribute("d", rectangle);
+  bgNode.setAttribute("fill", "white");
+  return bgNode;
+}
 
-      const boundary = el.dataset.boundary;
-      const team = boundary.split("-")[0];
-      const isPage = boundary.split("-")[1] === "page";
-
-      const inset = isPage ? -2 : 10;
-      const strokeWidth = isPage ? 15 : 3;
-
-      const rectangle = createRoundedRectanglePathWithControlPoints(
-        inset,
-        inset,
-        width - 2 * inset,
-        height - 2 * inset,
-        10,
-        150,
-      );
-
-      // white background rectangle without rough.js
-      const bgNode = document.createElementNS(
-        "http://www.w3.org/2000/svg",
-        "path",
-      );
-      bgNode.setAttribute("d", rectangle);
-      bgNode.setAttribute("fill", "white");
-      svg.appendChild(bgNode);
-
-      // rough rectangle
-      const rc = roughjs.svg(svg);
-      let node = readBoundaryFromCache(boundary, width, height);
-      if (!node) {
-        node = rc.path(rectangle, {
-          roughness: isPage ? 6 : 3,
-          strokeWidth,
-          fillStyle: "sunburst",
-          fillWeight: 0.5,
-          hachureGap: 10,
-          disableMultiStroke: false,
-          strokeLineDash: null,
-          preserveVertices: true,
-          fill: isPage ? null : "rgb(10,150,10,0.5)",
-          bowing: 0.5,
-          ...config[team],
-        });
-        writeBoundaryToCache(node, boundary, width, height);
-      }
-      svg.appendChild(node);
-      setBackgroundImage(boundary, svg);
-    });
+// generate a rough boundary
+function generateBoundary(svg, rectangle, team, isPage) {
+  const rc = roughjs.svg(svg);
+  return rc.path(rectangle, {
+    bowing: 0.5,
+    disableMultiStroke: true,
+    fill: config[team].fill,
+    fillStyle: "hachure",
+    fillWeight: 1.5,
+    hachureAngle: config[team].hachureAngle,
+    hachureGap: 12,
+    preserveVertices: true,
+    roughness: isPage ? 6 : 3,
+    stroke: config[team].stroke,
+    strokeLineDash: null,
+    strokeWidth: isPage ? 15 : 3,
   });
 }
 
-const showBoundaries = window.localStorage.getItem("showBoundaries") === "true";
-toggleBoundaries(showBoundaries);
+function generateRoughBoundary(el) {
+  const clientRect = el.getBoundingClientRect();
+  const width = Math.round(clientRect.width);
+  const height = Math.round(clientRect.height);
 
-const checkbox = document.createElement("input");
-checkbox.type = "checkbox";
-checkbox.checked = showBoundaries;
-checkbox.addEventListener("change", (e) => toggleBoundaries(e.target.checked));
+  const boundary = el.dataset.boundary;
+  const team = boundary.split("-")[0];
+  const isPage = boundary.endsWith("-page");
 
-const label = document.createElement("label");
-label.appendChild(checkbox);
-label.appendChild(document.createTextNode(" show team boundaries"));
+  // basic shape and position of the boundary
+  const inset = isPage ? -2 : 10;
+  const rectangle = generateRoundedRectangle({
+    x: inset,
+    y: inset,
+    width: width - 2 * inset,
+    height: height - 2 * inset,
+    borderRadius: 10,
+    segmentLength: 150,
+  });
 
-const container = document.createElement("div");
-container.appendChild(label);
-container.style.cssText =
-  "position: fixed; bottom: 0; left: 0; background-color: rgba(255, 255, 255, 0.8); padding: 10px; -webkit-user-select: none; user-select: none;";
-document.body.appendChild(container);
+  // svg document
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("width", width);
+  svg.setAttribute("height", height);
+
+  // white background
+  svg.appendChild(generateWhiteBackground(rectangle));
+
+  // rough rectangle
+  let node = readBoundaryFromCache(boundary, width, height);
+  if (!node) {
+    node = generateBoundary(svg, rectangle, team, isPage);
+    writeBoundaryToCache(node, boundary, width, height);
+  }
+  svg.appendChild(node);
+
+  // apply to DOM
+  setCssBackground(boundary, svg);
+}
+
+function generateRoughBoundaries() {
+  const boundaries = document.querySelectorAll("[data-boundary]");
+  [...boundaries].forEach(generateRoughBoundary);
+}
+
+function toggleBoundaries(active) {
+  document.documentElement.classList.toggle("showBoundaries", active);
+  window.localStorage.setItem("showBoundaries", active);
+
+  if (!active) {
+    return;
+  }
+  generateRoughBoundaries();
+}
+
+function showToggleButton() {
+  const showBoundaries =
+    window.localStorage.getItem("showBoundaries") === "true";
+  toggleBoundaries(showBoundaries);
+
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.checked = showBoundaries;
+  checkbox.addEventListener("change", (e) =>
+    toggleBoundaries(e.target.checked),
+  );
+
+  const label = document.createElement("label");
+  label.appendChild(checkbox);
+  label.appendChild(document.createTextNode(" show team boundaries"));
+
+  const container = document.createElement("div");
+  container.appendChild(label);
+  container.style.cssText =
+    "position: fixed; bottom: 0; left: 0; background-color: rgba(255, 255, 255, 0.8); padding: 10px; -webkit-user-select: none; user-select: none;";
+  document.body.appendChild(container);
+}
+
+/**
+ * initialize
+ */
+
+setBasicStyles();
+showToggleButton();
+window.addEventListener("resize", () => {
+  window.requestAnimationFrame(generateRoughBoundaries);
+});
+window.addEventListener("click", generateRoughBoundaries);

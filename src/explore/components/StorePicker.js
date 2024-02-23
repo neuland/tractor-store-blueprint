@@ -5,7 +5,6 @@ export default () => {
   return html`<div class="e_StorePicker" data-boundary="explore-storepicker">
     <div class="e_StorePicker_selected"></div>
     <button class="e_StorePicker_choose" type="button">choose a store</button>
-    <button class="e_StorePicker_unselect" type="button">remove</button>
     <dialog
       class="e_StorePicker_dialog"
       data-boundary="explore-storepicker-dialog"
