@@ -21,6 +21,16 @@ export default ({ req }) => {
       <ul class="c_CartPage__lineItems">
         ${lineItems.map(LineItem).join("")}
       </ul>
+      <hr />
+      <p class="c_CartPage__total">
+        Total:
+        ${lineItems.reduce(
+          (acc, { price, quantity }) => acc + price * quantity,
+          0,
+        )}
+        Ø
+      </p>
+
       <form action="/checkout/checkout" method="get">
         <button>checkout</button>
       </form>

@@ -7,3 +7,9 @@
   list-style: none;
   padding: 0;
 }
+
+.c_CartPage__total {
+  margin-top: 20px;
+  text-align: right;
+  font-weight: bold;
+}
