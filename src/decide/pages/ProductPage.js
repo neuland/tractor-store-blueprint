@@ -48,8 +48,9 @@ export default ({ id, sku, req }) => {
               ${AddToCart({ sku: variant.sku })}
             </div>
           </div>
+          ${Recommendations({ skus: [variant.sku] })}
         </main>
-        ${Recommendations({ skus: [variant.sku] })} ${Footer()}
+        ${Footer()}
         <script src="/explore/scripts.js" type="module"></script>
         <script src="/decide/scripts.js" type="module"></script>
         <script src="/checkout/scripts.js" type="module"></script>

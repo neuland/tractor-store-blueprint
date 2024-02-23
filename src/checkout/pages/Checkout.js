@@ -8,26 +8,28 @@ import Footer from "../../explore/components/Footer.js";
 
 export default () => {
   const content = html`
-    ${CompactHeader()}
-    <h2>Checkout</h2>
-    <form action="/checkout/thanks" method="post">
-      <h3>Personal Data</h3>
-      <fieldset>
-        <label for="email">E-Mail</label>
-        <input type="email" id="email" name="email" required />
-      </fieldset>
+    <main class="c_Checkout">
+      ${CompactHeader()}
+      <h2>Checkout</h2>
+      <form action="/checkout/thanks" method="post">
+        <h3>Personal Data</h3>
+        <fieldset>
+          <label for="email">E-Mail</label>
+          <input type="email" id="email" name="email" required />
+        </fieldset>
 
-      <h3>Store Pickup</h3>
-      <fieldset>
-        <div class="c_Checkout_store">${StorePicker()}</div>
-        <label for="street">Store ID</label>
-        <input type="text" id="storeId" name="storeId" readonly /><br />
-      </fieldset>
+        <h3>Store Pickup</h3>
+        <fieldset>
+          <div class="c_Checkout_store">${StorePicker()}</div>
+          <label for="street">Store ID</label>
+          <input type="text" id="storeId" name="storeId" readonly /><br />
+        </fieldset>
 
-      <button>place order</button>
-    </form>
-    <a href="/checkout/cart">back to cart</a>
-    ${Footer()}
+        <button>place order</button>
+      </form>
+      <a href="/checkout/cart">back to cart</a>
+      ${Footer()}
+    </main>
   `;
   return Page({ content });
 };

@@ -28,6 +28,7 @@ function setBasicStyles() {
 [data-boundary] {
   position: relative;
   background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 [data-boundary]::after {
   display: block;
