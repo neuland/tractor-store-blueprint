@@ -1,5 +1,6 @@
 .d_ProductPage {
   margin: 0 auto;
+  padding-bottom: 5rem;
   max-width: 1000px;
 }
 
@@ -7,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 1rem;
 }
 
 .d_ProductPage__title {

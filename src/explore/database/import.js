@@ -27,6 +27,16 @@ function toProduct(product) {
   };
 }
 
+function toVariant(product, variant) {
+  return {
+    name: `${product.name} ${variant.name}`,
+    sku: variant.sku,
+    product: product.id,
+    image: variant.image,
+    url: productUrl(product.id, variant.sku),
+  };
+}
+
 const database = {
   categories: [
     {
@@ -43,16 +53,21 @@ const database = {
     },
   ],
   recommendations: {
-    /*
-    "ST-001-RD": ["GC-001-BK", "SP-001-BK"].map(skuToProduct),
-    "ST-001-BL": ["GC-001-BK", "SP-001-BK"].map(skuToProduct),
-    "ST-001-GN": ["GC-001-GE", "SP-001-GE"].map(skuToProduct),
-    "PT-001-SL": ["LW-001-LG", "SP-001-BK"].map(skuToProduct),
-    "PT-001-GD": ["LW-001-XL", "SP-001-BK"].map(skuToProduct),
-    "PT-001-PT": ["LW-001-XL", "SP-001-BK"].map(skuToProduct),
-    "LW-001-LG": ["LW-001-XL"].map(skuToProduct),
-    "LW-001-XL": ["GC-001-BK"].map(skuToProduct),
-    */
+    relations: {
+      "AU-01-SI": ["AU-02-GG", "AU-04-BK"],
+      "AU-04-RD": ["AU-03-RD", "AU-02-OG", "AU-05-ZH"],
+      "AU-05-ZH": ["AU-07-MT", "AU-01-SI", "AU-02-GG"],
+      "AU-03-YE": ["AU-06-CZ", "AU-07-YE"],
+    },
+    // object of sku to variant for lookup
+    variants: products
+      .flatMap((product) =>
+        product.variants.map((variant) => toVariant(product, variant)),
+      )
+      .reduce((res, variant) => {
+        res[variant.sku] = variant;
+        return res;
+      }, {}),
   },
   stores: [
     {

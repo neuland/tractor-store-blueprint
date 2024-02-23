@@ -132,7 +132,275 @@
       ]
     }
   ],
-  "recommendations": {},
+  "recommendations": {
+    "relations": {
+      "AU-01-SI": [
+        "AU-02-GG",
+        "AU-04-BK"
+      ],
+      "AU-04-RD": [
+        "AU-03-RD",
+        "AU-02-OG",
+        "AU-05-ZH"
+      ],
+      "AU-05-ZH": [
+        "AU-07-MT",
+        "AU-01-SI",
+        "AU-02-GG"
+      ],
+      "AU-03-YE": [
+        "AU-06-CZ",
+        "AU-07-YE"
+      ]
+    },
+    "variants": {
+      "AU-01-SI": {
+        "name": "TerraFirma AutoCultivator T-300 Silver",
+        "sku": "AU-01-SI",
+        "product": "AU-01",
+        "image": "/cdn/img/product/AU-01-SI.png",
+        "url": "/product/AU-01?sku=AU-01-SI"
+      },
+      "AU-02-OG": {
+        "name": "AgriTech Titan Sunset Copper",
+        "sku": "AU-02-OG",
+        "product": "AU-02",
+        "image": "/cdn/img/product/AU-02-OG.png",
+        "url": "/product/AU-02?sku=AU-02-OG"
+      },
+      "AU-02-BL": {
+        "name": "AgriTech Titan Cosmic Sapphire",
+        "sku": "AU-02-BL",
+        "product": "AU-02",
+        "image": "/cdn/img/product/AU-02-BL.png",
+        "url": "/product/AU-02?sku=AU-02-BL"
+      },
+      "AU-02-GG": {
+        "name": "AgriTech Titan Verdant Shadow",
+        "sku": "AU-02-GG",
+        "product": "AU-02",
+        "image": "/cdn/img/product/AU-02-GG.png",
+        "url": "/product/AU-02?sku=AU-02-GG"
+      },
+      "AU-03-TQ": {
+        "name": "AgriMaster Navigator Turquoise Titan",
+        "sku": "AU-03-TQ",
+        "product": "AU-03",
+        "image": "/cdn/img/product/AU-03-TQ.png",
+        "url": "/product/AU-03?sku=AU-03-TQ"
+      },
+      "AU-03-PL": {
+        "name": "AgriMaster Navigator Majestic Violet",
+        "sku": "AU-03-PL",
+        "product": "AU-03",
+        "image": "/cdn/img/product/AU-03-PL.png",
+        "url": "/product/AU-03?sku=AU-03-PL"
+      },
+      "AU-03-RD": {
+        "name": "AgriMaster Navigator Scarlet Dynamo",
+        "sku": "AU-03-RD",
+        "product": "AU-03",
+        "image": "/cdn/img/product/AU-03-RD.png",
+        "url": "/product/AU-03?sku=AU-03-RD"
+      },
+      "AU-03-YE": {
+        "name": "AgriMaster Navigator Sunbeam Yellow",
+        "sku": "AU-03-YE",
+        "product": "AU-03",
+        "image": "/cdn/img/product/AU-03-YE.png",
+        "url": "/product/AU-03?sku=AU-03-YE"
+      },
+      "AU-04-RD": {
+        "name": "Sapphire Sunworker 460R Ruby Red",
+        "sku": "AU-04-RD",
+        "product": "AU-04",
+        "image": "/cdn/img/product/AU-04-RD.png",
+        "url": "/product/AU-04?sku=AU-04-RD"
+      },
+      "AU-04-BK": {
+        "name": "Sapphire Sunworker 460R Midnight Onyx",
+        "sku": "AU-04-BK",
+        "product": "AU-04",
+        "image": "/cdn/img/product/AU-04-BK.png",
+        "url": "/product/AU-04?sku=AU-04-BK"
+      },
+      "AU-05-ZH": {
+        "name": "AgriTech Crop Commander Zestful Horizon",
+        "sku": "AU-05-ZH",
+        "product": "AU-05",
+        "image": "/cdn/img/product/AU-05-ZH.png",
+        "url": "/product/AU-05?sku=AU-05-ZH"
+      },
+      "AU-06-CZ": {
+        "name": "AgriTech Field Sovereign Canary Zenith",
+        "sku": "AU-06-CZ",
+        "product": "AU-06",
+        "image": "/cdn/img/product/AU-06-CZ.png",
+        "url": "/product/AU-06?sku=AU-06-CZ"
+      },
+      "AU-06-MT": {
+        "name": "AgriTech Field Sovereign Minted Jade",
+        "sku": "AU-06-MT",
+        "product": "AU-06",
+        "image": "/cdn/img/product/AU-06-MT.png",
+        "url": "/product/AU-06?sku=AU-06-MT"
+      },
+      "AU-07-MT": {
+        "name": "Verde Voyager Glacial Mint",
+        "sku": "AU-07-MT",
+        "product": "AU-07",
+        "image": "/cdn/img/product/AU-07-MT.png",
+        "url": "/product/AU-07?sku=AU-07-MT"
+      },
+      "AU-07-YE": {
+        "name": "Verde Voyager Sunbeam Yellow",
+        "sku": "AU-07-YE",
+        "product": "AU-07",
+        "image": "/cdn/img/product/AU-07-YE.png",
+        "url": "/product/AU-07?sku=AU-07-YE"
+      },
+      "CL-005-100": {
+        "name": "Golden Grain Harvester 520L 100hp",
+        "sku": "CL-005-100",
+        "product": "CL-005",
+        "image": "/cdn/img/product/CL-005.png",
+        "url": "/product/CL-005?sku=CL-005-100"
+      },
+      "CL-005-200": {
+        "name": "Golden Grain Harvester 520L 200hp",
+        "sku": "CL-005-200",
+        "product": "CL-005",
+        "image": "/cdn/img/product/CL-005.png",
+        "url": "/product/CL-005?sku=CL-005-200"
+      },
+      "CL-006-100": {
+        "name": "Jasper Journeyman 670H 100hp",
+        "sku": "CL-006-100",
+        "product": "CL-006",
+        "image": "/cdn/img/product/CL-006.png",
+        "url": "/product/CL-006?sku=CL-006-100"
+      },
+      "CL-006-200": {
+        "name": "Jasper Journeyman 670H 200hp",
+        "sku": "CL-006-200",
+        "product": "CL-006",
+        "image": "/cdn/img/product/CL-006.png",
+        "url": "/product/CL-006?sku=CL-006-200"
+      },
+      "CL-007-100": {
+        "name": "Garnet Grove Guardian 560S 100hp",
+        "sku": "CL-007-100",
+        "product": "CL-007",
+        "image": "/cdn/img/product/CL-007.png",
+        "url": "/product/CL-007?sku=CL-007-100"
+      },
+      "CL-007-200": {
+        "name": "Garnet Grove Guardian 560S 200hp",
+        "sku": "CL-007-200",
+        "product": "CL-007",
+        "image": "/cdn/img/product/CL-007.png",
+        "url": "/product/CL-007?sku=CL-007-200"
+      },
+      "CL-008-100": {
+        "name": "Sienna Soil Sovereign 370X 100hp",
+        "sku": "CL-008-100",
+        "product": "CL-008",
+        "image": "/cdn/img/product/CL-008.png",
+        "url": "/product/CL-008?sku=CL-008-100"
+      },
+      "CL-008-200": {
+        "name": "Sienna Soil Sovereign 370X 200hp",
+        "sku": "CL-008-200",
+        "product": "CL-008",
+        "image": "/cdn/img/product/CL-008.png",
+        "url": "/product/CL-008?sku=CL-008-200"
+      },
+      "CL-009-100": {
+        "name": "Maroon Meadow Marshal 530Q 100hp",
+        "sku": "CL-009-100",
+        "product": "CL-009",
+        "image": "/cdn/img/product/CL-009.png",
+        "url": "/product/CL-009?sku=CL-009-100"
+      },
+      "CL-009-200": {
+        "name": "Maroon Meadow Marshal 530Q 200hp",
+        "sku": "CL-009-200",
+        "product": "CL-009",
+        "image": "/cdn/img/product/CL-009.png",
+        "url": "/product/CL-009?sku=CL-009-200"
+      },
+      "CL-010-100": {
+        "name": "Quartz Quarry Queen 360L 100hp",
+        "sku": "CL-010-100",
+        "product": "CL-010",
+        "image": "/cdn/img/product/CL-010.png",
+        "url": "/product/CL-010?sku=CL-010-100"
+      },
+      "CL-010-200": {
+        "name": "Quartz Quarry Queen 360L 200hp",
+        "sku": "CL-010-200",
+        "product": "CL-010",
+        "image": "/cdn/img/product/CL-010.png",
+        "url": "/product/CL-010?sku=CL-010-200"
+      },
+      "CL-011-100": {
+        "name": "Steel Seed Sower 470W 100hp",
+        "sku": "CL-011-100",
+        "product": "CL-011",
+        "image": "/cdn/img/product/CL-011.png",
+        "url": "/product/CL-011?sku=CL-011-100"
+      },
+      "CL-011-200": {
+        "name": "Steel Seed Sower 470W 200hp",
+        "sku": "CL-011-200",
+        "product": "CL-011",
+        "image": "/cdn/img/product/CL-011.png",
+        "url": "/product/CL-011?sku=CL-011-200"
+      },
+      "CL-012-100": {
+        "name": "Cobalt Countryside Cruiser 340M 100hp",
+        "sku": "CL-012-100",
+        "product": "CL-012",
+        "image": "/cdn/img/product/CL-012.png",
+        "url": "/product/CL-012?sku=CL-012-100"
+      },
+      "CL-012-200": {
+        "name": "Cobalt Countryside Cruiser 340M 200hp",
+        "sku": "CL-012-200",
+        "product": "CL-012",
+        "image": "/cdn/img/product/CL-012.png",
+        "url": "/product/CL-012?sku=CL-012-200"
+      },
+      "CL-013-100": {
+        "name": "Cerulean Crop Commander 310A 100hp",
+        "sku": "CL-013-100",
+        "product": "CL-013",
+        "image": "/cdn/img/product/CL-013.png",
+        "url": "/product/CL-013?sku=CL-013-100"
+      },
+      "CL-013-200": {
+        "name": "Cerulean Crop Commander 310A 200hp",
+        "sku": "CL-013-200",
+        "product": "CL-013",
+        "image": "/cdn/img/product/CL-013.png",
+        "url": "/product/CL-013?sku=CL-013-200"
+      },
+      "AU-001-100": {
+        "name": "Futuro Fieldmaster 800Xi 100hp",
+        "sku": "AU-001-100",
+        "product": "AU-001",
+        "image": "/cdn/img/product/AU-001.png",
+        "url": "/product/AU-001?sku=AU-001-100"
+      },
+      "AU-001-200": {
+        "name": "Futuro Fieldmaster 800Xi 200hp",
+        "sku": "AU-001-200",
+        "product": "AU-001",
+        "image": "/cdn/img/product/AU-001.png",
+        "url": "/product/AU-001?sku=AU-001-200"
+      }
+    }
+  },
   "stores": [
     {
       "id": "s1",

@@ -1,0 +1,10 @@
+.e_Recommendations {
+  padding: 2rem;
+}
+
+.e_Recommendations_list {
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  list-style-type: none;
+}
