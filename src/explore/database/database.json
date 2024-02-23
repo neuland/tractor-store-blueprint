@@ -5,67 +5,109 @@
       "name": "Classics",
       "products": [
         {
-          "name": "Golden Grain Harvester 520L",
-          "id": "CL-005",
-          "image": "/cdn/img/product/CL-005.png",
-          "startPrice": 1000,
-          "url": "/product/CL-005"
+          "name": "Heritage Workhorse",
+          "id": "CL-01",
+          "image": "/cdn/img/product/CL-01-GR.png",
+          "startPrice": 2500,
+          "url": "/product/CL-01"
         },
         {
-          "name": "Jasper Journeyman 670H",
-          "id": "CL-006",
-          "image": "/cdn/img/product/CL-006.png",
-          "startPrice": 1000,
-          "url": "/product/CL-006"
+          "name": "Falcon Crest Farm",
+          "id": "CL-02",
+          "image": "/cdn/img/product/CL-02-BL.png",
+          "startPrice": 2600,
+          "url": "/product/CL-02"
         },
         {
-          "name": "Garnet Grove Guardian 560S",
-          "id": "CL-007",
-          "image": "/cdn/img/product/CL-007.png",
-          "startPrice": 1000,
-          "url": "/product/CL-007"
+          "name": "Falcon Crest Work",
+          "id": "CL-03",
+          "image": "/cdn/img/product/CL-03-GR.png",
+          "startPrice": 2300,
+          "url": "/product/CL-03"
         },
         {
-          "name": "Sienna Soil Sovereign 370X",
-          "id": "CL-008",
-          "image": "/cdn/img/product/CL-008.png",
-          "startPrice": 1000,
-          "url": "/product/CL-008"
+          "name": "Broadfield Majestic",
+          "id": "CL-04",
+          "image": "/cdn/img/product/CL-04-BL.png",
+          "startPrice": 2200,
+          "url": "/product/CL-04"
         },
         {
-          "name": "Maroon Meadow Marshal 530Q",
-          "id": "CL-009",
-          "image": "/cdn/img/product/CL-009.png",
-          "startPrice": 1000,
-          "url": "/product/CL-009"
+          "name": "Countryside Commander",
+          "id": "CL-05",
+          "image": "/cdn/img/product/CL-05-PT.png",
+          "startPrice": 2700,
+          "url": "/product/CL-05"
         },
         {
-          "name": "Quartz Quarry Queen 360L",
-          "id": "CL-010",
-          "image": "/cdn/img/product/CL-010.png",
-          "startPrice": 1000,
-          "url": "/product/CL-010"
+          "name": "Danamark Steadfast",
+          "id": "CL-06",
+          "image": "/cdn/img/product/CL-06-MT.png",
+          "startPrice": 2800,
+          "url": "/product/CL-06"
         },
         {
-          "name": "Steel Seed Sower 470W",
-          "id": "CL-011",
-          "image": "/cdn/img/product/CL-011.png",
-          "startPrice": 1000,
-          "url": "/product/CL-011"
+          "name": "Greenland Rover",
+          "id": "CL-07",
+          "image": "/cdn/img/product/CL-07-GR.png",
+          "startPrice": 2900,
+          "url": "/product/CL-07"
         },
         {
-          "name": "Cobalt Countryside Cruiser 340M",
-          "id": "CL-012",
-          "image": "/cdn/img/product/CL-012.png",
-          "startPrice": 1000,
-          "url": "/product/CL-012"
+          "name": "Holland Hamster",
+          "id": "CL-08",
+          "image": "/cdn/img/product/CL-08-GR.png",
+          "startPrice": 2750,
+          "url": "/product/CL-08"
         },
         {
-          "name": "Cerulean Crop Commander 310A",
-          "id": "CL-013",
-          "image": "/cdn/img/product/CL-013.png",
-          "startPrice": 1000,
-          "url": "/product/CL-013"
+          "name": "TerraFirma Veneto",
+          "id": "CL-09",
+          "image": "/cdn/img/product/CL-09-BL.png",
+          "startPrice": 2950,
+          "url": "/product/CL-09"
+        },
+        {
+          "name": "Global Gallant",
+          "id": "CL-10",
+          "image": "/cdn/img/product/CL-10-SD.png",
+          "startPrice": 2600,
+          "url": "/product/CL-10"
+        },
+        {
+          "name": "Scandinavia Sower",
+          "id": "CL-11",
+          "image": "/cdn/img/product/CL-11-SK.png",
+          "startPrice": 3100,
+          "url": "/product/CL-11"
+        },
+        {
+          "name": "Celerity Cruiser",
+          "id": "CL-12",
+          "image": "/cdn/img/product/CL-12-BL.png",
+          "startPrice": 3200,
+          "url": "/product/CL-12"
+        },
+        {
+          "name": "Rapid Racer",
+          "id": "CL-13",
+          "image": "/cdn/img/product/CL-13-BL.png",
+          "startPrice": 7500,
+          "url": "/product/CL-13"
+        },
+        {
+          "name": "Caribbean Cruiser",
+          "id": "CL-14",
+          "image": "/cdn/img/product/CL-14-GR.png",
+          "startPrice": 2300,
+          "url": "/product/CL-14"
+        },
+        {
+          "name": "Fieldmaster Classic",
+          "id": "CL-15",
+          "image": "/cdn/img/product/CL-15-PI.png",
+          "startPrice": 6200,
+          "url": "/product/CL-15"
         }
       ]
     },
@@ -81,14 +123,14 @@
           "url": "/product/AU-01"
         },
         {
-          "name": "AgriTech Titan",
+          "name": "SmartFarm Titan",
           "id": "AU-02",
           "image": "/cdn/img/product/AU-02-OG.png",
           "startPrice": 1000,
           "url": "/product/AU-02"
         },
         {
-          "name": "AgriMaster Navigator",
+          "name": "FutureHarvest Navigator",
           "id": "AU-03",
           "image": "/cdn/img/product/AU-03-TQ.png",
           "startPrice": 1600,
@@ -102,14 +144,14 @@
           "url": "/product/AU-04"
         },
         {
-          "name": "AgriTech Crop Commander",
+          "name": "EcoGrow Crop Commander",
           "id": "AU-05",
           "image": "/cdn/img/product/AU-05-ZH.png",
           "startPrice": 3400,
           "url": "/product/AU-05"
         },
         {
-          "name": "AgriTech Field Sovereign",
+          "name": "FarmFleet Sovereign",
           "id": "AU-06",
           "image": "/cdn/img/product/AU-06-CZ.png",
           "startPrice": 2100,
@@ -123,11 +165,11 @@
           "url": "/product/AU-07"
         },
         {
-          "name": "Futuro Fieldmaster 800Xi",
-          "id": "AU-001",
-          "image": "/cdn/img/product/AU-001.png",
-          "startPrice": 1000,
-          "url": "/product/AU-001"
+          "name": "Field Pioneer",
+          "id": "AU-08",
+          "image": "/cdn/img/product/AU-08-WH.png",
+          "startPrice": 4500,
+          "url": "/product/AU-08"
         }
       ]
     }
@@ -162,49 +204,49 @@
         "url": "/product/AU-01?sku=AU-01-SI"
       },
       "AU-02-OG": {
-        "name": "AgriTech Titan Sunset Copper",
+        "name": "SmartFarm Titan Sunset Copper",
         "sku": "AU-02-OG",
         "product": "AU-02",
         "image": "/cdn/img/product/AU-02-OG.png",
         "url": "/product/AU-02?sku=AU-02-OG"
       },
       "AU-02-BL": {
-        "name": "AgriTech Titan Cosmic Sapphire",
+        "name": "SmartFarm Titan Cosmic Sapphire",
         "sku": "AU-02-BL",
         "product": "AU-02",
         "image": "/cdn/img/product/AU-02-BL.png",
         "url": "/product/AU-02?sku=AU-02-BL"
       },
       "AU-02-GG": {
-        "name": "AgriTech Titan Verdant Shadow",
+        "name": "SmartFarm Titan Verdant Shadow",
         "sku": "AU-02-GG",
         "product": "AU-02",
         "image": "/cdn/img/product/AU-02-GG.png",
         "url": "/product/AU-02?sku=AU-02-GG"
       },
       "AU-03-TQ": {
-        "name": "AgriMaster Navigator Turquoise Titan",
+        "name": "FutureHarvest Navigator Turquoise Titan",
         "sku": "AU-03-TQ",
         "product": "AU-03",
         "image": "/cdn/img/product/AU-03-TQ.png",
         "url": "/product/AU-03?sku=AU-03-TQ"
       },
       "AU-03-PL": {
-        "name": "AgriMaster Navigator Majestic Violet",
+        "name": "FutureHarvest Navigator Majestic Violet",
         "sku": "AU-03-PL",
         "product": "AU-03",
         "image": "/cdn/img/product/AU-03-PL.png",
         "url": "/product/AU-03?sku=AU-03-PL"
       },
       "AU-03-RD": {
-        "name": "AgriMaster Navigator Scarlet Dynamo",
+        "name": "FutureHarvest Navigator Scarlet Dynamo",
         "sku": "AU-03-RD",
         "product": "AU-03",
         "image": "/cdn/img/product/AU-03-RD.png",
         "url": "/product/AU-03?sku=AU-03-RD"
       },
       "AU-03-YE": {
-        "name": "AgriMaster Navigator Sunbeam Yellow",
+        "name": "FutureHarvest Navigator Sunbeam Yellow",
         "sku": "AU-03-YE",
         "product": "AU-03",
         "image": "/cdn/img/product/AU-03-YE.png",
@@ -225,21 +267,21 @@
         "url": "/product/AU-04?sku=AU-04-BK"
       },
       "AU-05-ZH": {
-        "name": "AgriTech Crop Commander Zestful Horizon",
+        "name": "EcoGrow Crop Commander Zestful Horizon",
         "sku": "AU-05-ZH",
         "product": "AU-05",
         "image": "/cdn/img/product/AU-05-ZH.png",
         "url": "/product/AU-05?sku=AU-05-ZH"
       },
       "AU-06-CZ": {
-        "name": "AgriTech Field Sovereign Canary Zenith",
+        "name": "FarmFleet Sovereign Canary Zenith",
         "sku": "AU-06-CZ",
         "product": "AU-06",
         "image": "/cdn/img/product/AU-06-CZ.png",
         "url": "/product/AU-06?sku=AU-06-CZ"
       },
       "AU-06-MT": {
-        "name": "AgriTech Field Sovereign Minted Jade",
+        "name": "FarmFleet Sovereign Minted Jade",
         "sku": "AU-06-MT",
         "product": "AU-06",
         "image": "/cdn/img/product/AU-06-MT.png",
@@ -259,145 +301,229 @@
         "image": "/cdn/img/product/AU-07-YE.png",
         "url": "/product/AU-07?sku=AU-07-YE"
       },
-      "CL-005-100": {
-        "name": "Golden Grain Harvester 520L 100hp",
-        "sku": "CL-005-100",
-        "product": "CL-005",
-        "image": "/cdn/img/product/CL-005.png",
-        "url": "/product/CL-005?sku=CL-005-100"
+      "AU-08-WH": {
+        "name": "Field Pioneer Polar White",
+        "sku": "AU-08-WH",
+        "product": "AU-08",
+        "image": "/cdn/img/product/AU-08-WH.png",
+        "url": "/product/AU-08?sku=AU-08-WH"
       },
-      "CL-005-200": {
-        "name": "Golden Grain Harvester 520L 200hp",
-        "sku": "CL-005-200",
-        "product": "CL-005",
-        "image": "/cdn/img/product/CL-005.png",
-        "url": "/product/CL-005?sku=CL-005-200"
+      "CL-01-GR": {
+        "name": "Heritage Workhorse Verdant Field",
+        "sku": "CL-01-GR",
+        "product": "CL-01",
+        "image": "/cdn/img/product/CL-01-GR.png",
+        "url": "/product/CL-01?sku=CL-01-GR"
       },
-      "CL-006-100": {
-        "name": "Jasper Journeyman 670H 100hp",
-        "sku": "CL-006-100",
-        "product": "CL-006",
-        "image": "/cdn/img/product/CL-006.png",
-        "url": "/product/CL-006?sku=CL-006-100"
+      "CL-01-GY": {
+        "name": "Heritage Workhorse Stormy Sky",
+        "sku": "CL-01-GY",
+        "product": "CL-01",
+        "image": "/cdn/img/product/CL-01-GY.png",
+        "url": "/product/CL-01?sku=CL-01-GY"
       },
-      "CL-006-200": {
-        "name": "Jasper Journeyman 670H 200hp",
-        "sku": "CL-006-200",
-        "product": "CL-006",
-        "image": "/cdn/img/product/CL-006.png",
-        "url": "/product/CL-006?sku=CL-006-200"
+      "CL-02-BL": {
+        "name": "Falcon Crest Farm Cerulean Classic",
+        "sku": "CL-02-BL",
+        "product": "CL-02",
+        "image": "/cdn/img/product/CL-02-BL.png",
+        "url": "/product/CL-02?sku=CL-02-BL"
       },
-      "CL-007-100": {
-        "name": "Garnet Grove Guardian 560S 100hp",
-        "sku": "CL-007-100",
-        "product": "CL-007",
-        "image": "/cdn/img/product/CL-007.png",
-        "url": "/product/CL-007?sku=CL-007-100"
+      "CL-03-GR": {
+        "name": "Falcon Crest Work Meadow Green",
+        "sku": "CL-03-GR",
+        "product": "CL-03",
+        "image": "/cdn/img/product/CL-03-GR.png",
+        "url": "/product/CL-03?sku=CL-03-GR"
       },
-      "CL-007-200": {
-        "name": "Garnet Grove Guardian 560S 200hp",
-        "sku": "CL-007-200",
-        "product": "CL-007",
-        "image": "/cdn/img/product/CL-007.png",
-        "url": "/product/CL-007?sku=CL-007-200"
+      "CL-03-PI": {
+        "name": "Falcon Crest Work Rustic Rose",
+        "sku": "CL-03-PI",
+        "product": "CL-03",
+        "image": "/cdn/img/product/CL-03-PI.png",
+        "url": "/product/CL-03?sku=CL-03-PI"
       },
-      "CL-008-100": {
-        "name": "Sienna Soil Sovereign 370X 100hp",
-        "sku": "CL-008-100",
-        "product": "CL-008",
-        "image": "/cdn/img/product/CL-008.png",
-        "url": "/product/CL-008?sku=CL-008-100"
+      "CL-03-YE": {
+        "name": "Falcon Crest Work Harvest Gold",
+        "sku": "CL-03-YE",
+        "product": "CL-03",
+        "image": "/cdn/img/product/CL-03-YE.png",
+        "url": "/product/CL-03?sku=CL-03-YE"
       },
-      "CL-008-200": {
-        "name": "Sienna Soil Sovereign 370X 200hp",
-        "sku": "CL-008-200",
-        "product": "CL-008",
-        "image": "/cdn/img/product/CL-008.png",
-        "url": "/product/CL-008?sku=CL-008-200"
+      "CL-04-BL": {
+        "name": "Broadfield Majestic Oceanic Blue",
+        "sku": "CL-04-BL",
+        "product": "CL-04",
+        "image": "/cdn/img/product/CL-04-BL.png",
+        "url": "/product/CL-04?sku=CL-04-BL"
       },
-      "CL-009-100": {
-        "name": "Maroon Meadow Marshal 530Q 100hp",
-        "sku": "CL-009-100",
-        "product": "CL-009",
-        "image": "/cdn/img/product/CL-009.png",
-        "url": "/product/CL-009?sku=CL-009-100"
+      "CL-04-RD": {
+        "name": "Broadfield Majestic Rustic Crimson",
+        "sku": "CL-04-RD",
+        "product": "CL-04",
+        "image": "/cdn/img/product/CL-04-RD.png",
+        "url": "/product/CL-04?sku=CL-04-RD"
       },
-      "CL-009-200": {
-        "name": "Maroon Meadow Marshal 530Q 200hp",
-        "sku": "CL-009-200",
-        "product": "CL-009",
-        "image": "/cdn/img/product/CL-009.png",
-        "url": "/product/CL-009?sku=CL-009-200"
+      "CL-04-TQ": {
+        "name": "Broadfield Majestic Aqua Green",
+        "sku": "CL-04-TQ",
+        "product": "CL-04",
+        "image": "/cdn/img/product/CL-04-TQ.png",
+        "url": "/product/CL-04?sku=CL-04-TQ"
       },
-      "CL-010-100": {
-        "name": "Quartz Quarry Queen 360L 100hp",
-        "sku": "CL-010-100",
-        "product": "CL-010",
-        "image": "/cdn/img/product/CL-010.png",
-        "url": "/product/CL-010?sku=CL-010-100"
+      "CL-05-PT": {
+        "name": "Countryside Commander Pacific Teal",
+        "sku": "CL-05-PT",
+        "product": "CL-05",
+        "image": "/cdn/img/product/CL-05-PT.png",
+        "url": "/product/CL-05?sku=CL-05-PT"
       },
-      "CL-010-200": {
-        "name": "Quartz Quarry Queen 360L 200hp",
-        "sku": "CL-010-200",
-        "product": "CL-010",
-        "image": "/cdn/img/product/CL-010.png",
-        "url": "/product/CL-010?sku=CL-010-200"
+      "CL-05-RD": {
+        "name": "Countryside Commander Barn Red",
+        "sku": "CL-05-RD",
+        "product": "CL-05",
+        "image": "/cdn/img/product/CL-05-RD.png",
+        "url": "/product/CL-05?sku=CL-05-RD"
       },
-      "CL-011-100": {
-        "name": "Steel Seed Sower 470W 100hp",
-        "sku": "CL-011-100",
-        "product": "CL-011",
-        "image": "/cdn/img/product/CL-011.png",
-        "url": "/product/CL-011?sku=CL-011-100"
+      "CL-06-MT": {
+        "name": "Danamark Steadfast Emerald Forest",
+        "sku": "CL-06-MT",
+        "product": "CL-06",
+        "image": "/cdn/img/product/CL-06-MT.png",
+        "url": "/product/CL-06?sku=CL-06-MT"
       },
-      "CL-011-200": {
-        "name": "Steel Seed Sower 470W 200hp",
-        "sku": "CL-011-200",
-        "product": "CL-011",
-        "image": "/cdn/img/product/CL-011.png",
-        "url": "/product/CL-011?sku=CL-011-200"
+      "CL-06-YE": {
+        "name": "Danamark Steadfast Golden Wheat",
+        "sku": "CL-06-YE",
+        "product": "CL-06",
+        "image": "/cdn/img/product/CL-06-YE.png",
+        "url": "/product/CL-06?sku=CL-06-YE"
       },
-      "CL-012-100": {
-        "name": "Cobalt Countryside Cruiser 340M 100hp",
-        "sku": "CL-012-100",
-        "product": "CL-012",
-        "image": "/cdn/img/product/CL-012.png",
-        "url": "/product/CL-012?sku=CL-012-100"
+      "CL-07-GR": {
+        "name": "Greenland Rover Forest Fern",
+        "sku": "CL-07-GR",
+        "product": "CL-07",
+        "image": "/cdn/img/product/CL-07-GR.png",
+        "url": "/product/CL-07?sku=CL-07-GR"
       },
-      "CL-012-200": {
-        "name": "Cobalt Countryside Cruiser 340M 200hp",
-        "sku": "CL-012-200",
-        "product": "CL-012",
-        "image": "/cdn/img/product/CL-012.png",
-        "url": "/product/CL-012?sku=CL-012-200"
+      "CL-07-YE": {
+        "name": "Greenland Rover Autumn Amber",
+        "sku": "CL-07-YE",
+        "product": "CL-07",
+        "image": "/cdn/img/product/CL-07-YE.png",
+        "url": "/product/CL-07?sku=CL-07-YE"
       },
-      "CL-013-100": {
-        "name": "Cerulean Crop Commander 310A 100hp",
-        "sku": "CL-013-100",
-        "product": "CL-013",
-        "image": "/cdn/img/product/CL-013.png",
-        "url": "/product/CL-013?sku=CL-013-100"
+      "CL-08-GR": {
+        "name": "Holland Hamster Polder Green",
+        "sku": "CL-08-GR",
+        "product": "CL-08",
+        "image": "/cdn/img/product/CL-08-GR.png",
+        "url": "/product/CL-08?sku=CL-08-GR"
       },
-      "CL-013-200": {
-        "name": "Cerulean Crop Commander 310A 200hp",
-        "sku": "CL-013-200",
-        "product": "CL-013",
-        "image": "/cdn/img/product/CL-013.png",
-        "url": "/product/CL-013?sku=CL-013-200"
+      "CL-08-PI": {
+        "name": "Holland Hamster Tulip Magenta",
+        "sku": "CL-08-PI",
+        "product": "CL-08",
+        "image": "/cdn/img/product/CL-08-PI.png",
+        "url": "/product/CL-08?sku=CL-08-PI"
       },
-      "AU-001-100": {
-        "name": "Futuro Fieldmaster 800Xi 100hp",
-        "sku": "AU-001-100",
-        "product": "AU-001",
-        "image": "/cdn/img/product/AU-001.png",
-        "url": "/product/AU-001?sku=AU-001-100"
+      "CL-09-BL": {
+        "name": "TerraFirma Veneto Adriatic Blue",
+        "sku": "CL-09-BL",
+        "product": "CL-09",
+        "image": "/cdn/img/product/CL-09-BL.png",
+        "url": "/product/CL-09?sku=CL-09-BL"
       },
-      "AU-001-200": {
-        "name": "Futuro Fieldmaster 800Xi 200hp",
-        "sku": "AU-001-200",
-        "product": "AU-001",
-        "image": "/cdn/img/product/AU-001.png",
-        "url": "/product/AU-001?sku=AU-001-200"
+      "CL-09-GR": {
+        "name": "TerraFirma Veneto Tuscan Green",
+        "sku": "CL-09-GR",
+        "product": "CL-09",
+        "image": "/cdn/img/product/CL-09-GR.png",
+        "url": "/product/CL-09?sku=CL-09-GR"
+      },
+      "CL-10-SD": {
+        "name": "Global Gallant Sahara Dawn",
+        "sku": "CL-10-SD",
+        "product": "CL-10",
+        "image": "/cdn/img/product/CL-10-SD.png",
+        "url": "/product/CL-10?sku=CL-10-SD"
+      },
+      "CL-10-VI": {
+        "name": "Global Gallant Violet Vintage",
+        "sku": "CL-10-VI",
+        "product": "CL-10",
+        "image": "/cdn/img/product/CL-10-VI.png",
+        "url": "/product/CL-10?sku=CL-10-VI"
+      },
+      "CL-11-SK": {
+        "name": "Scandinavia Sower Baltic Blue",
+        "sku": "CL-11-SK",
+        "product": "CL-11",
+        "image": "/cdn/img/product/CL-11-SK.png",
+        "url": "/product/CL-11?sku=CL-11-SK"
+      },
+      "CL-11-YE": {
+        "name": "Scandinavia Sower Nordic Gold",
+        "sku": "CL-11-YE",
+        "product": "CL-11",
+        "image": "/cdn/img/product/CL-11-YE.png",
+        "url": "/product/CL-11?sku=CL-11-YE"
+      },
+      "CL-12-BL": {
+        "name": "Celerity Cruiser Velocity Blue",
+        "sku": "CL-12-BL",
+        "product": "CL-12",
+        "image": "/cdn/img/product/CL-12-BL.png",
+        "url": "/product/CL-12?sku=CL-12-BL"
+      },
+      "CL-12-RD": {
+        "name": "Celerity Cruiser Rally Red",
+        "sku": "CL-12-RD",
+        "product": "CL-12",
+        "image": "/cdn/img/product/CL-12-RD.png",
+        "url": "/product/CL-12?sku=CL-12-RD"
+      },
+      "CL-13-BL": {
+        "name": "Rapid Racer Speedway Blue",
+        "sku": "CL-13-BL",
+        "product": "CL-13",
+        "image": "/cdn/img/product/CL-13-BL.png",
+        "url": "/product/CL-13?sku=CL-13-BL"
+      },
+      "CL-13-RD": {
+        "name": "Rapid Racer Raceway Red",
+        "sku": "CL-13-RD",
+        "product": "CL-13",
+        "image": "/cdn/img/product/CL-13-RD.png",
+        "url": "/product/CL-13?sku=CL-13-RD"
+      },
+      "CL-14-GR": {
+        "name": "Caribbean Cruiser Emerald Grove",
+        "sku": "CL-14-GR",
+        "product": "CL-14",
+        "image": "/cdn/img/product/CL-14-GR.png",
+        "url": "/product/CL-14?sku=CL-14-GR"
+      },
+      "CL-14-RD": {
+        "name": "Caribbean Cruiser Ruby Fields",
+        "sku": "CL-14-RD",
+        "product": "CL-14",
+        "image": "/cdn/img/product/CL-14-RD.png",
+        "url": "/product/CL-14?sku=CL-14-RD"
+      },
+      "CL-15-PI": {
+        "name": "Fieldmaster Classic Vintage Pink",
+        "sku": "CL-15-PI",
+        "product": "CL-15",
+        "image": "/cdn/img/product/CL-15-PI.png",
+        "url": "/product/CL-15?sku=CL-15-PI"
+      },
+      "CL-15-SD": {
+        "name": "Fieldmaster Classic Sahara Dust",
+        "sku": "CL-15-SD",
+        "product": "CL-15",
+        "image": "/cdn/img/product/CL-15-SD.png",
+        "url": "/product/CL-15?sku=CL-15-SD"
       }
     }
   },
