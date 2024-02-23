@@ -1,12 +1,18 @@
 import { readFromCookie } from "../state.js";
 import { html } from "../utils.js";
+import Button from "./Button.js";
 
 export default ({ req }) => {
   const lineItems = readFromCookie(req);
   const quantity = lineItems.reduce((t, { quantity }) => t + quantity, 0);
   return html`<div class="c_MiniCart" data-boundary="checkout-minicart">
-    <a href="/checkout/cart" class="c_MiniCart__button" ontouchstart>
-      <div class="c_MiniCart__inner">
+    ${Button({
+      tag: "button",
+      variant: "secondary",
+      rounded: true,
+      href: "/checkout/cart",
+      className: "c_MiniCart__button",
+      children: html`
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="33"
@@ -24,7 +30,7 @@ export default ({ req }) => {
           </defs>
         </svg>
         <div class="c_MiniCart__quantity">${quantity || ""}</div>
-      </div>
-    </a>
+      `,
+    })}
   </div>`;
 };

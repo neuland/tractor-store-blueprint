@@ -1,5 +1,6 @@
 import data from "../database/index.js";
 import { html } from "../utils.js";
+import Button from "./Button.js";
 
 export default ({ sku }) => {
   const product = data.variants.find((p) => p.sku === sku);
@@ -21,8 +22,12 @@ export default ({ sku }) => {
             out of stock
           </p>`}
     </div>
-    <button ${outOfStock ? "disabled" : ""} class="c_AddToCart__button">
-      <div class="c_AddToCart__inner">add to basket</div>
-    </button>
+    ${Button({
+      tag: "button",
+      disabled: outOfStock,
+      className: "c_AddToCart__button",
+      children: html`add to basket`,
+      variant: "primary",
+    })}
   </form>`;
 };

@@ -3,6 +3,7 @@
 @import url("./components/MiniCart.css");
 @import url("./components/AddToCart.css");
 @import url("./components/LineItem.css");
+@import url("./components/Button.css");
 
 @font-face {
   font-family: "Raleway";
