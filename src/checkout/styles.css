@@ -4,6 +4,7 @@
 @import url("./components/AddToCart.css");
 @import url("./components/LineItem.css");
 @import url("./components/Button.css");
+@import url("./components/CompactHeader.css");
 
 @font-face {
   font-family: "Raleway";

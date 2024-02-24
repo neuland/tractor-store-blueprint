@@ -13,3 +13,14 @@
   text-align: right;
   font-weight: bold;
 }
+
+.c_CartPage__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  gap: 2rem;
+}
+
+.c_CartPage__buttons > * {
+  flex: 0;
+}

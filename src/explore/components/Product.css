@@ -15,14 +15,14 @@
 }
 
 .e_Product_name {
-  margin: 1rem 0;
+  margin: 12px 0 8px;
   color: black;
   text-align: center;
   display: block;
 }
 
 .e_Product_price {
-  margin: 1rem 0;
+  margin: 8px 0;
   color: black;
   text-align: center;
   display: block;

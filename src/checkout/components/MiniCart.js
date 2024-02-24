@@ -32,5 +32,6 @@ export default ({ req }) => {
         <div class="c_MiniCart__quantity">${quantity || ""}</div>
       `,
     })}
+    
   </div>`;
 };

@@ -39,7 +39,7 @@
   }
 }
 
-.c_MiniCart--highlight .c_MiniCart__inner svg {
+.c_MiniCart--highlight svg {
   animation: bounce 0.2s ease-out;
 }
 

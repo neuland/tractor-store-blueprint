@@ -6,6 +6,7 @@ import { html } from "../utils.js";
 import Header from "../../explore/components/Header.js";
 import Footer from "../../explore/components/Footer.js";
 import Recommendations from "../../explore/components/Recommendations.js";
+import Button from "../components/Button.js";
 
 export default ({ req }) => {
   const lineItems = readFromCookie(req).map(({ sku, quantity }) => {
@@ -31,9 +32,20 @@ export default ({ req }) => {
         Ø
       </p>
 
-      <form action="/checkout/checkout" method="get">
-        <button>checkout</button>
-      </form>
+      <div class="c_CartPage__buttons">
+        ${Button({
+          onClick: "history.back()",
+          children: "Continue Shopping",
+          variant: "secondary",
+        })}
+        ${Button({
+          tag: "a",
+          href: "/checkout/checkout",
+          children: "Checkout",
+          variant: "primary",
+        })}
+      </div>
+
       ${Recommendations({ skus })} ${Footer()}
     </main>
   `;

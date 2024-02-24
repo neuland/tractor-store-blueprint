@@ -1,4 +1,5 @@
 import { html } from "../utils.js";
+import Button from "./Button.js";
 
 export default ({ sku, id, name, quantity, price, image }) => {
   const url = `/product/${id}?sku=${sku}`;
@@ -13,7 +14,12 @@ export default ({ sku, id, name, quantity, price, image }) => {
     <div class="c_LineItem__price">${price * quantity} Ø</div>
     <form action="/checkout/cart/remove" method="post">
       <input type="hidden" name="sku" value="${sku}" />
-      <input type="submit" value="remove" />
+      ${Button({
+        variant: "secondary",
+        type: "submit",
+        value: "remove",
+        children: "Remove",
+      })}
     </form>
   </li>`;
 };
