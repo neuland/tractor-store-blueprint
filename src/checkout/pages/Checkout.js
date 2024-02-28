@@ -11,11 +11,11 @@ export default () => {
     <main class="c_Checkout">
       ${CompactHeader()}
       <h2>Checkout</h2>
-      <form action="/checkout/thanks" method="post">
+      <form action="/checkout/place-order" method="post">
         <h3>Personal Data</h3>
         <fieldset>
-          <label for="email">E-Mail</label>
-          <input type="email" id="email" name="email" required />
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
         </fieldset>
 
         <h3>Store Pickup</h3>

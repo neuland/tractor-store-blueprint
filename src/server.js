@@ -6,11 +6,13 @@ import atImport from "postcss-import";
 import { ListPage } from "./explore/index.js";
 import { ProductPage } from "./decide/index.js";
 import {
+  MiniCart,
   CartPage,
   Checkout,
-  MiniCart,
+  Thanks,
   handleAddToCart,
   handleRemoveFromCart,
+  handlePlaceOrder,
 } from "./checkout/index.js";
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -103,6 +105,15 @@ app.post("/checkout/cart/add", (req, res) => {
 app.post("/checkout/cart/remove", (req, res) => {
   handleRemoveFromCart(req, res);
   res.redirect("/checkout/cart");
+});
+
+app.post("/checkout/place-order", (req, res) => {
+  handlePlaceOrder(req, res);
+  res.redirect("/checkout/thanks");
+});
+
+app.get("/checkout/thanks", (req, res) => {
+  res.send(Thanks({ req }));
 });
 
 app.get("/checkout/styles.css", async (req, res) => {

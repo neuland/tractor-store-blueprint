@@ -11,26 +11,19 @@ import Button from "../components/Button.js";
 export default ({ req }) => {
   const lineItems = readFromCookie(req).map(({ sku, quantity }) => {
     const variant = data.variants.find((p) => p.sku === sku);
-    return { ...variant, quantity };
+    return { ...variant, quantity, total: variant.price * quantity };
   });
+  const total = lineItems.reduce((acc, { total }) => acc + total, 0);
   const skus = lineItems.map(({ sku }) => sku);
   const content = html`
     ${Header({ req })}
     <main class="c_CartPage">
       <h2>Warenkorb</h2>
-      <p>${lineItems.length} Produkte im Warenkorb</p>
       <ul class="c_CartPage__lineItems">
         ${lineItems.map(LineItem).join("")}
       </ul>
       <hr />
-      <p class="c_CartPage__total">
-        Total:
-        ${lineItems.reduce(
-          (acc, { price, quantity }) => acc + price * quantity,
-          0,
-        )}
-        Ø
-      </p>
+      <p class="c_CartPage__total">Total: ${total} Ø</p>
 
       <div class="c_CartPage__buttons">
         ${Button({

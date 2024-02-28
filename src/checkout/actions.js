@@ -27,3 +27,7 @@ export function handleRemoveFromCart(req, res) {
 
   writeToCookie(items, res);
 }
+
+export function handlePlaceOrder(req, res) {
+  writeToCookie([], res);
+}
