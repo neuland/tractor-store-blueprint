@@ -7,7 +7,6 @@ export default ({ req }) => {
   const quantity = lineItems.reduce((t, { quantity }) => t + quantity, 0);
   return html`<div class="c_MiniCart" data-boundary="checkout-minicart">
     ${Button({
-      tag: "button",
       variant: "secondary",
       rounded: true,
       href: "/checkout/cart",

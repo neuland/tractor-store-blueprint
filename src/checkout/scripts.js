@@ -1,4 +1,4 @@
-/* globals document */
+/* globals document,window */
 
 /* client side javascript */
 
@@ -58,4 +58,37 @@ if ($addToCart) {
       document.dispatchEvent(new Event("checkout:cart-updated"));
     }
   });
+}
+
+const $thanksPage = document.querySelector(".c_Thanks");
+if ($thanksPage) {
+  import("https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/+esm").then(
+    ({ default: confetti }) => {
+      var end = Date.now() + 1000;
+
+      const settings = {
+        particleCount: 3,
+        scalar: 1.5,
+        colors: ["#FFDE54", "#FF5A54", "#54FF90"],
+        spread: 70,
+      };
+      function frame() {
+        confetti({
+          ...settings,
+          angle: 60,
+          origin: { x: 0 },
+        });
+        confetti({
+          ...settings,
+          angle: 120,
+          origin: { x: 1 },
+        });
+
+        if (Date.now() < end) {
+          window.requestAnimationFrame(frame);
+        }
+      }
+      frame();
+    },
+  );
 }

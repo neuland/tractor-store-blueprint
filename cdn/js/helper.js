@@ -4,17 +4,17 @@ import roughjs from "https://cdn.jsdelivr.net/npm/roughjs@4.6.6/+esm";
 // team specific styles
 const config = {
   explore: {
-    fill: "rgba(255, 90, 84, 0.3)",
+    fill: "rgba(255, 90, 84, 0.1)",
     stroke: "rgba(255, 90, 84, 1)",
     hachureAngle: 30,
   },
   decide: {
-    fill: "rgba(84, 255, 144, 0.3)",
+    fill: "rgba(84, 255, 144, 0.1)",
     stroke: "rgba(84, 255, 144, 1)",
     hachureAngle: 60,
   },
   checkout: {
-    fill: "rgba(255, 222, 84, 0.3)",
+    fill: "rgba(255, 222, 84, 0.1)",
     stroke: "rgba(255, 222, 84, 1)",
     hachureAngle: 90,
   },
@@ -186,16 +186,16 @@ function generateBoundary(svg, rectangle, team, isPage) {
   return rc.path(rectangle, {
     bowing: 0.5,
     disableMultiStroke: true,
-    fill: config[team].fill,
-    fillStyle: "hachure",
-    fillWeight: 1.5,
-    hachureAngle: config[team].hachureAngle,
-    hachureGap: 12,
+    //fill: config[team].fill,
+    //fillStyle: "hachure",
+    //fillWeight: 1.5,
+    //hachureAngle: config[team].hachureAngle,
+    //hachureGap: 12,
     preserveVertices: true,
-    roughness: isPage ? 6 : 3,
+    roughness: isPage ? 5 : 3,
     stroke: config[team].stroke,
     strokeLineDash: null,
-    strokeWidth: isPage ? 15 : 3,
+    strokeWidth: isPage ? 20 : 3,
   });
 }
 

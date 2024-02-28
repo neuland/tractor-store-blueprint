@@ -23,7 +23,6 @@ export default ({ sku }) => {
           </p>`}
     </div>
     ${Button({
-      tag: "button",
       disabled: outOfStock,
       className: "c_AddToCart__button",
       children: html`add to basket`,

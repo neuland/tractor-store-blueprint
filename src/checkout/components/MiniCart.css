@@ -59,3 +59,6 @@
   transform-origin: center 7px;
   animation: shake 0.2s infinite ease-in-out;
 }
+.c_MiniCart {
+  padding: 1.5rem;
+}

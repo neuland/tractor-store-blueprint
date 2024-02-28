@@ -1,4 +1,4 @@
-import BuyMiniCart from "../../checkout/components/MiniCart.js";
+import MiniCart from "../../checkout/components/MiniCart.js";
 import Navigation from "./Navigation.js";
 import { html } from "../utils.js";
 
@@ -12,7 +12,7 @@ export default ({ req }) => {
           alt="Micro Frontends - Tractor Store"
         />
       </a>
-      ${Navigation()} ${BuyMiniCart({ req })}
+      ${Navigation()} ${MiniCart({ req })}
     </div>
   </header>`;
 };

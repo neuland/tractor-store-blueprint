@@ -27,12 +27,11 @@ export default ({ req }) => {
 
       <div class="c_CartPage__buttons">
         ${Button({
-          onClick: "history.back()",
+          href: "/",
           children: "Continue Shopping",
           variant: "secondary",
         })}
         ${Button({
-          tag: "a",
           href: "/checkout/checkout",
           children: "Checkout",
           variant: "primary",
