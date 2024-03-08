@@ -4,11 +4,20 @@
   max-width: 1000px;
 }
 
-.d_ProductPage_details {
+.d_ProductPage__details {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1rem;
+}
+
+.d_ProductPage__productImage {
+  flex-basis: 40%;
+}
+
+.d_ProductPage__productInformation {
+  flex-basis: 60%;
+  padding-left: 10%;
 }
 
 .d_ProductPage__title {

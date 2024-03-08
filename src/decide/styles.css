@@ -1,4 +1,5 @@
 @import url("./pages/ProductPage.css");
+@import url("./components/Variant.css");
 
 @font-face {
   font-family: "Raleway";

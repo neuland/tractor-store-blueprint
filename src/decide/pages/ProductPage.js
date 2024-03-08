@@ -13,6 +13,8 @@ export default ({ id, sku, req }) => {
     highlights = [],
   } = data.products.find((p) => p.id === id);
   const variant = variants.find((v) => v.sku === sku) || variants[0];
+  console.log({ variants });
+
   return html`<!doctype html>
     <html>
       <head>
@@ -25,13 +27,13 @@ export default ({ id, sku, req }) => {
       <body data-boundary="decide-page">
         ${Header({ req })}
         <main class="d_ProductPage">
-          <div class="d_ProductPage_details">
+          <div class="d_ProductPage__details">
             <img
-              class="d_ProductPage_image"
+              class="d_ProductPage__productImage"
               src="${variant.image}"
               width="400"
             />
-            <div>
+            <div class="d_ProductPage__productInformation">
               <h2 class="d_ProductPage__title">${name}</h2>
               <ul class="d_ProductPage__highlights">
                 ${highlights

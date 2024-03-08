@@ -14,6 +14,7 @@
           "name": "Silver",
           "image": "/cdn/img/product/AU-01-SI.png",
           "sku": "AU-01-SI",
+          "color": "#C0C0C0",
           "price": 1000
         }
       ]
@@ -32,18 +33,21 @@
           "name": "Sunset Copper",
           "image": "/cdn/img/product/AU-02-OG.png",
           "sku": "AU-02-OG",
+          "color": "#DD6E42",
           "price": 1100
         },
         {
           "name": "Cosmic Sapphire",
           "image": "/cdn/img/product/AU-02-BL.png",
           "sku": "AU-02-BL",
+          "color": "#2A52BE",
           "price": 1000
         },
         {
           "name": "Verdant Shadow",
           "image": "/cdn/img/product/AU-02-GG.png",
           "sku": "AU-02-GG",
+          "color": "#005A04",
           "price": 1000
         }
       ]
@@ -62,24 +66,28 @@
           "name": "Turquoise Titan",
           "image": "/cdn/img/product/AU-03-TQ.png",
           "sku": "AU-03-TQ",
+          "color": "#40E0D0",
           "price": 1600
         },
         {
           "name": "Majestic Violet",
           "image": "/cdn/img/product/AU-03-PL.png",
           "sku": "AU-03-PL",
+          "color": "#9B5FC0",
           "price": 1700
         },
         {
           "name": "Scarlet Dynamo",
           "image": "/cdn/img/product/AU-03-RD.png",
           "sku": "AU-03-RD",
+          "color": "#FF2400",
           "price": 1900
         },
         {
           "name": "Sunbeam Yellow",
           "image": "/cdn/img/product/AU-03-YE.png",
           "sku": "AU-03-YE",
+          "color": "#FFDA03",
           "price": 1800
         }
       ]
@@ -98,12 +106,14 @@
           "name": "Ruby Red",
           "image": "/cdn/img/product/AU-04-RD.png",
           "sku": "AU-04-RD",
+          "color": "#9B111E",
           "price": 5000
         },
         {
           "name": "Midnight Onyx",
           "image": "/cdn/img/product/AU-04-BK.png",
           "sku": "AU-04-BK",
+          "color": "#353839",
           "price": 4000
         }
       ]
@@ -122,6 +132,7 @@
           "name": "Zestful Horizon",
           "image": "/cdn/img/product/AU-05-ZH.png",
           "sku": "AU-05-ZH",
+          "color": "#FFA07A",
           "price": 3400
         }
       ]
@@ -140,10 +151,12 @@
           "name": "Canary Zenith",
           "image": "/cdn/img/product/AU-06-CZ.png",
           "sku": "AU-06-CZ",
+          "color": "#FFD700",
           "price": 2200
         },
         {
           "name": "Minted Jade",
+          "color": "#00A36C",
           "image": "/cdn/img/product/AU-06-MT.png",
           "sku": "AU-06-MT",
           "price": 2100
@@ -164,12 +177,14 @@
           "name": "Glacial Mint",
           "image": "/cdn/img/product/AU-07-MT.png",
           "sku": "AU-07-MT",
+          "color": "#AFDBD2",
           "price": 4000
         },
         {
           "name": "Sunbeam Yellow",
           "image": "/cdn/img/product/AU-07-YE.png",
           "sku": "AU-07-YE",
+          "color": "#FFDA03",
           "price": 5000
         }
       ]
@@ -188,6 +203,7 @@
           "name": "Polar White",
           "image": "/cdn/img/product/AU-08-WH.png",
           "sku": "AU-08-WH",
+          "color": "#E8E8E8",
           "price": 4500
         }
       ]
@@ -206,12 +222,14 @@
           "name": "Verdant Field",
           "image": "/cdn/img/product/CL-01-GR.png",
           "sku": "CL-01-GR",
+          "color": "#6B8E23",
           "price": 2500
         },
         {
           "name": "Stormy Sky",
           "image": "/cdn/img/product/CL-01-GY.png",
           "sku": "CL-01-GY",
+          "color": "#708090",
           "price": 2500
         }
       ]
@@ -230,6 +248,7 @@
           "name": "Cerulean Classic",
           "image": "/cdn/img/product/CL-02-BL.png",
           "sku": "CL-02-BL",
+          "color": "#007BA7",
           "price": 2600
         }
       ]
@@ -248,18 +267,21 @@
           "name": "Meadow Green",
           "image": "/cdn/img/product/CL-03-GR.png",
           "sku": "CL-03-GR",
+          "color": "#7CFC00",
           "price": 2300
         },
         {
           "name": "Rustic Rose",
           "image": "/cdn/img/product/CL-03-PI.png",
           "sku": "CL-03-PI",
+          "color": "#B7410E",
           "price": 2300
         },
         {
           "name": "Harvest Gold",
           "image": "/cdn/img/product/CL-03-YE.png",
           "sku": "CL-03-YE",
+          "color": "#DA9100",
           "price": 2300
         }
       ]
@@ -278,18 +300,21 @@
           "name": "Oceanic Blue",
           "image": "/cdn/img/product/CL-04-BL.png",
           "sku": "CL-04-BL",
+          "color": "#0077BE",
           "price": 2200
         },
         {
           "name": "Rustic Crimson",
           "image": "/cdn/img/product/CL-04-RD.png",
           "sku": "CL-04-RD",
+          "color": "#7B3F00",
           "price": 2200
         },
         {
           "name": "Aqua Green",
           "image": "/cdn/img/product/CL-04-TQ.png",
           "sku": "CL-04-TQ",
+          "color": "#D4F1BE",
           "price": 2200
         }
       ]
@@ -308,12 +333,14 @@
           "name": "Pacific Teal",
           "image": "/cdn/img/product/CL-05-PT.png",
           "sku": "CL-05-PT",
+          "color": "#5CA2D1",
           "price": 2700
         },
         {
           "name": "Barn Red",
           "image": "/cdn/img/product/CL-05-RD.png",
           "sku": "CL-05-RD",
+          "color": "#7C0A02",
           "price": 2700
         }
       ]
@@ -332,12 +359,14 @@
           "name": "Emerald Forest",
           "image": "/cdn/img/product/CL-06-MT.png",
           "sku": "CL-06-MT",
+          "color": "#228B22",
           "price": 2800
         },
         {
           "name": "Golden Wheat",
           "image": "/cdn/img/product/CL-06-YE.png",
           "sku": "CL-06-YE",
+          "color": "#F5DEB3",
           "price": 2800
         }
       ]
@@ -356,12 +385,14 @@
           "name": "Forest Fern",
           "image": "/cdn/img/product/CL-07-GR.png",
           "sku": "CL-07-GR",
+          "color": "#4F7942",
           "price": 2900
         },
         {
           "name": "Autumn Amber",
           "image": "/cdn/img/product/CL-07-YE.png",
           "sku": "CL-07-YE",
+          "color": "#FFBF00",
           "price": 2900
         }
       ]
@@ -380,12 +411,14 @@
           "name": "Polder Green",
           "image": "/cdn/img/product/CL-08-GR.png",
           "sku": "CL-08-GR",
+          "color": "#C2B280",
           "price": 2750
         },
         {
           "name": "Tulip Magenta",
           "image": "/cdn/img/product/CL-08-PI.png",
           "sku": "CL-08-PI",
+          "color": "#D65282",
           "price": 2750
         }
       ]
@@ -404,12 +437,14 @@
           "name": "Adriatic Blue",
           "image": "/cdn/img/product/CL-09-BL.png",
           "sku": "CL-09-BL",
+          "color": "#005577",
           "price": 2950
         },
         {
           "name": "Tuscan Green",
           "image": "/cdn/img/product/CL-09-GR.png",
           "sku": "CL-09-GR",
+          "color": "#006400",
           "price": 2950
         }
       ]
@@ -428,12 +463,14 @@
           "name": "Sahara Dawn",
           "image": "/cdn/img/product/CL-10-SD.png",
           "sku": "CL-10-SD",
+          "color": "#F4C430",
           "price": 2600
         },
         {
           "name": "Violet Vintage",
           "image": "/cdn/img/product/CL-10-VI.png",
           "sku": "CL-10-VI",
+          "color": "#8A2BE2",
           "price": 2600
         }
       ]
@@ -452,12 +489,14 @@
           "name": "Baltic Blue",
           "image": "/cdn/img/product/CL-11-SK.png",
           "sku": "CL-11-SK",
+          "color": "#007FFF",
           "price": 3100
         },
         {
           "name": "Nordic Gold",
           "image": "/cdn/img/product/CL-11-YE.png",
           "sku": "CL-11-YE",
+          "color": "#FFD700",
           "price": 3100
         }
       ]
@@ -476,12 +515,14 @@
           "name": "Velocity Blue",
           "image": "/cdn/img/product/CL-12-BL.png",
           "sku": "CL-12-BL",
+          "color": "#1E90FF",
           "price": 3200
         },
         {
           "name": "Rally Red",
           "image": "/cdn/img/product/CL-12-RD.png",
           "sku": "CL-12-RD",
+          "color": "#ED2939",
           "price": 3200
         }
       ]
@@ -500,12 +541,14 @@
           "name": "Speedway Blue",
           "image": "/cdn/img/product/CL-13-BL.png",
           "sku": "CL-13-BL",
+          "color": "#0C1C8C",
           "price": 7500
         },
         {
           "name": "Raceway Red",
           "image": "/cdn/img/product/CL-13-RD.png",
           "sku": "CL-13-RD",
+          "color": "#CF1020",
           "price": 7500
         }
       ]
@@ -524,12 +567,14 @@
           "name": "Emerald Grove",
           "image": "/cdn/img/product/CL-14-GR.png",
           "sku": "CL-14-GR",
+          "color": "#048243",
           "price": 2300
         },
         {
           "name": "Ruby Fields",
           "image": "/cdn/img/product/CL-14-RD.png",
           "sku": "CL-14-RD",
+          "color": "#9B111E",
           "price": 2300
         }
       ]
@@ -548,12 +593,14 @@
           "name": "Vintage Pink",
           "image": "/cdn/img/product/CL-15-PI.png",
           "sku": "CL-15-PI",
+          "color": "#C71585",
           "price": 6200
         },
         {
           "name": "Sahara Dust",
           "image": "/cdn/img/product/CL-15-SD.png",
           "sku": "CL-15-SD",
+          "color": "#ECD540",
           "price": 6200
         }
       ]

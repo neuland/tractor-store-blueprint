@@ -1,0 +1,37 @@
+.d_Variant__color {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background-color: var(--background-color);
+}
+
+.d_Variant__color::before,
+.d_Variant__color::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  border-radius: 50%;
+}
+.d_Variant__color::before {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.1) 60%
+  );
+}
+.d_Variant__color::after {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.9) 10%,
+    rgba(255, 255, 255, 0.8) 30%,
+    transparent 30%
+  );
+  filter: blur(1px);
+}
