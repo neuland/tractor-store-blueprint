@@ -1,6 +1,8 @@
 .c_LineItem {
   display: flex;
   margin-bottom: 2rem;
+  gap: 2rem;
+  align-items: center;
 }
 
 .c_LineItem__image {
@@ -17,6 +19,8 @@
 .c_LineItem__name {
   padding-right: 2rem;
   flex-grow: 1;
+  color: inherit;
+  text-decoration: none;
 }
 
 .c_LineItem__quantity {
