@@ -8,8 +8,8 @@ import Footer from "../../explore/components/Footer.js";
 
 export default () => {
   const content = html`
+    ${CompactHeader()}
     <main class="c_Checkout">
-      ${CompactHeader()}
       <h2>Checkout</h2>
       <form action="/checkout/place-order" method="post">
         <h3>Personal Data</h3>
