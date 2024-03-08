@@ -13,7 +13,6 @@ export default ({ id, sku, req }) => {
     highlights = [],
   } = data.products.find((p) => p.id === id);
   const variant = variants.find((v) => v.sku === sku) || variants[0];
-  console.log({ variants });
 
   return html`<!doctype html>
     <html>

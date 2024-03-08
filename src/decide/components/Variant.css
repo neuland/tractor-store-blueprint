@@ -44,3 +44,23 @@
   );
   filter: blur(1px);
 }
+
+.d_Variant a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.d_Variant strong {
+  font-weight: normal;
+  position: relative;
+}
+
+.d_Variant strong::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  position: absolute;
+  background-color: black;
+}

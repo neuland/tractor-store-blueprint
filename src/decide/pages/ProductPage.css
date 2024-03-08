@@ -7,8 +7,11 @@
 .d_ProductPage__details {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 1rem;
+  min-height: 450px;
+  height: calc(100vh - 350px);
+  max-height: 650px;
 }
 
 .d_ProductPage__productImage {
@@ -37,12 +40,8 @@
 .d_ProductPage__variants {
   display: flex;
   flex-wrap: wrap;
+  gap: 1.5rem;
   list-style: none;
   margin-top: 3rem;
   padding: 0;
-}
-
-.d_ProductPage__variants li {
-  white-space: nowrap;
-  padding: 0 0.5rem 0 0;
 }
