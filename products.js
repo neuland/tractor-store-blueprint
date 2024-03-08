@@ -309,13 +309,13 @@ export default [
         color: "#7B3F00", // Rustic Crimson:
         price: 2200,
       },
-      
+      {
         name: "Aqua Green",
         image: "/cdn/img/product/CL-04-TQ.png",
         sku: "CL-04-TQ",
         color: "#00b298", // Aqua Green:
         price: 2200,
-      ,
+      },
     ],
   },
   {
