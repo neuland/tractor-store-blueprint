@@ -23,7 +23,7 @@
   text-decoration: none;
 }
 
-.c_LineItem__quantity {
+.c_LineItem__price {
   flex-basis: 100px;
-  text-align: center;
+  text-align: end;
 }

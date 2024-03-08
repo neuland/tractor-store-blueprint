@@ -1,10 +1,15 @@
 import data from "../database/index.js";
 import { html } from "../utils.js";
+import Button from "./Button.js";
 
 export default () => {
   return html`<div class="e_StorePicker" data-boundary="explore-storepicker">
     <div class="e_StorePicker_selected"></div>
-    <button class="e_StorePicker_choose" type="button">choose a store</button>
+    ${Button({
+      className: "e_StorePicker_choose",
+      type: "button",
+      children: "choose a store",
+    })}
     <dialog
       class="e_StorePicker_dialog"
       data-boundary="explore-storepicker-dialog"
@@ -21,13 +26,11 @@ export default () => {
                   ${s.street}<br />
                   ${s.city}
                 </div>
-                <button
-                  class="e_StorePicker_select"
-                  type="button"
-                  data-id="${s.id}"
-                >
-                  select
-                </button>
+                ${Button({
+                  className: "e_StorePicker_select",
+                  type: "button",
+                  children: "select",
+                })}
               </li>`,
           )
           .join("")}

@@ -6,6 +6,7 @@
 @import url("./components/Product.css");
 @import url("./components/Recommendations.css");
 @import url("./components/Recommendation.css");
+@import url("./components/Button.css");
 @import url("./pages/ListPage.css");
 
 @font-face {

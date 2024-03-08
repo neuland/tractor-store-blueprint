@@ -11,7 +11,7 @@ export default ({ sku, id, name, quantity, total, image }) => {
       <strong>${name}</strong><br />${sku}
     </a>
     <div class="c_LineItem__quantity">${quantity}</div>
-    <div class="c_LineItem__price">${total} Ø</div>
+
     <form action="/checkout/cart/remove" method="post">
       <input type="hidden" name="sku" value="${sku}" />
       ${Button({
@@ -21,5 +21,6 @@ export default ({ sku, id, name, quantity, total, image }) => {
         children: "Remove",
       })}
     </form>
+    <div class="c_LineItem__price">${total} Ø</div>
   </li>`;
 };

@@ -5,6 +5,7 @@ import StorePicker from "../../explore/components/StorePicker.js";
 
 // imports from other teams -> fragments
 import Footer from "../../explore/components/Footer.js";
+import Button from "../components/Button.js";
 
 export default () => {
   const content = html`
@@ -25,9 +26,19 @@ export default () => {
           <input type="text" id="storeId" name="storeId" readonly /><br />
         </fieldset>
 
-        <button>place order</button>
+        <div class="c_Checkout__buttons">
+          ${Button({
+            children: "place order",
+            variant: "primary",
+          })}
+          ${Button({
+            href: "/checkout/cart",
+            children: "back to cart",
+            variant: "secondary",
+          })}
+        </div>
       </form>
-      <a href="/checkout/cart">back to cart</a>
+
       ${Footer()}
     </main>
   `;
