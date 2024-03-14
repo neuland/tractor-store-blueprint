@@ -4,7 +4,7 @@ import Footer from "../components/Footer.js";
 import Product from "../components/Product.js";
 import { html } from "../utils.js";
 
-export default ({ category, req }) => {
+export default ({ category, c }) => {
   const cat = category && data.categories.find((c) => c.key === category);
 
   const title = cat ? cat.name : "All Products";
@@ -16,13 +16,13 @@ export default ({ category, req }) => {
     <html>
       <head>
         <title>Tractor Store</title>
-        <link rel="stylesheet" href="/explore/styles.css" />
-        <link rel="stylesheet" href="/decide/styles.css" />
-        <link rel="stylesheet" href="/checkout/styles.css" />
+        <link rel="stylesheet" href="/explore/static/styles.css" />
+        <link rel="stylesheet" href="/decide/static/styles.css" />
+        <link rel="stylesheet" href="/checkout/static/styles.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body data-boundary="explore-page">
-        ${Header({ req })}
+        ${Header({ c })}
         <main class="e_ListPage">
           <h2>${title}</h2>
           <p>${products.length} products</p>
@@ -31,9 +31,9 @@ export default ({ category, req }) => {
           </ul>
         </main>
         ${Footer()}
-        <script src="/explore/scripts.js" type="module"></script>
-        <script src="/decide/scripts.js" type="module"></script>
-        <script src="/checkout/scripts.js" type="module"></script>
+        <script src="/explore/static/scripts.js" type="module"></script>
+        <script src="/decide/static/scripts.js" type="module"></script>
+        <script src="/checkout/static/scripts.js" type="module"></script>
         <script src="/cdn/js/helper.js" type="module"></script>
       </body>
     </html>`;

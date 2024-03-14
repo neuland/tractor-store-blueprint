@@ -2,7 +2,7 @@ import MiniCart from "../../checkout/components/MiniCart.js";
 import Navigation from "./Navigation.js";
 import { html } from "../utils.js";
 
-export default ({ req }) => {
+export default ({ c }) => {
   return html`<header class="e_Header" data-boundary="explore-header">
     <div class="e_Header__inner">
       <a class="e_Header__link" href="/">
@@ -12,7 +12,7 @@ export default ({ req }) => {
           alt="Micro Frontends - Tractor Store"
         />
       </a>
-      ${Navigation()} ${MiniCart({ req })}
+      ${Navigation()} ${MiniCart({ c })}
     </div>
   </header>`;
 };

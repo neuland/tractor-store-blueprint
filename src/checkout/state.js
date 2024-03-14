@@ -1,9 +1,11 @@
+import { getCookie, setCookie } from "hono/cookie";
+
 const ITEM_SEP = "|";
 const QTY_SEP = "_";
 const COOKIE = "c_cart";
 
-export function readFromCookie(req) {
-  const cookieStr = req.cookies[COOKIE];
+export function readFromCookie(c) {
+  const cookieStr = getCookie(c, COOKIE);
 
   if (!cookieStr) return [];
 
@@ -13,9 +15,10 @@ export function readFromCookie(req) {
   });
 }
 
-export function writeToCookie(items, res) {
+export function writeToCookie(items, c) {
   const cookieStr = items
     .map((item) => `${item.sku}${QTY_SEP}${item.quantity}`)
     .join(ITEM_SEP);
-  res.cookie(COOKIE, cookieStr, { httpOnly: true });
+  console.log("writeToCookie", cookieStr);
+  setCookie(c, COOKIE, cookieStr, { httpOnly: true });
 }

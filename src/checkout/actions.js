@@ -1,9 +1,10 @@
 import { readFromCookie, writeToCookie } from "./state.js";
 
-export function handleAddToCart(req, res) {
-  const sku = req.body.sku;
+export async function handleAddToCart(c) {
+  const body = await c.req.parseBody();
+  const sku = body.sku;
 
-  const items = readFromCookie(req);
+  const items = readFromCookie(c);
 
   const lineItem = items.find((i) => i.sku === sku);
   if (lineItem) {
@@ -11,13 +12,14 @@ export function handleAddToCart(req, res) {
   } else {
     items.push({ sku, quantity: 1 });
   }
-  writeToCookie(items, res);
+  writeToCookie(items, c);
 }
 
-export function handleRemoveFromCart(req, res) {
-  const sku = req.body.sku;
+export async function handleRemoveFromCart(c) {
+  const body = await c.req.parseBody();
+  const sku = body.sku;
 
-  const items = readFromCookie(req);
+  const items = readFromCookie(c);
 
   const lineItem = items.find((i) => i.sku === sku);
   if (lineItem) {
@@ -25,9 +27,9 @@ export function handleRemoveFromCart(req, res) {
     items.splice(index, 1);
   }
 
-  writeToCookie(items, res);
+  writeToCookie(items, c);
 }
 
-export function handlePlaceOrder(req, res) {
-  writeToCookie([], res);
+export async function handlePlaceOrder(c) {
+  writeToCookie([], c);
 }

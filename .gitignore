@@ -1,1 +1,4 @@
-node_modules
+node_modules/
+public/checkout/
+public/decide/
+public/explore/

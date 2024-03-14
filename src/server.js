@@ -1,8 +1,5 @@
-import fs from "fs";
-import express from "express";
-import cookieParser from "cookie-parser";
-import postcss from "postcss";
-import atImport from "postcss-import";
+import { Hono } from "hono";
+import { logger } from "hono/logger";
 import { ListPage } from "./explore/index.js";
 import { ProductPage } from "./decide/index.js";
 import {
@@ -15,118 +12,46 @@ import {
   handlePlaceOrder,
 } from "./checkout/index.js";
 
-const isProduction = process.env.NODE_ENV === "production";
+export default function createServer() {
+  const app = new Hono();
+  app.use(logger());
 
-const app = express();
+  /**
+   * Team Explore
+   */
+  app.get("/:category?", async (c) => {
+    const category = c.req.param("category");
+    return c.html(ListPage({ category, c }));
+  });
 
-app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+  /**
+   * Team Decide
+   */
+  app.get("/product/:id", async (c) => {
+    const { id } = c.req.param();
+    const sku = c.req.query("sku");
+    return c.html(ProductPage({ id, sku, c }));
+  });
 
-// add cache header for static files
-app.use((req, res, next) => {
-  if (!isProduction) {
-    res.setHeader("Cache-Control", "no-store");
-  }
-  if (
-    req.url.endsWith(".css") ||
-    req.url.endsWith(".js") ||
-    req.url.startsWith("/cdn")
-  ) {
-    res.setHeader(
-      "Cache-Control",
-      `public, max-age=${isProduction ? 31536000 : 0}`,
-    );
-  }
-  next();
-});
+  /**
+   * Team Buy
+   */
+  app.get("/checkout/cart", (c) => c.html(CartPage({ c })));
+  app.get("/checkout/checkout", (c) => c.html(Checkout()));
+  app.get("/checkout/mini-cart", (c) => c.html(MiniCart({ c })));
+  app.post("/checkout/cart/add", async (c) => {
+    await handleAddToCart(c);
+    return c.redirect("/checkout/cart");
+  });
+  app.post("/checkout/cart/remove", async (c) => {
+    await handleRemoveFromCart(c);
+    return c.redirect("/checkout/cart");
+  });
+  app.post("/checkout/place-order", async (c) => {
+    await handlePlaceOrder(c);
+    return c.redirect("/checkout/thanks");
+  });
+  app.get("/checkout/thanks", (c) => c.html(Thanks({ c })));
 
-// inline @import rules to deliver a single CSS file
-async function inlinedCss(path) {
-  const css = fs.readFileSync(path, "utf8");
-  const result = await postcss().use(atImport()).process(css, { from: path });
-  return result.css;
+  return app;
 }
-
-/**
- * Team Explore
- */
-
-app.get("/:category?", (req, res) => {
-  res.send(ListPage({ category: req.params.category, req }));
-});
-
-app.get("/explore/styles.css", async (req, res) => {
-  res.setHeader("Content-Type", "text/css");
-  res.send(await inlinedCss("./src/explore/styles.css"));
-});
-
-app.get("/explore/scripts.js", (req, res) => {
-  res.sendFile("src/explore/scripts.js", { root: "." });
-});
-
-/**
- * Team Decide
- */
-
-app.get("/product/:id", (req, res) => {
-  res.send(ProductPage({ id: req.params.id, sku: req.query.sku, req }));
-});
-
-app.get("/decide/styles.css", async (req, res) => {
-  res.setHeader("Content-Type", "text/css");
-  res.send(await inlinedCss("./src/decide/styles.css"));
-});
-
-app.get("/decide/scripts.js", (req, res) => {
-  res.sendFile("src/decide/scripts.js", { root: "." });
-});
-
-/**
- * Team Buy
- */
-
-app.get("/checkout/cart", (req, res) => {
-  res.send(CartPage({ req }));
-});
-
-app.get("/checkout/checkout", (req, res) => {
-  res.send(Checkout());
-});
-
-app.get("/checkout/mini-cart", (req, res) => {
-  res.send(MiniCart({ req }));
-});
-
-app.post("/checkout/cart/add", (req, res) => {
-  handleAddToCart(req, res);
-  res.redirect("/checkout/cart");
-});
-
-app.post("/checkout/cart/remove", (req, res) => {
-  handleRemoveFromCart(req, res);
-  res.redirect("/checkout/cart");
-});
-
-app.post("/checkout/place-order", (req, res) => {
-  handlePlaceOrder(req, res);
-  res.redirect("/checkout/thanks");
-});
-
-app.get("/checkout/thanks", (req, res) => {
-  res.send(Thanks({ req }));
-});
-
-app.get("/checkout/styles.css", async (req, res) => {
-  res.setHeader("Content-Type", "text/css");
-  res.send(await inlinedCss("./src/checkout/styles.css"));
-});
-
-app.get("/checkout/scripts.js", (req, res) => {
-  res.sendFile("src/checkout/scripts.js", { root: "." });
-});
-
-app.use("/cdn", express.static("cdn"));
-
-app.listen(3000, () => {
-  console.log("Server is listening on port http://localhost:3000/");
-});
