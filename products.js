@@ -155,7 +155,7 @@ export default [
       },
       {
         name: "Minted Jade",
-        color: "#00A36C", // Minted Jade:
+        color: "#628882", // Minted Jade:
         image: "/cdn/img/product/AU-06-MT.png",
         sku: "AU-06-MT",
         price: 2100,
@@ -332,7 +332,7 @@ export default [
         name: "Pacific Teal",
         image: "/cdn/img/product/CL-05-PT.png",
         sku: "CL-05-PT",
-        color: "#5CA2D1", // Pacific Teal:
+        color: "#479da8", // Pacific Teal:
         price: 2700,
       },
       {
@@ -358,14 +358,14 @@ export default [
         name: "Emerald Forest",
         image: "/cdn/img/product/CL-06-MT.png",
         sku: "CL-06-MT",
-        color: "#228B22", // Emerald Forest:
+        color: "#46f5bb", // Emerald Forest:
         price: 2800,
       },
       {
         name: "Golden Wheat",
         image: "/cdn/img/product/CL-06-YE.png",
         sku: "CL-06-YE",
-        color: "#F5DEB3", // Golden Wheat:
+        color: "#faaf3f", // Golden Wheat:
         price: 2800,
       },
     ],
@@ -384,7 +384,7 @@ export default [
         name: "Forest Fern",
         image: "/cdn/img/product/CL-07-GR.png",
         sku: "CL-07-GR",
-        color: "#4F7942", // Forest Fern:
+        color: "#2ea250", // Forest Fern:
         price: 2900,
       },
       {
@@ -436,14 +436,14 @@ export default [
         name: "Adriatic Blue",
         image: "/cdn/img/product/CL-09-BL.png",
         sku: "CL-09-BL",
-        color: "#005577", // Adriatic Blue:
+        color: "#2f6ea3", // Adriatic Blue:
         price: 2950,
       },
       {
         name: "Tuscan Green",
         image: "/cdn/img/product/CL-09-GR.png",
         sku: "CL-09-GR",
-        color: "#006400", // Tuscan Green:
+        color: "#518b2b", // Tuscan Green:
         price: 2950,
       },
     ],
@@ -462,7 +462,7 @@ export default [
         name: "Sahara Dawn",
         image: "/cdn/img/product/CL-10-SD.png",
         sku: "CL-10-SD",
-        color: "#F4C430", // Sahara Dawn:
+        color: "#b8a875", // Sahara Dawn:
         price: 2600,
       },
       {
@@ -488,7 +488,7 @@ export default [
         name: "Baltic Blue",
         image: "/cdn/img/product/CL-11-SK.png",
         sku: "CL-11-SK",
-        color: "#007FFF", // Baltic Blue:
+        color: "#95c1f4", // Baltic Blue:
         price: 3100,
       },
       {
@@ -540,7 +540,7 @@ export default [
         name: "Speedway Blue",
         image: "/cdn/img/product/CL-13-BL.png",
         sku: "CL-13-BL",
-        color: "#0C1C8C", // Speedway Blue:
+        color: "#2679a6", // Speedway Blue:
         price: 7500,
       },
       {
@@ -566,14 +566,14 @@ export default [
         name: "Emerald Grove",
         image: "/cdn/img/product/CL-14-GR.png",
         sku: "CL-14-GR",
-        color: "#048243", // Emerald Grove:
+        color: "#57ae13", // Emerald Grove:
         price: 2300,
       },
       {
         name: "Ruby Fields",
         image: "/cdn/img/product/CL-14-RD.png",
         sku: "CL-14-RD",
-        color: "#9B111E", // Ruby Fields:
+        color: "#cd2b1e", // Ruby Fields:
         price: 2300,
       },
     ],
@@ -592,14 +592,14 @@ export default [
         name: "Vintage Pink",
         image: "/cdn/img/product/CL-15-PI.png",
         sku: "CL-15-PI",
-        color: "#C71585", // Vintage Pink:
+        color: "#e1949e", // Vintage Pink:
         price: 6200,
       },
       {
         name: "Sahara Dust",
         image: "/cdn/img/product/CL-15-SD.png",
         sku: "CL-15-SD",
-        color: "#ECD540", // Sahara Dust:
+        color: "#dec78c", // Sahara Dust:
         price: 6200,
       },
     ],
