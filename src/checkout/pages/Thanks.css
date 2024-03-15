@@ -1,5 +1,6 @@
 .c_Thanks {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: calc(1000px + var(--outer-space) * 2);
+  padding: 0 var(--outer-space);
   min-height: 50vh;
 }

@@ -1,6 +1,7 @@
 .c_Checkout {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: calc(1000px + var(--outer-space) * 2);
+  padding: 0 var(--outer-space);
 }
 
 .c_Checkout__buttons {

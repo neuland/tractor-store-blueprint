@@ -29,3 +29,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
+:root {
+  --outer-space: 1.5rem;
+}
