@@ -13,7 +13,7 @@ export default ({ sku }) => {
   >
     <input type="hidden" name="sku" value="${sku}" />
     <div class="c_AddToCart__information">
-      <p>${product.price} €</p>
+      <p>${product.price} Ø</p>
       ${product.inventory > 0
         ? html`<p class="c_AddToCart__stock c_AddToCart__stock--ok">
             ${product.inventory} in stock, free shipping
