@@ -33,7 +33,7 @@
   list-style: none;
 }
 
-.d_ProductPage__highlights li {
+.d_ProductPage__highlights > li {
   margin-bottom: 1rem;
 }
 
