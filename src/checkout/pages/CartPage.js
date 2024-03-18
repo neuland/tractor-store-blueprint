@@ -45,8 +45,9 @@ export default ({ c }) => {
         })}
       </div>
 
-      ${Recommendations({ skus })} ${Footer()}
+      ${Recommendations({ skus })}
     </main>
+    ${Footer()}
   `;
   return Page({ content });
 };

@@ -148,7 +148,11 @@ function readBoundaryFromCache(boundary, width, height) {
     return null;
   }
   const entry = JSON.parse(svgStr);
-  if (entry.width !== width || entry.height !== height) {
+  const tolerance = 10;
+  if (
+    Math.abs(entry.width - width) >= tolerance ||
+    Math.abs(entry.height - height) >= tolerance
+  ) {
     return null;
   }
   const parser = new window.DOMParser();
@@ -223,6 +227,7 @@ function generateRoughBoundary(el) {
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("width", width);
   svg.setAttribute("height", height);
+  svg.setAttribute("preserveAspectRatio", "none");
 
   // white background
   svg.appendChild(generateWhiteBackground(rectangle));

@@ -10,7 +10,7 @@
 }
 
 .c_CartPage__total {
-  margin-top: 20px;
+  margin: 2rem 0 3rem;
   text-align: right;
   font-weight: bold;
 }
@@ -18,7 +18,7 @@
 .c_CartPage__buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 4rem;
+  margin-bottom: 4rem;
   gap: 2rem;
 }
 

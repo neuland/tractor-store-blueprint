@@ -1,7 +1,7 @@
 .d_ProductPage {
   margin: 0 auto;
   max-width: calc(1000px + var(--outer-space) * 2);
-  padding: 0 var(--outer-space) 5rem;
+  padding: 0 var(--outer-space);
 }
 
 .d_ProductPage__details {

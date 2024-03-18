@@ -71,9 +71,8 @@ export default () => {
           })}
         </div>
       </form>
-
-      ${Footer()}
     </main>
+    ${Footer()}
   `;
   return Page({ content });
 };
