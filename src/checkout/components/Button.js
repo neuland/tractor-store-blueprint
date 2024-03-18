@@ -6,8 +6,9 @@ export default ({
   value,
   disabled,
   rounded,
-  className,
+  className = "",
   children,
+  dataId,
   variant = "secondary",
 }) => {
   const tag = href ? "a" : "button";
@@ -16,6 +17,7 @@ export default ({
     ${href ? `href="${href}"` : ""}
     ${type ? `type="${type}"` : ""}
     ${value ? `value="${value}"` : ""}
+    ${dataId ? `data-id="${dataId}"` : ""}
     class="c_Button c_Button--${variant} ${className} ${rounded ? "c_Button--rounded" : ""}"
     ontouchstart
   >

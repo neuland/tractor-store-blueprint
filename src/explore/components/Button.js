@@ -8,6 +8,7 @@ export default ({
   rounded,
   className,
   children,
+  dataId,
   variant = "secondary",
 }) => {
   const tag = href ? "a" : "button";
@@ -16,9 +17,10 @@ export default ({
     ${href ? `href="${href}"` : ""}
     ${type ? `type="${type}"` : ""}
     ${value ? `value="${value}"` : ""}
-    class="c_Button c_Button--${variant} ${className} ${rounded ? "c_Button--rounded" : ""}"
+    ${dataId ? `data-id="${dataId}"` : ""}
+    class="e_Button e_Button--${variant} ${className} ${rounded ? "e_Button--rounded" : ""}"
     ontouchstart
   >
-    <div class="c_Button__inner">${children}</div>
+    <div class="e_Button__inner">${children}</div>
   </${tag}>`;
 };

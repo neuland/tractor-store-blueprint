@@ -1,9 +1,12 @@
 /* globals document */
-
 /* client side javascript */
 
-/* store picker */
-
+/**
+ * Store picker fragment
+ * - open dialog on button click
+ * - select store on button click
+ * - publish event on store selected
+ */
 const $picker = document.querySelector(".e_StorePicker");
 if ($picker) {
   const dialog = $picker.querySelector(".e_StorePicker dialog");
@@ -19,6 +22,7 @@ if ($picker) {
         new CustomEvent("explore:store-selected", { bubbles: true, detail }),
       );
       dialog.close();
+      // copy selected store content to top level
       selected.innerHTML = e.currentTarget.previousElementSibling.innerHTML;
     });
   });

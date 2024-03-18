@@ -1,4 +1,4 @@
-.c_Button {
+.e_Button {
   --button-height: 50px;
   display: block;
   height: var(--button-height);
@@ -21,27 +21,27 @@
   font-size: 16px;
 }
 
-.c_Button--primary {
+.e_Button--primary {
   --accent-color: #ff5a55;
   color: #fff;
 }
 
-.c_Button--secondary {
+.e_Button--secondary {
   --accent-color: #ffffff;
   color: #000;
 }
 
-.c_Button--rounded {
+.e_Button--rounded {
   --button-height: 66px;
   width: var(--button-height);
 }
 
-.c_Button[disabled] {
+.e_Button[disabled] {
   --accent-color: #d3d3d3;
   pointer-events: none;
 }
 
-.c_Button::before {
+.e_Button::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -63,7 +63,7 @@
     background 0.1s 0.2s;
 }
 
-.c_Button__inner {
+.e_Button__inner {
   position: relative;
   padding-left: 20px;
   padding-right: 20px;
@@ -82,12 +82,12 @@
   white-space: nowrap;
 }
 
-.c_Button:hover .c_Button__inner {
+.e_Button:hover .e_Button__inner {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
     var(--accent-color);
 }
 
-.c_Button:active::before {
+.e_Button:active::before {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.16)),
     var(--accent-color);
   box-shadow:
@@ -99,7 +99,7 @@
     background 0.05s;
 }
 
-.c_Button:active .c_Button__inner {
+.e_Button:active .e_Button__inner {
   transform: scale(0.97);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     var(--accent-color);

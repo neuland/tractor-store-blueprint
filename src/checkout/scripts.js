@@ -1,32 +1,37 @@
 /* globals document,window */
-
 /* client side javascript */
 
-/* checkout page store select */
-const $storePicker = document.querySelector(".c_Checkout_store");
-if ($storePicker) {
+/**
+ * Checkout page
+ * - form validation
+ * - react to store selected event (explore)
+ */
+const $checkoutForm = document.querySelector(".c_Checkout__form");
+if ($checkoutForm) {
+  const $submit = $checkoutForm.querySelector("button[type=submit]");
+  const $storeId = document.getElementById("c_storeId");
+
+  const update = () => {
+    const isValid = $checkoutForm.checkValidity() && $storeId.value;
+    $submit.disabled = !isValid;
+  };
+
+  $checkoutForm.addEventListener("input", update);
+  update();
+
+  const $storePicker = document.querySelector(".c_Checkout__store");
   $storePicker.addEventListener("explore:store-selected", function (e) {
-    console.log("checkout: store-selected", e.detail);
-    document.getElementById("storeId").value = e.detail;
+    console.log("checkout: store-selected", e, e.detail);
+    document.getElementById("c_storeId").value = e.detail;
+    update();
   });
 }
 
-/* checkout page address */
-const $tabs = document.querySelectorAll(".c_Checkout_delivery details");
-$tabs.forEach((detail) => {
-  detail.querySelector("summary").addEventListener("click", (e) => {
-    e.preventDefault();
-    const wasOpen = detail.hasAttribute("open");
-    $tabs.forEach((d) => {
-      d.removeAttribute("open");
-    });
-    if (!wasOpen) {
-      detail.setAttribute("open", true);
-    }
-  });
-});
-
-/* mini cart */
+/**
+ * Mini cart fragment
+ * - updated content on updated event
+ * - highlight animation
+ */
 document.addEventListener("checkout:cart-updated", async function () {
   const $miniCart = document.querySelector(".c_MiniCart");
   if ($miniCart) {
@@ -44,7 +49,11 @@ document.addEventListener("checkout:cart-updated", async function () {
   }
 });
 
-/* add to cart */
+/**
+ * Add to cart fragment
+ * - api call
+ * - updated mini cart event
+ */
 const $addToCart = document.querySelector(".c_AddToCart");
 if ($addToCart) {
   $addToCart.addEventListener("submit", async function (e) {
@@ -60,6 +69,10 @@ if ($addToCart) {
   });
 }
 
+/**
+ * Thanks page
+ * - confetti on load
+ */
 const $thanksPage = document.querySelector(".c_Thanks");
 if ($thanksPage) {
   import("https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/+esm").then(

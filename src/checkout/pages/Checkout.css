@@ -4,6 +4,12 @@
   padding: 0 var(--outer-space);
 }
 
+.c_Checkout__name {
+  display: flex;
+  gap: 0 4rem;
+  flex-wrap: wrap;
+}
+
 .c_Checkout__buttons {
   margin-top: 4rem;
   display: flex;
@@ -15,11 +21,21 @@
   flex: 0;
 }
 
-.c_Checkout input[type="text"] {
+.c_Checkout__label {
+  width: 100px;
+  display: inline-block;
+}
+
+.c_Checkout__input {
   height: 40px;
-  padding: 5px;
+  padding: 5px 10px;
   font-size: 16px;
   border-radius: 8px;
+  margin: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) inset;
+}
+
+.c_Checkout__input:read-only {
+  background-color: rgba(0, 0, 0, 0.05);
 }
