@@ -1,4 +1,3 @@
-import { Context } from "hono";
 import { getCookie, setCookie } from "hono/cookie";
 
 const ITEM_SEP = "|";
@@ -13,7 +12,7 @@ const COOKIE = "c_cart";
 
 /**
  * Reads the line items from the cookie.
- * @param {Context} c - The hono context.
+ * @param {object} c - The hono context.
  * @returns {LineItem[]} An array of items read from the cookie.
  */
 export function readFromCookie(c) {
@@ -30,7 +29,7 @@ export function readFromCookie(c) {
 /**
  * Writes the line items to the cookie.
  * @param {LineItem[]} items - An array of items to write to the cookie.
- * @param {Context} c - The hono context.
+ * @param {object} c - The hono context.
  */
 export function writeToCookie(items, c) {
   const cookieStr = items

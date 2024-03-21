@@ -7,7 +7,6 @@ import Header from "../../explore/components/Header.js";
 import Footer from "../../explore/components/Footer.js";
 import Recommendations from "../../explore/components/Recommendations.js";
 import Button from "../components/Button.js";
-import { Context } from "hono";
 
 /**
  * @typedef {object} LineItem
@@ -23,7 +22,7 @@ import { Context } from "hono";
 
 /**
  * Retrieves cart line items.
- * @param {Context} c - Hono context.
+ * @param {object} c - Hono context.
  * @returns {LineItem[]} - Cart line items.
  */
 function getLineItems(c) {

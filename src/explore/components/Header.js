@@ -1,12 +1,11 @@
 import MiniCart from "../../checkout/components/MiniCart.js";
 import Navigation from "./Navigation.js";
 import { html } from "../utils.js";
-import { Context } from "hono";
 
 /**
  * Header component.
  * @param {object} props - The properties of the Header component.
- * @param {Context} props.c - The hono context.
+ * @param {object} props.c - The hono context.
  * @returns {string} The Header component markup.
  */
 export default ({ c }) => {

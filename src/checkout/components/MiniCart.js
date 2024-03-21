@@ -1,4 +1,3 @@
-import { Context } from "hono";
 import { readFromCookie } from "../state.js";
 import { html } from "../utils.js";
 import Button from "./Button.js";
@@ -6,7 +5,7 @@ import Button from "./Button.js";
 /**
  * MiniCart component.
  * @param {object} props - The properties of the MiniCart component.
- * @param {Context} props.c - The hono context.
+ * @param {object} props.c - The hono context.
  * @returns {string} The MiniCart component markup.
  */
 export default ({ c }) => {
