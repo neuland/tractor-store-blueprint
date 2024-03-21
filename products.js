@@ -1,9 +1,30 @@
+/**
+ * @typedef {object} Variant
+ * @property {string} name - The variant name.
+ * @property {string} image - The URL to the variant's image.
+ * @property {string} sku - The stock keeping unit.
+ * @property {string} color - The color code in hexadecimal.
+ * @property {number} price - The price of the variant.
+ */
+
+/**
+ * @typedef {object} Product
+ * @property {string} name - The product name.
+ * @property {string} id - The product ID.
+ * @property {string} category - The product category.
+ * @property {string[]} highlights - List of product highlights.
+ * @property {Variant[]} variants - Available variants of the product.
+ */
+
+/**
+ * @type {Product[]}
+ */
 export default [
   {
     name: "TerraFirma AutoCultivator T-300",
     id: "AU-01",
     category: "autonomous",
-    highlights: [
+    highlightsa: [
       "Precision GPS mapping optimizes field coverage.",
       "Hybrid engine ensures eco-friendly extended operation.",
       "Fully autonomous with smart obstacle detection and terrain adaptation.",
@@ -95,7 +116,7 @@ export default [
     name: "Sapphire Sunworker 460R",
     id: "AU-04",
     category: "autonomous",
-    hichlights: [
+    highlights: [
       "Next-generation autonomous guidance system for seamless operation",
       "High-capacity energy storage for all-day work without recharge",
       "Advanced analytics suite for precision soil and plant health management",
@@ -121,7 +142,7 @@ export default [
     name: "EcoGrow Crop Commander",
     id: "AU-05",
     category: "autonomous",
-    hichlights: [
+    highlights: [
       "Ultra-precise field navigation technology",
       "Dual-mode power system for maximum uptime",
       "On-the-go field data analysis for smart farming decisions",
@@ -140,7 +161,7 @@ export default [
     name: "FarmFleet Sovereign",
     id: "AU-06",
     category: "autonomous",
-    hichlights: [
+    highlights: [
       "Robust all-terrain adaptability for diverse farm landscapes",
       "High-efficiency energy matrix for longer field endurance",
       "Integrated crop management system with advanced diagnostics",
@@ -166,7 +187,7 @@ export default [
     name: "Verde Voyager",
     id: "AU-07",
     category: "autonomous",
-    hichlights: [
+    highlights: [
       "Adaptive drive system intelligently navigates through diverse field conditions",
       "Clean energy operation with advanced solar battery technology",
       "High-resolution field scanners for precise agronomy insights",

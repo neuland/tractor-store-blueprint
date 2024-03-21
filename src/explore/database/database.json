@@ -199,329 +199,282 @@
       "AU-01-SI": {
         "name": "TerraFirma AutoCultivator T-300 Silver",
         "sku": "AU-01-SI",
-        "product": "AU-01",
         "image": "/cdn/img/product/AU-01-SI.png",
         "url": "/product/AU-01?sku=AU-01-SI"
       },
       "AU-02-OG": {
         "name": "SmartFarm Titan Sunset Copper",
         "sku": "AU-02-OG",
-        "product": "AU-02",
         "image": "/cdn/img/product/AU-02-OG.png",
         "url": "/product/AU-02?sku=AU-02-OG"
       },
       "AU-02-BL": {
         "name": "SmartFarm Titan Cosmic Sapphire",
         "sku": "AU-02-BL",
-        "product": "AU-02",
         "image": "/cdn/img/product/AU-02-BL.png",
         "url": "/product/AU-02?sku=AU-02-BL"
       },
       "AU-02-GG": {
         "name": "SmartFarm Titan Verdant Shadow",
         "sku": "AU-02-GG",
-        "product": "AU-02",
         "image": "/cdn/img/product/AU-02-GG.png",
         "url": "/product/AU-02?sku=AU-02-GG"
       },
       "AU-03-TQ": {
         "name": "FutureHarvest Navigator Turquoise Titan",
         "sku": "AU-03-TQ",
-        "product": "AU-03",
         "image": "/cdn/img/product/AU-03-TQ.png",
         "url": "/product/AU-03?sku=AU-03-TQ"
       },
       "AU-03-PL": {
         "name": "FutureHarvest Navigator Majestic Violet",
         "sku": "AU-03-PL",
-        "product": "AU-03",
         "image": "/cdn/img/product/AU-03-PL.png",
         "url": "/product/AU-03?sku=AU-03-PL"
       },
       "AU-03-RD": {
         "name": "FutureHarvest Navigator Scarlet Dynamo",
         "sku": "AU-03-RD",
-        "product": "AU-03",
         "image": "/cdn/img/product/AU-03-RD.png",
         "url": "/product/AU-03?sku=AU-03-RD"
       },
       "AU-03-YE": {
         "name": "FutureHarvest Navigator Sunbeam Yellow",
         "sku": "AU-03-YE",
-        "product": "AU-03",
         "image": "/cdn/img/product/AU-03-YE.png",
         "url": "/product/AU-03?sku=AU-03-YE"
       },
       "AU-04-RD": {
         "name": "Sapphire Sunworker 460R Ruby Red",
         "sku": "AU-04-RD",
-        "product": "AU-04",
         "image": "/cdn/img/product/AU-04-RD.png",
         "url": "/product/AU-04?sku=AU-04-RD"
       },
       "AU-04-BK": {
         "name": "Sapphire Sunworker 460R Midnight Onyx",
         "sku": "AU-04-BK",
-        "product": "AU-04",
         "image": "/cdn/img/product/AU-04-BK.png",
         "url": "/product/AU-04?sku=AU-04-BK"
       },
       "AU-05-ZH": {
         "name": "EcoGrow Crop Commander Zestful Horizon",
         "sku": "AU-05-ZH",
-        "product": "AU-05",
         "image": "/cdn/img/product/AU-05-ZH.png",
         "url": "/product/AU-05?sku=AU-05-ZH"
       },
       "AU-06-CZ": {
         "name": "FarmFleet Sovereign Canary Zenith",
         "sku": "AU-06-CZ",
-        "product": "AU-06",
         "image": "/cdn/img/product/AU-06-CZ.png",
         "url": "/product/AU-06?sku=AU-06-CZ"
       },
       "AU-06-MT": {
         "name": "FarmFleet Sovereign Minted Jade",
         "sku": "AU-06-MT",
-        "product": "AU-06",
         "image": "/cdn/img/product/AU-06-MT.png",
         "url": "/product/AU-06?sku=AU-06-MT"
       },
       "AU-07-MT": {
         "name": "Verde Voyager Glacial Mint",
         "sku": "AU-07-MT",
-        "product": "AU-07",
         "image": "/cdn/img/product/AU-07-MT.png",
         "url": "/product/AU-07?sku=AU-07-MT"
       },
       "AU-07-YE": {
         "name": "Verde Voyager Sunbeam Yellow",
         "sku": "AU-07-YE",
-        "product": "AU-07",
         "image": "/cdn/img/product/AU-07-YE.png",
         "url": "/product/AU-07?sku=AU-07-YE"
       },
       "AU-08-WH": {
         "name": "Field Pioneer Polar White",
         "sku": "AU-08-WH",
-        "product": "AU-08",
         "image": "/cdn/img/product/AU-08-WH.png",
         "url": "/product/AU-08?sku=AU-08-WH"
       },
       "CL-01-GR": {
         "name": "Heritage Workhorse Verdant Field",
         "sku": "CL-01-GR",
-        "product": "CL-01",
         "image": "/cdn/img/product/CL-01-GR.png",
         "url": "/product/CL-01?sku=CL-01-GR"
       },
       "CL-01-GY": {
         "name": "Heritage Workhorse Stormy Sky",
         "sku": "CL-01-GY",
-        "product": "CL-01",
         "image": "/cdn/img/product/CL-01-GY.png",
         "url": "/product/CL-01?sku=CL-01-GY"
       },
       "CL-02-BL": {
         "name": "Falcon Crest Farm Cerulean Classic",
         "sku": "CL-02-BL",
-        "product": "CL-02",
         "image": "/cdn/img/product/CL-02-BL.png",
         "url": "/product/CL-02?sku=CL-02-BL"
       },
       "CL-03-GR": {
         "name": "Falcon Crest Work Meadow Green",
         "sku": "CL-03-GR",
-        "product": "CL-03",
         "image": "/cdn/img/product/CL-03-GR.png",
         "url": "/product/CL-03?sku=CL-03-GR"
       },
       "CL-03-PI": {
         "name": "Falcon Crest Work Rustic Rose",
         "sku": "CL-03-PI",
-        "product": "CL-03",
         "image": "/cdn/img/product/CL-03-PI.png",
         "url": "/product/CL-03?sku=CL-03-PI"
       },
       "CL-03-YE": {
         "name": "Falcon Crest Work Harvest Gold",
         "sku": "CL-03-YE",
-        "product": "CL-03",
         "image": "/cdn/img/product/CL-03-YE.png",
         "url": "/product/CL-03?sku=CL-03-YE"
       },
       "CL-04-BL": {
         "name": "Broadfield Majestic Oceanic Blue",
         "sku": "CL-04-BL",
-        "product": "CL-04",
         "image": "/cdn/img/product/CL-04-BL.png",
         "url": "/product/CL-04?sku=CL-04-BL"
       },
       "CL-04-RD": {
         "name": "Broadfield Majestic Rustic Crimson",
         "sku": "CL-04-RD",
-        "product": "CL-04",
         "image": "/cdn/img/product/CL-04-RD.png",
         "url": "/product/CL-04?sku=CL-04-RD"
       },
       "CL-04-TQ": {
         "name": "Broadfield Majestic Aqua Green",
         "sku": "CL-04-TQ",
-        "product": "CL-04",
         "image": "/cdn/img/product/CL-04-TQ.png",
         "url": "/product/CL-04?sku=CL-04-TQ"
       },
       "CL-05-PT": {
         "name": "Countryside Commander Pacific Teal",
         "sku": "CL-05-PT",
-        "product": "CL-05",
         "image": "/cdn/img/product/CL-05-PT.png",
         "url": "/product/CL-05?sku=CL-05-PT"
       },
       "CL-05-RD": {
         "name": "Countryside Commander Barn Red",
         "sku": "CL-05-RD",
-        "product": "CL-05",
         "image": "/cdn/img/product/CL-05-RD.png",
         "url": "/product/CL-05?sku=CL-05-RD"
       },
       "CL-06-MT": {
         "name": "Danamark Steadfast Emerald Forest",
         "sku": "CL-06-MT",
-        "product": "CL-06",
         "image": "/cdn/img/product/CL-06-MT.png",
         "url": "/product/CL-06?sku=CL-06-MT"
       },
       "CL-06-YE": {
         "name": "Danamark Steadfast Golden Wheat",
         "sku": "CL-06-YE",
-        "product": "CL-06",
         "image": "/cdn/img/product/CL-06-YE.png",
         "url": "/product/CL-06?sku=CL-06-YE"
       },
       "CL-07-GR": {
         "name": "Greenland Rover Forest Fern",
         "sku": "CL-07-GR",
-        "product": "CL-07",
         "image": "/cdn/img/product/CL-07-GR.png",
         "url": "/product/CL-07?sku=CL-07-GR"
       },
       "CL-07-YE": {
         "name": "Greenland Rover Autumn Amber",
         "sku": "CL-07-YE",
-        "product": "CL-07",
         "image": "/cdn/img/product/CL-07-YE.png",
         "url": "/product/CL-07?sku=CL-07-YE"
       },
       "CL-08-GR": {
         "name": "Holland Hamster Polder Green",
         "sku": "CL-08-GR",
-        "product": "CL-08",
         "image": "/cdn/img/product/CL-08-GR.png",
         "url": "/product/CL-08?sku=CL-08-GR"
       },
       "CL-08-PI": {
         "name": "Holland Hamster Tulip Magenta",
         "sku": "CL-08-PI",
-        "product": "CL-08",
         "image": "/cdn/img/product/CL-08-PI.png",
         "url": "/product/CL-08?sku=CL-08-PI"
       },
       "CL-09-BL": {
         "name": "TerraFirma Veneto Adriatic Blue",
         "sku": "CL-09-BL",
-        "product": "CL-09",
         "image": "/cdn/img/product/CL-09-BL.png",
         "url": "/product/CL-09?sku=CL-09-BL"
       },
       "CL-09-GR": {
         "name": "TerraFirma Veneto Tuscan Green",
         "sku": "CL-09-GR",
-        "product": "CL-09",
         "image": "/cdn/img/product/CL-09-GR.png",
         "url": "/product/CL-09?sku=CL-09-GR"
       },
       "CL-10-SD": {
         "name": "Global Gallant Sahara Dawn",
         "sku": "CL-10-SD",
-        "product": "CL-10",
         "image": "/cdn/img/product/CL-10-SD.png",
         "url": "/product/CL-10?sku=CL-10-SD"
       },
       "CL-10-VI": {
         "name": "Global Gallant Violet Vintage",
         "sku": "CL-10-VI",
-        "product": "CL-10",
         "image": "/cdn/img/product/CL-10-VI.png",
         "url": "/product/CL-10?sku=CL-10-VI"
       },
       "CL-11-SK": {
         "name": "Scandinavia Sower Baltic Blue",
         "sku": "CL-11-SK",
-        "product": "CL-11",
         "image": "/cdn/img/product/CL-11-SK.png",
         "url": "/product/CL-11?sku=CL-11-SK"
       },
       "CL-11-YE": {
         "name": "Scandinavia Sower Nordic Gold",
         "sku": "CL-11-YE",
-        "product": "CL-11",
         "image": "/cdn/img/product/CL-11-YE.png",
         "url": "/product/CL-11?sku=CL-11-YE"
       },
       "CL-12-BL": {
         "name": "Celerity Cruiser Velocity Blue",
         "sku": "CL-12-BL",
-        "product": "CL-12",
         "image": "/cdn/img/product/CL-12-BL.png",
         "url": "/product/CL-12?sku=CL-12-BL"
       },
       "CL-12-RD": {
         "name": "Celerity Cruiser Rally Red",
         "sku": "CL-12-RD",
-        "product": "CL-12",
         "image": "/cdn/img/product/CL-12-RD.png",
         "url": "/product/CL-12?sku=CL-12-RD"
       },
       "CL-13-BL": {
         "name": "Rapid Racer Speedway Blue",
         "sku": "CL-13-BL",
-        "product": "CL-13",
         "image": "/cdn/img/product/CL-13-BL.png",
         "url": "/product/CL-13?sku=CL-13-BL"
       },
       "CL-13-RD": {
         "name": "Rapid Racer Raceway Red",
         "sku": "CL-13-RD",
-        "product": "CL-13",
         "image": "/cdn/img/product/CL-13-RD.png",
         "url": "/product/CL-13?sku=CL-13-RD"
       },
       "CL-14-GR": {
         "name": "Caribbean Cruiser Emerald Grove",
         "sku": "CL-14-GR",
-        "product": "CL-14",
         "image": "/cdn/img/product/CL-14-GR.png",
         "url": "/product/CL-14?sku=CL-14-GR"
       },
       "CL-14-RD": {
         "name": "Caribbean Cruiser Ruby Fields",
         "sku": "CL-14-RD",
-        "product": "CL-14",
         "image": "/cdn/img/product/CL-14-RD.png",
         "url": "/product/CL-14?sku=CL-14-RD"
       },
       "CL-15-PI": {
         "name": "Fieldmaster Classic Vintage Pink",
         "sku": "CL-15-PI",
-        "product": "CL-15",
         "image": "/cdn/img/product/CL-15-PI.png",
         "url": "/product/CL-15?sku=CL-15-PI"
       },
       "CL-15-SD": {
         "name": "Fieldmaster Classic Sahara Dust",
         "sku": "CL-15-SD",
-        "product": "CL-15",
         "image": "/cdn/img/product/CL-15-SD.png",
         "url": "/product/CL-15?sku=CL-15-SD"
       }

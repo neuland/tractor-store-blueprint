@@ -20,6 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "@hono/node-server": "^1.8.2",
+    "eslint-plugin-jsdoc": "^48.2.1",
     "hono": "^4.1.0"
   },
   "devDependencies": {

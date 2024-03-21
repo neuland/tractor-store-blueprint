@@ -7,7 +7,25 @@ import Header from "../../explore/components/Header.js";
 import Footer from "../../explore/components/Footer.js";
 import Recommendations from "../../explore/components/Recommendations.js";
 import Button from "../components/Button.js";
+import { Context } from "hono";
 
+/**
+ * @typedef {object} LineItem
+ * @property {string} id - Product ID.
+ * @property {string} sku - Variant SKU.
+ * @property {string} name - Variant name.
+ * @property {number} price - Variant price.
+ * @property {string} image - Variant image URL.
+ * @property {number} inventory - Variant inventory count.
+ * @property {number} quantity - Quantity in cart.
+ * @property {number} total - Total price (price * quantity).
+ */
+
+/**
+ * Retrieves cart line items.
+ * @param {Context} c - Hono context.
+ * @returns {LineItem[]} - Cart line items.
+ */
 function getLineItems(c) {
   return readFromCookie(c).reduce((res, { sku, quantity }) => {
     const variant = data.variants.find((p) => p.sku === sku);

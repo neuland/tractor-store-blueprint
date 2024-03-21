@@ -12,6 +12,10 @@ import {
   handlePlaceOrder,
 } from "./checkout/index.js";
 
+/**
+ * Creates a server instance.
+ * @returns {Hono} The server instance.
+ */
 export default function createServer() {
   const app = new Hono();
   app.use(logger());

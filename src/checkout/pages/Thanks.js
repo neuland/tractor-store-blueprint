@@ -3,7 +3,14 @@ import Header from "../../explore/components/Header.js";
 import { html } from "../utils.js";
 import Footer from "../../explore/components/Footer.js";
 import Button from "../components/Button.js";
+import { Context } from "hono";
 
+/**
+ * Thanks component.
+ * @param {object} props - The properties of the Thanks component.
+ * @param {Context} props.c - The hono context.
+ * @returns {string} The Thanks component markup.
+ */
 export default ({ c }) => {
   const content = html`
     ${Header({ c })}

@@ -4,11 +4,30 @@ import Recommendation from "./Recommendation.js";
 
 const BESTSELLER = ["AU-04-RD", "AU-03-YE", "AU-05-ZH"];
 
+/**
+ * @typedef {object} RecoItem
+ * @property {string} name - The name of the recommendation item.
+ * @property {string} sku - The SKU of the recommendation item.
+ * @property {string} image - The image URL of the recommendation item.
+ * @property {string} url - The URL of the recommendation item.
+ */
+
+/**
+ * Returns recommendations for a given SKU.
+ * @param {string} sku - The SKU to get recommendations for.
+ * @returns {RecoItem[]} An array of recommended items.
+ */
 function recosForSku(sku) {
   const recoSkus = data.recommendations.relations[sku] || BESTSELLER;
   return recoSkus.map((sku) => data.recommendations.variants[sku]);
 }
 
+/**
+ * Returns recommendations for a list of SKUs.
+ * @param {string[]} skus - The SKUs to get recommendations for.
+ * @param {number} max - The maximum number of recommendations to return.
+ * @returns {RecoItem[]} An array of recommended items.
+ */
 function recosForSkus(skus, max = 4) {
   const listOfRecos = skus.map(recosForSku);
 
@@ -26,6 +45,12 @@ function recosForSkus(skus, max = 4) {
   return result.slice(0, max);
 }
 
+/**
+ * Recommendations component.
+ * @param {object} props - The properties of the Recommendations component.
+ * @param {string[]} props.skus - The SKUs of the variants to get recommendations for.
+ * @returns {string} The component markup.
+ */
 export default ({ skus }) => {
   const recos = recosForSkus(skus);
   return recos.length

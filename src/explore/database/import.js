@@ -6,17 +6,50 @@ import fs from "fs";
 import path from "path";
 import products from "../../../products.js";
 
+/**
+ * @typedef {object} Product
+ * @property {string} id - The ID of the product.
+ * @property {string} name - The name of the product.
+ * @property {string} image - The image URL of the product.
+ * @property {string} url - The URL of the product.
+ */
+
+/**
+ * @typedef {object} Variant
+ * @property {string} name - The name of the variant.
+ * @property {string} sku - The SKU of the variant.
+ * @property {string} image - The image URL of the variant.
+ * @property {string} product - The ID of the product the variant belongs to.
+ * @property {string} url - The URL of the variant.
+ */
+
+/**
+ * Generates the URL for a product.
+ * @param {string} id - The ID of the product.
+ * @param {string} sku - The SKU of the product variant.
+ * @returns {string} The URL of the product.
+ */
 export function productUrl(id, sku) {
   const query = sku ? `?sku=${sku}` : "";
   return `/product/${id}${query}`;
 }
 
+/**
+ * Calculates the starting price of a product's variants.
+ * @param {Variant[]} variants - The variants of the product.
+ * @returns {number} The starting price.
+ */
 function startPrice(variants) {
   return variants.reduce((min, variant) => {
     return Math.min(min, variant.price);
   }, Infinity);
 }
 
+/**
+ * Converts a product object to a formatted product.
+ * @param {Product} product - The product object.
+ * @returns {Product} The formatted product.
+ */
 function toProduct(product) {
   return {
     name: product.name,
@@ -27,16 +60,51 @@ function toProduct(product) {
   };
 }
 
-function toVariant(product, variant) {
+/**
+ * @typedef {object} RecoItem
+ * @property {string} name - The name of the recommendation item.
+ * @property {string} sku - The SKU of the recommendation item.
+ * @property {string} image - The image URL of the recommendation item.
+ * @property {string} url - The URL of the recommendation item.
+ */
+
+/**
+ * Converts a product object and a variant object to a formatted recommendation item.
+ * @param {Product} product - The product object.
+ * @param {Variant} variant - The variant object.
+ * @returns {RecoItem} The formatted recommendation item.
+ */
+function toRecoItem(product, variant) {
   return {
     name: `${product.name} ${variant.name}`,
     sku: variant.sku,
-    product: product.id,
     image: variant.image,
     url: productUrl(product.id, variant.sku),
   };
 }
 
+/**
+ * @typedef {object} Category
+ * @property {string} key - The key of the category.
+ * @property {string} name - The name of the category.
+ * @property {Product[]} products - The products in the category.
+ */
+
+/**
+ * @typedef {object} Recommendations
+ * @property {{[key: string]: string[]}} relations - The relations between products.
+ * @property {{[key: string]: RecoItem}} recoItems - The recommendation items.
+ */
+
+/**
+ * @typedef {object} Database
+ * @property {Category[]} categories - The categories in the database.
+ * @property {Recommendations} recommendations - The recommendations in the database.
+ */
+
+/**
+ * @type {Database}
+ */
 const database = {
   categories: [
     {
@@ -62,7 +130,7 @@ const database = {
     // object of sku to variant for lookup
     variants: products
       .flatMap((product) =>
-        product.variants.map((variant) => toVariant(product, variant)),
+        product.variants.map((variant) => toRecoItem(product, variant)),
       )
       .reduce((res, variant) => {
         res[variant.sku] = variant;

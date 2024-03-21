@@ -6,14 +6,36 @@ import fs from "fs";
 import path from "path";
 import products from "../../../products.js";
 
+/**
+ * Generates deterministic inventory (0-10) based on the name.
+ * @param {string} name - The name of the variant.
+ * @returns {number} - The inventory count of the variant.
+ */
 function getInventory(name) {
-  // generate deterministic inventory (0-10) based on the name
   const hash = name
     .split("")
     .reduce((acc, char) => acc + char.charCodeAt(0), 0);
   return hash % 11;
 }
 
+/**
+ * @typedef {object} Variant
+ * @property {string} id - The ID of the product the variant belongs to.
+ * @property {string} name - The name of the variant.
+ * @property {string} sku - The SKU of the variant.
+ * @property {number} price - The price of the variant.
+ * @property {string} image - The image URL of the variant.
+ * @property {number} inventory - The inventory count of the variant.
+ */
+
+/**
+ * @typedef {object} Database
+ * @property {Variant[]} variants - The variants in the database.
+ */
+
+/**
+ * @type {Database}
+ */
 const database = {
   variants: products.flatMap((p) => {
     return p.variants.map((v) => {

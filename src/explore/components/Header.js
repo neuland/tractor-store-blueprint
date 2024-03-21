@@ -1,7 +1,14 @@
 import MiniCart from "../../checkout/components/MiniCart.js";
 import Navigation from "./Navigation.js";
 import { html } from "../utils.js";
+import { Context } from "hono";
 
+/**
+ * Header component.
+ * @param {object} props - The properties of the Header component.
+ * @param {Context} props.c - The hono context.
+ * @returns {string} The Header component markup.
+ */
 export default ({ c }) => {
   return html`<header class="e_Header" data-boundary="explore-header">
     <div class="e_Header__inner">

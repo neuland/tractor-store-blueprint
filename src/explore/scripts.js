@@ -1,4 +1,3 @@
-/* globals document */
 /* client side javascript */
 
 /**

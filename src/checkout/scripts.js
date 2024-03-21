@@ -1,4 +1,3 @@
-/* globals document,window */
 /* client side javascript */
 
 /**
@@ -85,6 +84,9 @@ if ($thanksPage) {
         colors: ["#FFDE54", "#FF5A54", "#54FF90"],
         spread: 70,
       };
+      /**
+       * Animates confetti particles.
+       */
       function frame() {
         confetti({
           ...settings,

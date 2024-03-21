@@ -1,10 +1,10 @@
-.d_Variant {
+.d_VariantOption {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.d_Variant__color {
+.d_VariantOption__color {
   width: 15px;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -16,8 +16,8 @@
     0px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-.d_Variant__color::before,
-.d_Variant__color::after {
+.d_VariantOption__color::before,
+.d_VariantOption__color::after {
   content: "";
   display: block;
   position: absolute;
@@ -27,14 +27,14 @@
   left: 1px;
   border-radius: 50%;
 }
-.d_Variant__color::before {
+.d_VariantOption__color::before {
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.3),
     rgba(0, 0, 0, 0.1) 60%
   );
 }
-.d_Variant__color::after {
+.d_VariantOption__color::after {
   background: linear-gradient(
     to bottom,
     transparent,
@@ -45,17 +45,17 @@
   filter: blur(1px);
 }
 
-.d_Variant > a {
+.d_VariantOption > a {
   color: inherit;
   text-decoration: none;
 }
 
-.d_Variant > strong {
+.d_VariantOption > strong {
   font-weight: normal;
   position: relative;
 }
 
-.d_Variant > strong::before {
+.d_VariantOption > strong::before {
   content: "";
   display: block;
   width: 100%;

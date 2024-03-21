@@ -1,4 +1,4 @@
-import Variant from "../components/Variant.js";
+import VariantOption from "../components/VariantOption.js";
 import Header from "../../explore/components/Header.js";
 import Footer from "../../explore/components/Footer.js";
 import AddToCart from "../../checkout/components/AddToCart.js";
@@ -6,6 +6,14 @@ import Recommendations from "../../explore/components/Recommendations.js";
 import { html } from "../utils.js";
 import data from "../database/index.js";
 
+/**
+ * ProductPage component.
+ * @param {object} props - The properties of the ProductPage component.
+ * @param {string} props.id - The ID of the product.
+ * @param {string} props.sku - The SKU of the selected variant.
+ * @param {object} props.c - The context object.
+ * @returns {string} The ProductPage component markup.
+ */
 export default ({ id, sku, c }) => {
   const {
     name,
@@ -42,7 +50,7 @@ export default ({ id, sku, c }) => {
               <ul class="d_ProductPage__variants">
                 ${variants
                   .map((v) =>
-                    Variant({ ...v, selected: v.sku === variant.sku }),
+                    VariantOption({ ...v, selected: v.sku === variant.sku }),
                   )
                   .join("")}
               </ul>

@@ -1,4 +1,3 @@
-/* globals document, window, XMLSerializer */
 import roughjs from "https://cdn.jsdelivr.net/npm/roughjs@4.6.6/+esm";
 
 // team specific styles
@@ -20,6 +19,9 @@ const config = {
   },
 };
 
+/**
+ * Sets the basic styles.
+ */
 function setBasicStyles() {
   const style = document.createElement("style");
   style.innerHTML = `
@@ -64,7 +66,17 @@ html.showBoundaries img { mix-blend-mode: multiply; }
   document.head.appendChild(style);
 }
 
-// generates an svg path for a rounded rectangle with defined control points
+/**
+ * Generates a rounded rectangle SVG path.
+ * @param {object} options - The options for generating the rounded rectangle.
+ * @param {number} options.x - The x-coordinate of the top-left corner of the rectangle.
+ * @param {number} options.y - The y-coordinate of the top-left corner of the rectangle.
+ * @param {number} options.width - The width of the rectangle.
+ * @param {number} options.height - The height of the rectangle.
+ * @param {number} options.borderRadius - The border radius of the rectangle.
+ * @param {number} options.segmentLength - The length of each line segment.
+ * @returns {string} The SVG path representing the rounded rectangle.
+ */
 function generateRoundedRectangle({
   x,
   y,
@@ -76,7 +88,15 @@ function generateRoundedRectangle({
   const maxRadius = Math.min(width / 2, height / 2);
   borderRadius = Math.min(borderRadius, maxRadius);
 
-  // Adjusts line segments to include control points every `segmentLength` pixels
+  /**
+   * Generates line segments between two points.
+   * @param {number} startX - The x-coordinate of the starting point.
+   * @param {number} startY - The y-coordinate of the starting point.
+   * @param {number} endX - The x-coordinate of the ending point.
+   * @param {number} endY - The y-coordinate of the ending point.
+   * @param {number} segmentLength - The length of each line segment.
+   * @returns {string} The points representing the line segments.
+   */
   function generateLineSegments(startX, startY, endX, endY, segmentLength) {
     let points = "";
     const dx = endX - startX;
@@ -135,6 +155,13 @@ function generateRoundedRectangle({
   return pathData.join(" ");
 }
 
+/**
+ * Writes the SVG node to the cache for the given boundary, width, and height.
+ * @param {SVGElement} svgNode - The SVG node to be cached.
+ * @param {string} boundary - The boundary identifier.
+ * @param {number} width - The width of the boundary.
+ * @param {number} height - The height of the boundary.
+ */
 function writeBoundaryToCache(svgNode, boundary, width, height) {
   const serializer = new XMLSerializer();
   const svgStr = serializer.serializeToString(svgNode);
@@ -142,6 +169,13 @@ function writeBoundaryToCache(svgNode, boundary, width, height) {
   window.sessionStorage.setItem(`boundary-${boundary}`, JSON.stringify(entry));
 }
 
+/**
+ * Reads the SVG string from the cache for the given boundary, width, and height.
+ * @param {string} boundary - The boundary identifier.
+ * @param {number} width - The width of the boundary.
+ * @param {number} height - The height of the boundary.
+ * @returns {SVGElement|null} - The parsed SVG element or null if not found or dimensions don't match.
+ */
 function readBoundaryFromCache(boundary, width, height) {
   const svgStr = window.sessionStorage.getItem(`boundary-${boundary}`);
   if (!svgStr) {
@@ -159,7 +193,11 @@ function readBoundaryFromCache(boundary, width, height) {
   return parser.parseFromString(entry.svg, "image/svg+xml").firstChild;
 }
 
-// creates or updates a style tag with the svg as background
+/**
+ * Sets the CSS background for the given boundary using the SVG node.
+ * @param {string} boundary - The boundary identifier.
+ * @param {SVGElement} svgNode - The SVG node.
+ */
 function setCssBackground(boundary, svgNode) {
   const serializer = new XMLSerializer();
   const svgStr = serializer.serializeToString(svgNode);
@@ -176,7 +214,11 @@ function setCssBackground(boundary, svgNode) {
   style.innerHTML = `[data-boundary="${boundary}"] { background-image: ${url}; }`;
 }
 
-// generate a white background
+/**
+ * Generates a white background for the given rectangle.
+ * @param {string} rectangle - The rectangle coordinates.
+ * @returns {SVGElement} The generated white background SVG element.
+ */
 function generateWhiteBackground(rectangle) {
   const bgNode = document.createElementNS("http://www.w3.org/2000/svg", "path");
   bgNode.setAttribute("d", rectangle);
@@ -184,7 +226,14 @@ function generateWhiteBackground(rectangle) {
   return bgNode;
 }
 
-// generate a rough boundary
+/**
+ * Generates a boundary for the given SVG element.
+ * @param {SVGElement} svg - The SVG element.
+ * @param {string} rectangle - The rectangle coordinates.
+ * @param {string} team - The team name.
+ * @param {boolean} isPage - Indicates if it's a page boundary.
+ * @returns {string} The generated boundary.
+ */
 function generateBoundary(svg, rectangle, team, isPage) {
   const rc = roughjs.svg(svg);
   return rc.path(rectangle, {
@@ -203,6 +252,10 @@ function generateBoundary(svg, rectangle, team, isPage) {
   });
 }
 
+/**
+ * Generates a rough boundary for the given element.
+ * @param {HTMLElement} el - The element to generate the boundary for.
+ */
 function generateRoughBoundary(el) {
   const clientRect = el.getBoundingClientRect();
   const width = Math.round(clientRect.width);
@@ -244,11 +297,18 @@ function generateRoughBoundary(el) {
   setCssBackground(boundary, svg);
 }
 
+/**
+ * Generate rough boundaries for all elements with the data-boundary attribute.
+ */
 function generateRoughBoundaries() {
   const boundaries = document.querySelectorAll("[data-boundary]");
   [...boundaries].forEach(generateRoughBoundary);
 }
 
+/**
+ * Toggle the boundaries based on the active state.
+ * @param {boolean} active - The active state of the boundaries.
+ */
 function toggleBoundaries(active) {
   document.documentElement.classList.toggle("showBoundaries", active);
   window.localStorage.setItem("showBoundaries", active);
@@ -259,6 +319,9 @@ function toggleBoundaries(active) {
   generateRoughBoundaries();
 }
 
+/**
+ * Show toggle button.
+ */
 function showToggleButton() {
   const showBoundaries =
     window.localStorage.getItem("showBoundaries") === "true";

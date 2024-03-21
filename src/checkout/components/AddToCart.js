@@ -2,6 +2,12 @@ import data from "../database/index.js";
 import { html } from "../utils.js";
 import Button from "./Button.js";
 
+/**
+ * AddToCart component.
+ * @param {object} props - The properties of the AddToCart component.
+ * @param {string} props.sku - The SKU of the variant to add to the cart.
+ * @returns {string} The AddToCart component markup.
+ */
 export default ({ sku }) => {
   const product = data.variants.find((p) => p.sku === sku);
   const outOfStock = product.inventory === 0;
