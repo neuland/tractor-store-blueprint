@@ -19,21 +19,6 @@ function getInventory(name) {
 }
 
 /**
- * @typedef {object} Variant
- * @property {string} id - The ID of the product the variant belongs to.
- * @property {string} name - The name of the variant.
- * @property {string} sku - The SKU of the variant.
- * @property {number} price - The price of the variant.
- * @property {string} image - The image URL of the variant.
- * @property {number} inventory - The inventory count of the variant.
- */
-
-/**
- * @typedef {object} Database
- * @property {Variant[]} variants - The variants in the database.
- */
-
-/**
  * @type {Database}
  */
 const database = {

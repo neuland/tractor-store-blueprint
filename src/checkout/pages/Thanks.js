@@ -7,7 +7,7 @@ import Button from "../components/Button.js";
 /**
  * Thanks component.
  * @param {object} props - The properties of the Thanks component.
- * @param {object} props.c - The hono context.
+ * @param {HonoContext} props.c - The hono context.
  * @returns {string} The Thanks component markup.
  */
 export default ({ c }) => {

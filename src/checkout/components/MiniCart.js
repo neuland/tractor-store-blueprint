@@ -5,7 +5,7 @@ import Button from "./Button.js";
 /**
  * MiniCart component.
  * @param {object} props - The properties of the MiniCart component.
- * @param {object} props.c - The hono context.
+ * @param {HonoContext} props.c - The hono context.
  * @returns {string} The MiniCart component markup.
  */
 export default ({ c }) => {

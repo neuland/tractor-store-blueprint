@@ -1,5 +1,5 @@
 /**
- * @typedef {import('./index').default} Database
+ * @type {Database}
  */
 import data from "./database.json" assert { type: "json" };
 export default data;

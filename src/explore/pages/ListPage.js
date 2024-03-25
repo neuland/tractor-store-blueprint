@@ -4,6 +4,13 @@ import Footer from "../components/Footer.js";
 import Product from "../components/Product.js";
 import { html } from "../utils.js";
 
+/**
+ * ListPage component.
+ * @param {object} props - The properties of the ListPage component.
+ * @param {string} props.category - The category key.
+ * @param {HonoContext} props.c - The hone context.
+ * @returns {string} The ListPage component markup.
+ */
 export default ({ category, c }) => {
   const cat = category && data.categories.find((c) => c.key === category);
 

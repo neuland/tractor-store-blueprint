@@ -2,7 +2,7 @@ import { readFromCookie, writeToCookie } from "./state.js";
 
 /**
  * Handles adding an item to the cart.
- * @param {object} c - The hono context.
+ * @param {HonoContext} c - The hono context.
  */
 export async function handleAddToCart(c) {
   const body = await c.req.parseBody();
@@ -21,7 +21,7 @@ export async function handleAddToCart(c) {
 
 /**
  * Handles removing an item from the cart.
- * @param {object} c - The hono context.
+ * @param {HonoContext} c - The hono context.
  */
 export async function handleRemoveFromCart(c) {
   const body = await c.req.parseBody();
@@ -40,7 +40,7 @@ export async function handleRemoveFromCart(c) {
 
 /**
  * Handles placing an order.
- * @param {object} c - The hono context.
+ * @param {HonoContext} c - The hono context.
  */
 export async function handlePlaceOrder(c) {
   writeToCookie([], c);

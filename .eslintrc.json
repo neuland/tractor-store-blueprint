@@ -8,5 +8,8 @@
   "parserOptions": {
     "ecmaVersion": 14,
     "sourceType": "module"
+  },
+  "rules": {
+    "jsdoc/no-undefined-types": "off"
   }
 }

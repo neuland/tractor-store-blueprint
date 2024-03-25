@@ -9,8 +9,8 @@ import Button from "./Button.js";
  * @returns {string} The AddToCart component markup.
  */
 export default ({ sku }) => {
-  const product = data.variants.find((p) => p.sku === sku);
-  const outOfStock = product.inventory === 0;
+  const variant = data.variants.find((p) => p.sku === sku);
+  const outOfStock = variant.inventory === 0;
   return html`<form
     action="/checkout/cart/add"
     method="POST"
@@ -19,10 +19,10 @@ export default ({ sku }) => {
   >
     <input type="hidden" name="sku" value="${sku}" />
     <div class="c_AddToCart__information">
-      <p>${product.price} Ø</p>
-      ${product.inventory > 0
+      <p>${variant.price} Ø</p>
+      ${variant.inventory > 0
         ? html`<p class="c_AddToCart__stock c_AddToCart__stock--ok">
-            ${product.inventory} in stock, free shipping
+            ${variant.inventory} in stock, free shipping
           </p>`
         : html`<p class="c_AddToCart__stock c_AddToCart__stock--empty">
             out of stock

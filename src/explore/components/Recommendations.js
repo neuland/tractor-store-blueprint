@@ -5,14 +5,6 @@ import Recommendation from "./Recommendation.js";
 const BESTSELLER = ["AU-04-RD", "AU-03-YE", "AU-05-ZH"];
 
 /**
- * @typedef {object} RecoItem
- * @property {string} name - The name of the recommendation item.
- * @property {string} sku - The SKU of the recommendation item.
- * @property {string} image - The image URL of the recommendation item.
- * @property {string} url - The URL of the recommendation item.
- */
-
-/**
  * Returns recommendations for a given SKU.
  * @param {string} sku - The SKU to get recommendations for.
  * @returns {RecoItem[]} An array of recommended items.

@@ -5,7 +5,7 @@ import { html } from "../utils.js";
 /**
  * Header component.
  * @param {object} props - The properties of the Header component.
- * @param {object} props.c - The hono context.
+ * @param {HonoContext} props.c - The hono context.
  * @returns {string} The Header component markup.
  */
 export default ({ c }) => {

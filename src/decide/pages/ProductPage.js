@@ -11,7 +11,7 @@ import data from "../database/index.js";
  * @param {object} props - The properties of the ProductPage component.
  * @param {string} props.id - The ID of the product.
  * @param {string} props.sku - The SKU of the selected variant.
- * @param {object} props.c - The context object.
+ * @param {HonoContext} props.c - The hone object.
  * @returns {string} The ProductPage component markup.
  */
 export default ({ id, sku, c }) => {
