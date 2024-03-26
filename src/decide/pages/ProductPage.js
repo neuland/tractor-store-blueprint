@@ -3,7 +3,7 @@ import Header from "../../explore/components/Header.js";
 import Footer from "../../explore/components/Footer.js";
 import AddToCart from "../../checkout/components/AddToCart.js";
 import Recommendations from "../../explore/components/Recommendations.js";
-import { html } from "../utils.js";
+import { html, src, srcset } from "../utils.js";
 import data from "../database/index.js";
 
 /**
@@ -37,8 +37,11 @@ export default ({ id, sku, c }) => {
           <div class="d_ProductPage__details">
             <img
               class="d_ProductPage__productImage"
-              src="${variant.image}"
+              src="${src(variant.image, 400)}"
+              srcset="${srcset(variant.image, [400, 800])}"
+              sizes="400px"
               width="400"
+              height="400"
             />
             <div class="d_ProductPage__productInformation">
               <h2 class="d_ProductPage__title">${name}</h2>

@@ -1,4 +1,4 @@
-import { html } from "../utils.js";
+import { html, src, srcset } from "../utils.js";
 import Button from "./Button.js";
 
 /**
@@ -10,7 +10,14 @@ export default ({ sku, id, name, quantity, total, image }) => {
   const url = `/product/${id}?sku=${sku}`;
   return html`<li class="c_LineItem">
     <a href="${url}" class="c_LineItem__image">
-      <img src="${image}" alt="${name}" />
+      <img
+        src="${src(image, 200)}"
+        srcset="${srcset(image, [200, 400])}"
+        sizes="200px"
+        alt="${name}"
+        width="200"
+        height="200"
+      />
     </a>
     <a href="${url}" class="c_LineItem__name">
       <strong>${name}</strong><br />${sku}

@@ -32,7 +32,7 @@ export default [
     variants: [
       {
         name: "Silver",
-        image: "/cdn/img/product/AU-01-SI.png",
+        image: "/cdn/img/product/[size]/AU-01-SI.webp",
         sku: "AU-01-SI",
         color: "#C0C0C0", // Silver
         price: 1000,
@@ -51,21 +51,21 @@ export default [
     variants: [
       {
         name: "Sunset Copper",
-        image: "/cdn/img/product/AU-02-OG.png",
+        image: "/cdn/img/product/[size]/AU-02-OG.webp",
         sku: "AU-02-OG",
         color: "#dd5219", // Sunset Copper:
         price: 1100,
       },
       {
         name: "Cosmic Sapphire",
-        image: "/cdn/img/product/AU-02-BL.png",
+        image: "/cdn/img/product/[size]/AU-02-BL.webp",
         sku: "AU-02-BL",
         color: "#2A52BE", // Cosmic Sapphire:
         price: 1000,
       },
       {
         name: "Verdant Shadow",
-        image: "/cdn/img/product/AU-02-GG.png",
+        image: "/cdn/img/product/[size]/AU-02-GG.webp",
         sku: "AU-02-GG",
         color: "#005A04",
         price: 1000,
@@ -84,28 +84,28 @@ export default [
     variants: [
       {
         name: "Turquoise Titan",
-        image: "/cdn/img/product/AU-03-TQ.png",
+        image: "/cdn/img/product/[size]/AU-03-TQ.webp",
         sku: "AU-03-TQ",
         color: "#169fb8", // Turquoise Titan:
         price: 1600,
       },
       {
         name: "Majestic Violet",
-        image: "/cdn/img/product/AU-03-PL.png",
+        image: "/cdn/img/product/[size]/AU-03-PL.webp",
         sku: "AU-03-PL",
         color: "#9B5FC0", // Majestic Violet:
         price: 1700,
       },
       {
         name: "Scarlet Dynamo",
-        image: "/cdn/img/product/AU-03-RD.png",
+        image: "/cdn/img/product/[size]/AU-03-RD.webp",
         sku: "AU-03-RD",
         color: "#FF2400", // Scarlet Dynamo:
         price: 1900,
       },
       {
         name: "Sunbeam Yellow",
-        image: "/cdn/img/product/AU-03-YE.png",
+        image: "/cdn/img/product/[size]/AU-03-YE.webp",
         sku: "AU-03-YE",
         color: "#faad00", // Sunbeam Yellow:
         price: 1800,
@@ -124,14 +124,14 @@ export default [
     variants: [
       {
         name: "Ruby Red",
-        image: "/cdn/img/product/AU-04-RD.png",
+        image: "/cdn/img/product/[size]/AU-04-RD.webp",
         sku: "AU-04-RD",
         color: "#9B111E", // Ruby Red:
         price: 5000,
       },
       {
         name: "Midnight Onyx",
-        image: "/cdn/img/product/AU-04-BK.png",
+        image: "/cdn/img/product/[size]/AU-04-BK.webp",
         sku: "AU-04-BK",
         color: "#353839", // Midnight Onyx:
         price: 4000,
@@ -150,7 +150,7 @@ export default [
     variants: [
       {
         name: "Zestful Horizon",
-        image: "/cdn/img/product/AU-05-ZH.png",
+        image: "/cdn/img/product/[size]/AU-05-ZH.webp",
         sku: "AU-05-ZH",
         color: "#FFA07A", // Zestful Horizon:
         price: 3400,
@@ -169,7 +169,7 @@ export default [
     variants: [
       {
         name: "Canary Zenith",
-        image: "/cdn/img/product/AU-06-CZ.png",
+        image: "/cdn/img/product/[size]/AU-06-CZ.webp",
         sku: "AU-06-CZ",
         color: "#FFD700", // Canary Zenith:
         price: 2200,
@@ -177,7 +177,7 @@ export default [
       {
         name: "Minted Jade",
         color: "#628882", // Minted Jade:
-        image: "/cdn/img/product/AU-06-MT.png",
+        image: "/cdn/img/product/[size]/AU-06-MT.webp",
         sku: "AU-06-MT",
         price: 2100,
       },
@@ -195,14 +195,14 @@ export default [
     variants: [
       {
         name: "Glacial Mint",
-        image: "/cdn/img/product/AU-07-MT.png",
+        image: "/cdn/img/product/[size]/AU-07-MT.webp",
         sku: "AU-07-MT",
         color: "#AFDBD2", // Glacial Mint:
         price: 4000,
       },
       {
         name: "Sunbeam Yellow",
-        image: "/cdn/img/product/AU-07-YE.png",
+        image: "/cdn/img/product/[size]/AU-07-YE.webp",
         sku: "AU-07-YE",
         color: "#FFDA03", // Sunbeam Yellow:
         price: 5000,
@@ -221,7 +221,7 @@ export default [
     variants: [
       {
         name: "Polar White",
-        image: "/cdn/img/product/AU-08-WH.png",
+        image: "/cdn/img/product/[size]/AU-08-WH.webp",
         sku: "AU-08-WH",
         color: "#E8E8E8", // Polar White:
         price: 4500,
@@ -240,14 +240,14 @@ export default [
     variants: [
       {
         name: "Verdant Field",
-        image: "/cdn/img/product/CL-01-GR.png",
+        image: "/cdn/img/product/[size]/CL-01-GR.webp",
         sku: "CL-01-GR",
         color: "#6B8E23", // Verdant Field:
         price: 2500,
       },
       {
         name: "Stormy Sky",
-        image: "/cdn/img/product/CL-01-GY.png",
+        image: "/cdn/img/product/[size]/CL-01-GY.webp",
         sku: "CL-01-GY",
         color: "#708090", // Stormy Sky:
         price: 2500,
@@ -266,7 +266,7 @@ export default [
     variants: [
       {
         name: "Cerulean Classic",
-        image: "/cdn/img/product/CL-02-BL.png",
+        image: "/cdn/img/product/[size]/CL-02-BL.webp",
         sku: "CL-02-BL",
         color: "#007BA7", // Cerulean Classic:
         price: 2600,
@@ -285,21 +285,21 @@ export default [
     variants: [
       {
         name: "Meadow Green",
-        image: "/cdn/img/product/CL-03-GR.png",
+        image: "/cdn/img/product/[size]/CL-03-GR.webp",
         sku: "CL-03-GR",
         color: "#7CFC00", // Meadow Green:
         price: 2300,
       },
       {
         name: "Rustic Rose",
-        image: "/cdn/img/product/CL-03-PI.png",
+        image: "/cdn/img/product/[size]/CL-03-PI.webp",
         sku: "CL-03-PI",
         color: "#b50018", // Rustic Rose:
         price: 2300,
       },
       {
         name: "Harvest Gold",
-        image: "/cdn/img/product/CL-03-YE.png",
+        image: "/cdn/img/product/[size]/CL-03-YE.webp",
         sku: "CL-03-YE",
         color: "#DA9100", // Harvest Gold:
         price: 2300,
@@ -318,21 +318,21 @@ export default [
     variants: [
       {
         name: "Oceanic Blue",
-        image: "/cdn/img/product/CL-04-BL.png",
+        image: "/cdn/img/product/[size]/CL-04-BL.webp",
         sku: "CL-04-BL",
         color: "#0040a6", // Oceanic Blue:
         price: 2200,
       },
       {
         name: "Rustic Crimson",
-        image: "/cdn/img/product/CL-04-RD.png",
+        image: "/cdn/img/product/[size]/CL-04-RD.webp",
         sku: "CL-04-RD",
         color: "#7B3F00", // Rustic Crimson:
         price: 2200,
       },
       {
         name: "Aqua Green",
-        image: "/cdn/img/product/CL-04-TQ.png",
+        image: "/cdn/img/product/[size]/CL-04-TQ.webp",
         sku: "CL-04-TQ",
         color: "#00b298", // Aqua Green:
         price: 2200,
@@ -351,14 +351,14 @@ export default [
     variants: [
       {
         name: "Pacific Teal",
-        image: "/cdn/img/product/CL-05-PT.png",
+        image: "/cdn/img/product/[size]/CL-05-PT.webp",
         sku: "CL-05-PT",
         color: "#479da8", // Pacific Teal:
         price: 2700,
       },
       {
         name: "Barn Red",
-        image: "/cdn/img/product/CL-05-RD.png",
+        image: "/cdn/img/product/[size]/CL-05-RD.webp",
         sku: "CL-05-RD",
         color: "#7C0A02", // Barn Red:
         price: 2700,
@@ -377,14 +377,14 @@ export default [
     variants: [
       {
         name: "Emerald Forest",
-        image: "/cdn/img/product/CL-06-MT.png",
+        image: "/cdn/img/product/[size]/CL-06-MT.webp",
         sku: "CL-06-MT",
         color: "#46f5bb", // Emerald Forest:
         price: 2800,
       },
       {
         name: "Golden Wheat",
-        image: "/cdn/img/product/CL-06-YE.png",
+        image: "/cdn/img/product/[size]/CL-06-YE.webp",
         sku: "CL-06-YE",
         color: "#faaf3f", // Golden Wheat:
         price: 2800,
@@ -403,14 +403,14 @@ export default [
     variants: [
       {
         name: "Forest Fern",
-        image: "/cdn/img/product/CL-07-GR.png",
+        image: "/cdn/img/product/[size]/CL-07-GR.webp",
         sku: "CL-07-GR",
         color: "#2ea250", // Forest Fern:
         price: 2900,
       },
       {
         name: "Autumn Amber",
-        image: "/cdn/img/product/CL-07-YE.png",
+        image: "/cdn/img/product/[size]/CL-07-YE.webp",
         sku: "CL-07-YE",
         color: "#FFBF00", // Autumn Amber:
         price: 2900,
@@ -429,14 +429,14 @@ export default [
     variants: [
       {
         name: "Polder Green",
-        image: "/cdn/img/product/CL-08-GR.png",
+        image: "/cdn/img/product/[size]/CL-08-GR.webp",
         sku: "CL-08-GR",
         color: "#C2B280", // Polder Green:
         price: 2750,
       },
       {
         name: "Tulip Magenta",
-        image: "/cdn/img/product/CL-08-PI.png",
+        image: "/cdn/img/product/[size]/CL-08-PI.webp",
         sku: "CL-08-PI",
         color: "#D65282", // Tulip Magenta:
         price: 2750,
@@ -455,14 +455,14 @@ export default [
     variants: [
       {
         name: "Adriatic Blue",
-        image: "/cdn/img/product/CL-09-BL.png",
+        image: "/cdn/img/product/[size]/CL-09-BL.webp",
         sku: "CL-09-BL",
         color: "#2f6ea3", // Adriatic Blue:
         price: 2950,
       },
       {
         name: "Tuscan Green",
-        image: "/cdn/img/product/CL-09-GR.png",
+        image: "/cdn/img/product/[size]/CL-09-GR.webp",
         sku: "CL-09-GR",
         color: "#518b2b", // Tuscan Green:
         price: 2950,
@@ -481,14 +481,14 @@ export default [
     variants: [
       {
         name: "Sahara Dawn",
-        image: "/cdn/img/product/CL-10-SD.png",
+        image: "/cdn/img/product/[size]/CL-10-SD.webp",
         sku: "CL-10-SD",
         color: "#b8a875", // Sahara Dawn:
         price: 2600,
       },
       {
         name: "Violet Vintage",
-        image: "/cdn/img/product/CL-10-VI.png",
+        image: "/cdn/img/product/[size]/CL-10-VI.webp",
         sku: "CL-10-VI",
         color: "#8A2BE2", // Violet Vintage:
         price: 2600,
@@ -507,14 +507,14 @@ export default [
     variants: [
       {
         name: "Baltic Blue",
-        image: "/cdn/img/product/CL-11-SK.png",
+        image: "/cdn/img/product/[size]/CL-11-SK.webp",
         sku: "CL-11-SK",
         color: "#95c1f4", // Baltic Blue:
         price: 3100,
       },
       {
         name: "Nordic Gold",
-        image: "/cdn/img/product/CL-11-YE.png",
+        image: "/cdn/img/product/[size]/CL-11-YE.webp",
         sku: "CL-11-YE",
         color: "#FFD700", // Nordic Gold:
         price: 3100,
@@ -533,14 +533,14 @@ export default [
     variants: [
       {
         name: "Velocity Blue",
-        image: "/cdn/img/product/CL-12-BL.png",
+        image: "/cdn/img/product/[size]/CL-12-BL.webp",
         sku: "CL-12-BL",
         color: "#1E90FF", // Velocity Blue:
         price: 3200,
       },
       {
         name: "Rally Red",
-        image: "/cdn/img/product/CL-12-RD.png",
+        image: "/cdn/img/product/[size]/CL-12-RD.webp",
         sku: "CL-12-RD",
         color: "#ED2939", // Rally Red:
         price: 3200,
@@ -559,14 +559,14 @@ export default [
     variants: [
       {
         name: "Speedway Blue",
-        image: "/cdn/img/product/CL-13-BL.png",
+        image: "/cdn/img/product/[size]/CL-13-BL.webp",
         sku: "CL-13-BL",
         color: "#2679a6", // Speedway Blue:
         price: 7500,
       },
       {
         name: "Raceway Red",
-        image: "/cdn/img/product/CL-13-RD.png",
+        image: "/cdn/img/product/[size]/CL-13-RD.webp",
         sku: "CL-13-RD",
         color: "#CF1020", // Raceway Red:
         price: 7500,
@@ -585,14 +585,14 @@ export default [
     variants: [
       {
         name: "Emerald Grove",
-        image: "/cdn/img/product/CL-14-GR.png",
+        image: "/cdn/img/product/[size]/CL-14-GR.webp",
         sku: "CL-14-GR",
         color: "#57ae13", // Emerald Grove:
         price: 2300,
       },
       {
         name: "Ruby Fields",
-        image: "/cdn/img/product/CL-14-RD.png",
+        image: "/cdn/img/product/[size]/CL-14-RD.webp",
         sku: "CL-14-RD",
         color: "#cd2b1e", // Ruby Fields:
         price: 2300,
@@ -611,14 +611,14 @@ export default [
     variants: [
       {
         name: "Vintage Pink",
-        image: "/cdn/img/product/CL-15-PI.png",
+        image: "/cdn/img/product/[size]/CL-15-PI.webp",
         sku: "CL-15-PI",
         color: "#e1949e", // Vintage Pink:
         price: 6200,
       },
       {
         name: "Sahara Dust",
-        image: "/cdn/img/product/CL-15-SD.png",
+        image: "/cdn/img/product/[size]/CL-15-SD.webp",
         sku: "CL-15-SD",
         color: "#dec78c", // Sahara Dust:
         price: 6200,

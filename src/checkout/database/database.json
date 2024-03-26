@@ -5,7 +5,7 @@
       "name": "TerraFirma AutoCultivator T-300 Silver",
       "sku": "AU-01-SI",
       "price": 1000,
-      "image": "/cdn/img/product/AU-01-SI.png",
+      "image": "/cdn/img/product/[size]/AU-01-SI.webp",
       "inventory": 8
     },
     {
@@ -13,7 +13,7 @@
       "name": "SmartFarm Titan Sunset Copper",
       "sku": "AU-02-OG",
       "price": 1100,
-      "image": "/cdn/img/product/AU-02-OG.png",
+      "image": "/cdn/img/product/[size]/AU-02-OG.webp",
       "inventory": 4
     },
     {
@@ -21,7 +21,7 @@
       "name": "SmartFarm Titan Cosmic Sapphire",
       "sku": "AU-02-BL",
       "price": 1000,
-      "image": "/cdn/img/product/AU-02-BL.png",
+      "image": "/cdn/img/product/[size]/AU-02-BL.webp",
       "inventory": 3
     },
     {
@@ -29,7 +29,7 @@
       "name": "SmartFarm Titan Verdant Shadow",
       "sku": "AU-02-GG",
       "price": 1000,
-      "image": "/cdn/img/product/AU-02-GG.png",
+      "image": "/cdn/img/product/[size]/AU-02-GG.webp",
       "inventory": 6
     },
     {
@@ -37,7 +37,7 @@
       "name": "FutureHarvest Navigator Turquoise Titan",
       "sku": "AU-03-TQ",
       "price": 1600,
-      "image": "/cdn/img/product/AU-03-TQ.png",
+      "image": "/cdn/img/product/[size]/AU-03-TQ.webp",
       "inventory": 9
     },
     {
@@ -45,7 +45,7 @@
       "name": "FutureHarvest Navigator Majestic Violet",
       "sku": "AU-03-PL",
       "price": 1700,
-      "image": "/cdn/img/product/AU-03-PL.png",
+      "image": "/cdn/img/product/[size]/AU-03-PL.webp",
       "inventory": 7
     },
     {
@@ -53,7 +53,7 @@
       "name": "FutureHarvest Navigator Scarlet Dynamo",
       "sku": "AU-03-RD",
       "price": 1900,
-      "image": "/cdn/img/product/AU-03-RD.png",
+      "image": "/cdn/img/product/[size]/AU-03-RD.webp",
       "inventory": 8
     },
     {
@@ -61,7 +61,7 @@
       "name": "FutureHarvest Navigator Sunbeam Yellow",
       "sku": "AU-03-YE",
       "price": 1800,
-      "image": "/cdn/img/product/AU-03-YE.png",
+      "image": "/cdn/img/product/[size]/AU-03-YE.webp",
       "inventory": 3
     },
     {
@@ -69,7 +69,7 @@
       "name": "Sapphire Sunworker 460R Ruby Red",
       "sku": "AU-04-RD",
       "price": 5000,
-      "image": "/cdn/img/product/AU-04-RD.png",
+      "image": "/cdn/img/product/[size]/AU-04-RD.webp",
       "inventory": 9
     },
     {
@@ -77,7 +77,7 @@
       "name": "Sapphire Sunworker 460R Midnight Onyx",
       "sku": "AU-04-BK",
       "price": 4000,
-      "image": "/cdn/img/product/AU-04-BK.png",
+      "image": "/cdn/img/product/[size]/AU-04-BK.webp",
       "inventory": 8
     },
     {
@@ -85,7 +85,7 @@
       "name": "EcoGrow Crop Commander Zestful Horizon",
       "sku": "AU-05-ZH",
       "price": 3400,
-      "image": "/cdn/img/product/AU-05-ZH.png",
+      "image": "/cdn/img/product/[size]/AU-05-ZH.webp",
       "inventory": 8
     },
     {
@@ -93,7 +93,7 @@
       "name": "FarmFleet Sovereign Canary Zenith",
       "sku": "AU-06-CZ",
       "price": 2200,
-      "image": "/cdn/img/product/AU-06-CZ.png",
+      "image": "/cdn/img/product/[size]/AU-06-CZ.webp",
       "inventory": 3
     },
     {
@@ -101,7 +101,7 @@
       "name": "FarmFleet Sovereign Minted Jade",
       "sku": "AU-06-MT",
       "price": 2100,
-      "image": "/cdn/img/product/AU-06-MT.png",
+      "image": "/cdn/img/product/[size]/AU-06-MT.webp",
       "inventory": 5
     },
     {
@@ -109,7 +109,7 @@
       "name": "Verde Voyager Glacial Mint",
       "sku": "AU-07-MT",
       "price": 4000,
-      "image": "/cdn/img/product/AU-07-MT.png",
+      "image": "/cdn/img/product/[size]/AU-07-MT.webp",
       "inventory": 4
     },
     {
@@ -117,7 +117,7 @@
       "name": "Verde Voyager Sunbeam Yellow",
       "sku": "AU-07-YE",
       "price": 5000,
-      "image": "/cdn/img/product/AU-07-YE.png",
+      "image": "/cdn/img/product/[size]/AU-07-YE.webp",
       "inventory": 9
     },
     {
@@ -125,7 +125,7 @@
       "name": "Field Pioneer Polar White",
       "sku": "AU-08-WH",
       "price": 4500,
-      "image": "/cdn/img/product/AU-08-WH.png",
+      "image": "/cdn/img/product/[size]/AU-08-WH.webp",
       "inventory": 4
     },
     {
@@ -133,7 +133,7 @@
       "name": "Heritage Workhorse Verdant Field",
       "sku": "CL-01-GR",
       "price": 2500,
-      "image": "/cdn/img/product/CL-01-GR.png",
+      "image": "/cdn/img/product/[size]/CL-01-GR.webp",
       "inventory": 8
     },
     {
@@ -141,7 +141,7 @@
       "name": "Heritage Workhorse Stormy Sky",
       "sku": "CL-01-GY",
       "price": 2500,
-      "image": "/cdn/img/product/CL-01-GY.png",
+      "image": "/cdn/img/product/[size]/CL-01-GY.webp",
       "inventory": 7
     },
     {
@@ -149,7 +149,7 @@
       "name": "Falcon Crest Farm Cerulean Classic",
       "sku": "CL-02-BL",
       "price": 2600,
-      "image": "/cdn/img/product/CL-02-BL.png",
+      "image": "/cdn/img/product/[size]/CL-02-BL.webp",
       "inventory": 1
     },
     {
@@ -157,7 +157,7 @@
       "name": "Falcon Crest Work Meadow Green",
       "sku": "CL-03-GR",
       "price": 2300,
-      "image": "/cdn/img/product/CL-03-GR.png",
+      "image": "/cdn/img/product/[size]/CL-03-GR.webp",
       "inventory": 7
     },
     {
@@ -165,7 +165,7 @@
       "name": "Falcon Crest Work Rustic Rose",
       "sku": "CL-03-PI",
       "price": 2300,
-      "image": "/cdn/img/product/CL-03-PI.png",
+      "image": "/cdn/img/product/[size]/CL-03-PI.webp",
       "inventory": 3
     },
     {
@@ -173,7 +173,7 @@
       "name": "Falcon Crest Work Harvest Gold",
       "sku": "CL-03-YE",
       "price": 2300,
-      "image": "/cdn/img/product/CL-03-YE.png",
+      "image": "/cdn/img/product/[size]/CL-03-YE.webp",
       "inventory": 6
     },
     {
@@ -181,7 +181,7 @@
       "name": "Broadfield Majestic Oceanic Blue",
       "sku": "CL-04-BL",
       "price": 2200,
-      "image": "/cdn/img/product/CL-04-BL.png",
+      "image": "/cdn/img/product/[size]/CL-04-BL.webp",
       "inventory": 6
     },
     {
@@ -189,7 +189,7 @@
       "name": "Broadfield Majestic Rustic Crimson",
       "sku": "CL-04-RD",
       "price": 2200,
-      "image": "/cdn/img/product/CL-04-RD.png",
+      "image": "/cdn/img/product/[size]/CL-04-RD.webp",
       "inventory": 3
     },
     {
@@ -197,7 +197,7 @@
       "name": "Broadfield Majestic Aqua Green",
       "sku": "CL-04-TQ",
       "price": 2200,
-      "image": "/cdn/img/product/CL-04-TQ.png",
+      "image": "/cdn/img/product/[size]/CL-04-TQ.webp",
       "inventory": 0
     },
     {
@@ -205,7 +205,7 @@
       "name": "Countryside Commander Pacific Teal",
       "sku": "CL-05-PT",
       "price": 2700,
-      "image": "/cdn/img/product/CL-05-PT.png",
+      "image": "/cdn/img/product/[size]/CL-05-PT.webp",
       "inventory": 1
     },
     {
@@ -213,7 +213,7 @@
       "name": "Countryside Commander Barn Red",
       "sku": "CL-05-RD",
       "price": 2700,
-      "image": "/cdn/img/product/CL-05-RD.png",
+      "image": "/cdn/img/product/[size]/CL-05-RD.webp",
       "inventory": 1
     },
     {
@@ -221,7 +221,7 @@
       "name": "Danamark Steadfast Emerald Forest",
       "sku": "CL-06-MT",
       "price": 2800,
-      "image": "/cdn/img/product/CL-06-MT.png",
+      "image": "/cdn/img/product/[size]/CL-06-MT.webp",
       "inventory": 1
     },
     {
@@ -229,7 +229,7 @@
       "name": "Danamark Steadfast Golden Wheat",
       "sku": "CL-06-YE",
       "price": 2800,
-      "image": "/cdn/img/product/CL-06-YE.png",
+      "image": "/cdn/img/product/[size]/CL-06-YE.webp",
       "inventory": 2
     },
     {
@@ -237,7 +237,7 @@
       "name": "Greenland Rover Forest Fern",
       "sku": "CL-07-GR",
       "price": 2900,
-      "image": "/cdn/img/product/CL-07-GR.png",
+      "image": "/cdn/img/product/[size]/CL-07-GR.webp",
       "inventory": 4
     },
     {
@@ -245,7 +245,7 @@
       "name": "Greenland Rover Autumn Amber",
       "sku": "CL-07-YE",
       "price": 2900,
-      "image": "/cdn/img/product/CL-07-YE.png",
+      "image": "/cdn/img/product/[size]/CL-07-YE.webp",
       "inventory": 4
     },
     {
@@ -253,7 +253,7 @@
       "name": "Holland Hamster Polder Green",
       "sku": "CL-08-GR",
       "price": 2750,
-      "image": "/cdn/img/product/CL-08-GR.png",
+      "image": "/cdn/img/product/[size]/CL-08-GR.webp",
       "inventory": 8
     },
     {
@@ -261,7 +261,7 @@
       "name": "Holland Hamster Tulip Magenta",
       "sku": "CL-08-PI",
       "price": 2750,
-      "image": "/cdn/img/product/CL-08-PI.png",
+      "image": "/cdn/img/product/[size]/CL-08-PI.webp",
       "inventory": 3
     },
     {
@@ -269,7 +269,7 @@
       "name": "TerraFirma Veneto Adriatic Blue",
       "sku": "CL-09-BL",
       "price": 2950,
-      "image": "/cdn/img/product/CL-09-BL.png",
+      "image": "/cdn/img/product/[size]/CL-09-BL.webp",
       "inventory": 4
     },
     {
@@ -277,7 +277,7 @@
       "name": "TerraFirma Veneto Tuscan Green",
       "sku": "CL-09-GR",
       "price": 2950,
-      "image": "/cdn/img/product/CL-09-GR.png",
+      "image": "/cdn/img/product/[size]/CL-09-GR.webp",
       "inventory": 7
     },
     {
@@ -285,7 +285,7 @@
       "name": "Global Gallant Sahara Dawn",
       "sku": "CL-10-SD",
       "price": 2600,
-      "image": "/cdn/img/product/CL-10-SD.png",
+      "image": "/cdn/img/product/[size]/CL-10-SD.webp",
       "inventory": 6
     },
     {
@@ -293,7 +293,7 @@
       "name": "Global Gallant Violet Vintage",
       "sku": "CL-10-VI",
       "price": 2600,
-      "image": "/cdn/img/product/CL-10-VI.png",
+      "image": "/cdn/img/product/[size]/CL-10-VI.webp",
       "inventory": 2
     },
     {
@@ -301,7 +301,7 @@
       "name": "Scandinavia Sower Baltic Blue",
       "sku": "CL-11-SK",
       "price": 3100,
-      "image": "/cdn/img/product/CL-11-SK.png",
+      "image": "/cdn/img/product/[size]/CL-11-SK.webp",
       "inventory": 0
     },
     {
@@ -309,7 +309,7 @@
       "name": "Scandinavia Sower Nordic Gold",
       "sku": "CL-11-YE",
       "price": 3100,
-      "image": "/cdn/img/product/CL-11-YE.png",
+      "image": "/cdn/img/product/[size]/CL-11-YE.webp",
       "inventory": 3
     },
     {
@@ -317,7 +317,7 @@
       "name": "Celerity Cruiser Velocity Blue",
       "sku": "CL-12-BL",
       "price": 3200,
-      "image": "/cdn/img/product/CL-12-BL.png",
+      "image": "/cdn/img/product/[size]/CL-12-BL.webp",
       "inventory": 8
     },
     {
@@ -325,7 +325,7 @@
       "name": "Celerity Cruiser Rally Red",
       "sku": "CL-12-RD",
       "price": 3200,
-      "image": "/cdn/img/product/CL-12-RD.png",
+      "image": "/cdn/img/product/[size]/CL-12-RD.webp",
       "inventory": 8
     },
     {
@@ -333,7 +333,7 @@
       "name": "Rapid Racer Speedway Blue",
       "sku": "CL-13-BL",
       "price": 7500,
-      "image": "/cdn/img/product/CL-13-BL.png",
+      "image": "/cdn/img/product/[size]/CL-13-BL.webp",
       "inventory": 1
     },
     {
@@ -341,7 +341,7 @@
       "name": "Rapid Racer Raceway Red",
       "sku": "CL-13-RD",
       "price": 7500,
-      "image": "/cdn/img/product/CL-13-RD.png",
+      "image": "/cdn/img/product/[size]/CL-13-RD.webp",
       "inventory": 5
     },
     {
@@ -349,7 +349,7 @@
       "name": "Caribbean Cruiser Emerald Grove",
       "sku": "CL-14-GR",
       "price": 2300,
-      "image": "/cdn/img/product/CL-14-GR.png",
+      "image": "/cdn/img/product/[size]/CL-14-GR.webp",
       "inventory": 3
     },
     {
@@ -357,7 +357,7 @@
       "name": "Caribbean Cruiser Ruby Fields",
       "sku": "CL-14-RD",
       "price": 2300,
-      "image": "/cdn/img/product/CL-14-RD.png",
+      "image": "/cdn/img/product/[size]/CL-14-RD.webp",
       "inventory": 5
     },
     {
@@ -365,7 +365,7 @@
       "name": "Fieldmaster Classic Vintage Pink",
       "sku": "CL-15-PI",
       "price": 6200,
-      "image": "/cdn/img/product/CL-15-PI.png",
+      "image": "/cdn/img/product/[size]/CL-15-PI.webp",
       "inventory": 0
     },
     {
@@ -373,7 +373,7 @@
       "name": "Fieldmaster Classic Sahara Dust",
       "sku": "CL-15-SD",
       "price": 6200,
-      "image": "/cdn/img/product/CL-15-SD.png",
+      "image": "/cdn/img/product/[size]/CL-15-SD.webp",
       "inventory": 9
     }
   ]

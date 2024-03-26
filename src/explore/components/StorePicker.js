@@ -1,5 +1,5 @@
 import data from "../database/index.js";
-import { html } from "../utils.js";
+import { html, src, srcset } from "../utils.js";
 import Button from "./Button.js";
 
 export default () => {
@@ -25,8 +25,10 @@ export default () => {
                 <div class="e_StorePicker_content">
                   <img
                     class="e_StorePicker_image"
-                    src="${s.image}"
+                    src="${src(s.image, 200)}"
+                    srcset="${srcset(s.image, [200, 400])}"
                     width="200"
+                    height="200"
                   />
                   <p class="e_StorePicker_address">
                     ${s.name}<br />
