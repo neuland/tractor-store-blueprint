@@ -4,8 +4,8 @@ export const html = String.raw;
 
 // use the image server if not using local images
 const IMAGE_SERVER =
-  process?.env?.USE_LOCAL_IMAGES !== "true"
-    ? "https://the-tractor.store/v2"
+  typeof process === "undefined" || process.env.USE_LOCAL_IMAGES !== "true"
+    ? "https://cdn.the-tractor.store"
     : "";
 
 /**
