@@ -8,7 +8,7 @@
           "name": "Heritage Workhorse",
           "id": "CL-01",
           "image": "/cdn/img/product/[size]/CL-01-GR.webp",
-          "startPrice": 2500,
+          "startPrice": 5700,
           "url": "/product/CL-01"
         },
         {
@@ -57,7 +57,7 @@
           "name": "Holland Hamster",
           "id": "CL-08",
           "image": "/cdn/img/product/[size]/CL-08-GR.webp",
-          "startPrice": 2750,
+          "startPrice": 7750,
           "url": "/product/CL-08"
         },
         {
@@ -126,7 +126,7 @@
           "name": "SmartFarm Titan",
           "id": "AU-02",
           "image": "/cdn/img/product/[size]/AU-02-OG.webp",
-          "startPrice": 1000,
+          "startPrice": 4000,
           "url": "/product/AU-02"
         },
         {
@@ -140,7 +140,7 @@
           "name": "Sapphire Sunworker 460R",
           "id": "AU-04",
           "image": "/cdn/img/product/[size]/AU-04-RD.webp",
-          "startPrice": 4000,
+          "startPrice": 8500,
           "url": "/product/AU-04"
         },
         {

@@ -12,7 +12,7 @@
       "id": "AU-02",
       "name": "SmartFarm Titan Sunset Copper",
       "sku": "AU-02-OG",
-      "price": 1100,
+      "price": 4100,
       "image": "/cdn/img/product/[size]/AU-02-OG.webp",
       "inventory": 4
     },
@@ -20,7 +20,7 @@
       "id": "AU-02",
       "name": "SmartFarm Titan Cosmic Sapphire",
       "sku": "AU-02-BL",
-      "price": 1000,
+      "price": 4000,
       "image": "/cdn/img/product/[size]/AU-02-BL.webp",
       "inventory": 3
     },
@@ -28,7 +28,7 @@
       "id": "AU-02",
       "name": "SmartFarm Titan Verdant Shadow",
       "sku": "AU-02-GG",
-      "price": 1000,
+      "price": 4000,
       "image": "/cdn/img/product/[size]/AU-02-GG.webp",
       "inventory": 6
     },
@@ -68,7 +68,7 @@
       "id": "AU-04",
       "name": "Sapphire Sunworker 460R Ruby Red",
       "sku": "AU-04-RD",
-      "price": 5000,
+      "price": 8700,
       "image": "/cdn/img/product/[size]/AU-04-RD.webp",
       "inventory": 9
     },
@@ -76,7 +76,7 @@
       "id": "AU-04",
       "name": "Sapphire Sunworker 460R Midnight Onyx",
       "sku": "AU-04-BK",
-      "price": 4000,
+      "price": 8500,
       "image": "/cdn/img/product/[size]/AU-04-BK.webp",
       "inventory": 8
     },
@@ -132,7 +132,7 @@
       "id": "CL-01",
       "name": "Heritage Workhorse Verdant Field",
       "sku": "CL-01-GR",
-      "price": 2500,
+      "price": 5700,
       "image": "/cdn/img/product/[size]/CL-01-GR.webp",
       "inventory": 8
     },
@@ -140,7 +140,7 @@
       "id": "CL-01",
       "name": "Heritage Workhorse Stormy Sky",
       "sku": "CL-01-GY",
-      "price": 2500,
+      "price": 6200,
       "image": "/cdn/img/product/[size]/CL-01-GY.webp",
       "inventory": 7
     },
@@ -252,7 +252,7 @@
       "id": "CL-08",
       "name": "Holland Hamster Polder Green",
       "sku": "CL-08-GR",
-      "price": 2750,
+      "price": 7750,
       "image": "/cdn/img/product/[size]/CL-08-GR.webp",
       "inventory": 8
     },
@@ -260,7 +260,7 @@
       "id": "CL-08",
       "name": "Holland Hamster Tulip Magenta",
       "sku": "CL-08-PI",
-      "price": 2750,
+      "price": 7900,
       "image": "/cdn/img/product/[size]/CL-08-PI.webp",
       "inventory": 3
     },

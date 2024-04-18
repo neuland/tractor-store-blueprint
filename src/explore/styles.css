@@ -1,13 +1,12 @@
 @import url("./components/Header.css");
 @import url("./components/Navigation.css");
-@import url("./components/MenuItem.css");
 @import url("./components/Footer.css");
 @import url("./components/StorePicker.css");
 @import url("./components/Product.css");
 @import url("./components/Recommendations.css");
 @import url("./components/Recommendation.css");
 @import url("./components/Button.css");
-@import url("./pages/ListPage.css");
+@import url("./pages/CategoryPage.css");
 
 @font-face {
   font-family: "Raleway";

@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { logger } from "hono/logger";
-import { ListPage } from "./explore/index.js";
+import { HomePage, StoresPage, CategoryPage } from "./explore/index.js";
 import { ProductPage } from "./decide/index.js";
 import {
   MiniCart,
@@ -23,9 +23,16 @@ export default function createServer() {
   /**
    * Team Explore
    */
-  app.get("/:category?", async (c) => {
+  app.get("/", async (c) => {
+    return c.html(HomePage({ c }));
+  });
+  app.get("/stores", async (c) => {
+    return c.html(StoresPage({ c }));
+  });
+  app.get("/products/:category?", async (c) => {
+    console.log("category", c.req.param("category"));
     const category = c.req.param("category");
-    return c.html(ListPage({ category, c }));
+    return c.html(CategoryPage({ category, c }));
   });
 
   /**

@@ -54,21 +54,21 @@ export default [
         image: "/cdn/img/product/[size]/AU-02-OG.webp",
         sku: "AU-02-OG",
         color: "#dd5219", // Sunset Copper:
-        price: 1100,
+        price: 4100,
       },
       {
         name: "Cosmic Sapphire",
         image: "/cdn/img/product/[size]/AU-02-BL.webp",
         sku: "AU-02-BL",
         color: "#2A52BE", // Cosmic Sapphire:
-        price: 1000,
+        price: 4000,
       },
       {
         name: "Verdant Shadow",
         image: "/cdn/img/product/[size]/AU-02-GG.webp",
         sku: "AU-02-GG",
         color: "#005A04",
-        price: 1000,
+        price: 4000,
       },
     ],
   },
@@ -127,14 +127,14 @@ export default [
         image: "/cdn/img/product/[size]/AU-04-RD.webp",
         sku: "AU-04-RD",
         color: "#9B111E", // Ruby Red:
-        price: 5000,
+        price: 8700,
       },
       {
         name: "Midnight Onyx",
         image: "/cdn/img/product/[size]/AU-04-BK.webp",
         sku: "AU-04-BK",
         color: "#353839", // Midnight Onyx:
-        price: 4000,
+        price: 8500,
       },
     ],
   },
@@ -243,14 +243,14 @@ export default [
         image: "/cdn/img/product/[size]/CL-01-GR.webp",
         sku: "CL-01-GR",
         color: "#6B8E23", // Verdant Field:
-        price: 2500,
+        price: 5700,
       },
       {
         name: "Stormy Sky",
         image: "/cdn/img/product/[size]/CL-01-GY.webp",
         sku: "CL-01-GY",
         color: "#708090", // Stormy Sky:
-        price: 2500,
+        price: 6200,
       },
     ],
   },
@@ -432,14 +432,14 @@ export default [
         image: "/cdn/img/product/[size]/CL-08-GR.webp",
         sku: "CL-08-GR",
         color: "#C2B280", // Polder Green:
-        price: 2750,
+        price: 7750,
       },
       {
         name: "Tulip Magenta",
         image: "/cdn/img/product/[size]/CL-08-PI.webp",
         sku: "CL-08-PI",
         color: "#D65282", // Tulip Magenta:
-        price: 2750,
+        price: 7900,
       },
     ],
   },

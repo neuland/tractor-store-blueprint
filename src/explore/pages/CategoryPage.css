@@ -1,10 +1,10 @@
-.e_ListPage {
+.e_CategoryPage {
   max-width: calc(1000px + var(--outer-space) * 2);
   padding: 0 var(--outer-space);
   margin: 0 auto;
 }
 
-.e_ListPage_list {
+.e_CategoryPage_list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;

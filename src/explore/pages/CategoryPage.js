@@ -5,19 +5,29 @@ import Product from "../components/Product.js";
 import { html } from "../utils.js";
 
 /**
- * ListPage component.
- * @param {object} props - The properties of the ListPage component.
+ * CategoryPage component.
+ * @param {object} props - The properties of the CategoryPage component.
  * @param {string} props.category - The category key.
  * @param {HonoContext} props.c - The hone context.
- * @returns {string} The ListPage component markup.
+ * @returns {string} The CategoryPage component markup.
  */
 export default ({ category, c }) => {
   const cat = category && data.categories.find((c) => c.key === category);
 
-  const title = cat ? cat.name : "All Products";
+  const title = cat ? cat.name : "All Machines";
   const products = cat
     ? cat.products
     : data.categories.flatMap((c) => c.products);
+  // sort products by price descending
+  products.sort((a, b) => b.startPrice - a.startPrice);
+  const filters = [
+    { url: "/products", name: "All", active: !cat },
+    ...data.categories.map((c) => ({
+      url: `/products/${c.key}`,
+      name: c.name,
+      active: c.key === category,
+    })),
+  ];
 
   return html`<!doctype html>
     <html>
@@ -30,10 +40,23 @@ export default ({ category, c }) => {
       </head>
       <body data-boundary="explore-page">
         ${Header({ c })}
-        <main class="e_ListPage">
+        <main class="e_CategoryPage">
           <h2>${title}</h2>
+          <div>
           <p>${products.length} products</p>
-          <ul class="e_ListPage_list">
+          <div>
+            Filter: 
+            <ul>
+              ${filters
+                .map((f) =>
+                  f.active
+                    ? `<li>${f.name}</li>`
+                    : `<li><a href="${f.url}">${f.name}</a></li>`,
+                )
+                .join("")}
+            </ul>
+          </div>
+          <ul class="e_CategoryPage_list">
             ${products.map(Product).join("")}
           </ul>
         </main>
