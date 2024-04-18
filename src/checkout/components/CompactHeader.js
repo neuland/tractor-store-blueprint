@@ -1,4 +1,4 @@
-import { html } from "../utils.js";
+import { html, IMAGE_SERVER } from "../utils.js";
 
 export default () => {
   return html`<header class="c_CompactHeader">
@@ -6,7 +6,7 @@ export default () => {
       <a class="c_CompactHeader__link" href="/">
         <img
           class="c_CompactHeader__logo"
-          src="/cdn/img/logo.svg"
+          src="${IMAGE_SERVER}/cdn/img/logo.svg"
           alt="Micro Frontends - Tractor Store"
         />
       </a>

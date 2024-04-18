@@ -1,6 +1,6 @@
 import MiniCart from "../../checkout/components/MiniCart.js";
 import Navigation from "./Navigation.js";
-import { html } from "../utils.js";
+import { html, IMAGE_SERVER } from "../utils.js";
 
 /**
  * Header component.
@@ -14,7 +14,7 @@ export default ({ c }) => {
       <a class="e_Header__link" href="/">
         <img
           class="e_Header__logo"
-          src="/cdn/img/logo.svg"
+          src="${IMAGE_SERVER}/cdn/img/logo.svg"
           alt="Micro Frontends - Tractor Store"
         />
       </a>

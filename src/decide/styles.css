@@ -3,7 +3,8 @@
 
 @font-face {
   font-family: "Raleway";
-  src: url("/cdn/font/Raleway-Regular.woff2") format("woff2");
+  src: url("https://cdn.the-tractor.store/cdn/font/Raleway-Regular.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
