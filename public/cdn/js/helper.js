@@ -182,7 +182,7 @@ function readBoundaryFromCache(boundary, width, height) {
     return null;
   }
   const entry = JSON.parse(svgStr);
-  const tolerance = 10;
+  const tolerance = 30;
   if (
     Math.abs(entry.width - width) >= tolerance ||
     Math.abs(entry.height - height) >= tolerance

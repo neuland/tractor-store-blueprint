@@ -2,39 +2,64 @@ import data from "../database/index.js";
 import { html } from "../utils.js";
 import Recommendation from "./Recommendation.js";
 
-const BESTSELLER = ["AU-04-RD", "AU-03-YE", "AU-05-ZH"];
+const r = data.recommendations;
 
 /**
- * Returns recommendations for a given SKU.
- * @param {string} sku - The SKU to get recommendations for.
- * @returns {RecoItem[]} An array of recommended items.
+ * Calculates the average color of an array of colors.
+ * @param {number[][]} colors - The array of rgb.
+ * @returns {number[]} The average rgb.
  */
-function recosForSku(sku) {
-  const recoSkus = data.recommendations.relations[sku] || BESTSELLER;
-  return recoSkus.map((sku) => data.recommendations.variants[sku]);
+function averageColor(colors) {
+  const total = colors.reduce(
+    (acc, [r, g, b]) => [acc[0] + r, acc[1] + g, acc[2] + b],
+    [0, 0, 0],
+  );
+  return total.map((c) => Math.round(c / colors.length));
 }
 
 /**
- * Returns recommendations for a list of SKUs.
- * @param {string[]} skus - The SKUs to get recommendations for.
- * @param {number} max - The maximum number of recommendations to return.
- * @returns {RecoItem[]} An array of recommended items.
+ * Finds the colors of a list of SKUs.
+ * @param {string[]} skus - The array of SKUs.
+ * @returns {number[][]} The array of colors.
  */
-function recosForSkus(skus, max = 4) {
-  const listOfRecos = skus.map(recosForSku);
+function skusToColors(skus) {
+  console.log({ skus });
+  return skus.filter((sku) => r[sku]).map((sku) => r[sku].rgb);
+}
 
-  // take first of each list until we have enough
-  const result = [];
-  let i = 0;
-  while (listOfRecos.some((recos) => recos[i])) {
-    listOfRecos.forEach((recos) => {
-      if (recos[i] && !result.includes(recos[i])) {
-        result.push(recos[i]);
-      }
-    });
-    i++;
+/**
+ * Calculates the distance between two RGB colors.
+ * @param {number[]} rgb1 - The first RGB color.
+ * @param {number[]} rgb2 - The second RGB color.
+ * @returns {number} The distance between the colors.
+ */
+function colorDistance(rgb1, rgb2) {
+  const [r1, g1, b1] = rgb1;
+  const [r2, g2, b2] = rgb2;
+  return Math.sqrt(
+    Math.pow(r1 - r2, 2) + Math.pow(g1 - g2, 2) + Math.pow(b1 - b2, 2),
+  );
+}
+
+/**
+ * Finds recommendations based on color similarity.
+ * @param {string[]} skus - The array of SKUs.
+ * @param {number} [length=5] - The number of recommendations to return.
+ * @returns {RecoItem[]} The array of recommendations.
+ */
+function recosForSkus(skus, length = 4) {
+  const targetRgb = averageColor(skusToColors(skus));
+  let distances = [];
+
+  for (let sku in r) {
+    if (!skus.includes(sku)) {
+      const distance = colorDistance(targetRgb, r[sku].rgb);
+      distances.push({ sku, distance });
+    }
   }
-  return result.slice(0, max);
+
+  distances.sort((a, b) => a.distance - b.distance);
+  return distances.slice(0, length).map((d) => r[d.sku]);
 }
 
 /**

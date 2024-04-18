@@ -22,6 +22,7 @@
  * @property {string} sku - The SKU of the recommendation item.
  * @property {string} image - The image URL of the recommendation item.
  * @property {string} url - The URL of the recommendation item.
+ * @property {number[]} rgb - The RGB color of the recommendation item.
  */
 
 /**
@@ -32,13 +33,7 @@
  */
 
 /**
- * @typedef {object} Recommendations
- * @property {{[key: string]: string[]}} relations - The relations between products.
- * @property {{[key: string]: RecoItem}} recoItems - The recommendation items.
- */
-
-/**
  * @typedef {object} Database
  * @property {Category[]} categories - The categories in the database.
- * @property {Recommendations} recommendations - The recommendations in the database.
+ * @property {{[key: string]: RecoItem}} recommendations - The recommendations in the database.
  */

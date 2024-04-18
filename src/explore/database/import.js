@@ -44,6 +44,19 @@ function toProduct(product) {
 }
 
 /**
+ * Converts a hex color string to an RGB array.
+ * @param {string} hex - The hex color string.
+ * @returns {number[]} The RGB array.
+ **/
+function hexToRgb(hex) {
+  var bigint = parseInt(hex.replace("#", ""), 16);
+  var r = (bigint >> 16) & 255;
+  var g = (bigint >> 8) & 255;
+  var b = bigint & 255;
+  return [r, g, b];
+}
+
+/**
  * Converts a product object and a variant object to a formatted recommendation item.
  * @param {Product} product - The product object.
  * @param {Variant} variant - The variant object.
@@ -55,6 +68,7 @@ function toRecoItem(product, variant) {
     sku: variant.sku,
     image: variant.image,
     url: productUrl(product.id, variant.sku),
+    rgb: hexToRgb(variant.color),
   };
 }
 
@@ -76,23 +90,14 @@ const database = {
         .map(toProduct),
     },
   ],
-  recommendations: {
-    relations: {
-      "AU-01-SI": ["AU-02-GG", "AU-04-BK"],
-      "AU-04-RD": ["AU-03-RD", "AU-02-OG", "AU-05-ZH"],
-      "AU-05-ZH": ["AU-07-MT", "AU-01-SI", "AU-02-GG"],
-      "AU-03-YE": ["AU-06-CZ", "AU-07-YE"],
-    },
-    // object of sku to variant for lookup
-    variants: products
-      .flatMap((product) =>
-        product.variants.map((variant) => toRecoItem(product, variant)),
-      )
-      .reduce((res, variant) => {
-        res[variant.sku] = variant;
-        return res;
-      }, {}),
-  },
+  recommendations: products
+    .flatMap((product) =>
+      product.variants.map((variant) => toRecoItem(product, variant)),
+    )
+    .reduce((res, variant) => {
+      res[variant.sku] = variant;
+      return res;
+    }, {}),
   stores: [
     {
       id: "store-a",
