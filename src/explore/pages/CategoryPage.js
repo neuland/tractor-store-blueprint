@@ -43,9 +43,10 @@ export default ({ category, c }) => {
         ${Header({ c })}
         <main class="e_CategoryPage">
           <h2>${title}</h2>
-          <div>
-          <p>${products.length} products</p>
-          ${Filter({ filters })}
+          <div class="e_CategoryPage__subline">
+            <p>${products.length} products</p>
+            ${Filter({ filters })}
+          </div>
           <ul class="e_CategoryPage_list">
             ${products.map(Product).join("")}
           </ul>

@@ -30,6 +30,10 @@ body {
   min-height: 100vh;
 }
 
+p {
+  line-height: 1.5;
+}
+
 :root {
   --outer-space: 1.5rem;
 }
