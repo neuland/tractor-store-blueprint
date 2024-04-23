@@ -2,6 +2,7 @@ import data from "../database/index.js";
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import Product from "../components/Product.js";
+import Filter from "../components/Filter.js";
 import { html } from "../utils.js";
 
 /**
@@ -44,18 +45,7 @@ export default ({ category, c }) => {
           <h2>${title}</h2>
           <div>
           <p>${products.length} products</p>
-          <div>
-            Filter: 
-            <ul>
-              ${filters
-                .map((f) =>
-                  f.active
-                    ? `<li>${f.name}</li>`
-                    : `<li><a href="${f.url}">${f.name}</a></li>`,
-                )
-                .join("")}
-            </ul>
-          </div>
+          ${Filter({ filters })}
           <ul class="e_CategoryPage_list">
             ${products.map(Product).join("")}
           </ul>
