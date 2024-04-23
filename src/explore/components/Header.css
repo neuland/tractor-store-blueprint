@@ -5,6 +5,7 @@
   border-bottom: 1px solid #eeebe2;
   box-shadow: 0 0 20px 10px #eb5b5920;
   align-items: center;
+  mix-blend-mode: darken;
 }
 
 .e_Header__inner {
