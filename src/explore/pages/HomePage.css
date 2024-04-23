@@ -1,0 +1,5 @@
+.e_HomePage {
+  max-width: calc(1000px + var(--outer-space) * 2);
+  padding: 0 var(--outer-space);
+  margin: 0 auto;
+}

@@ -8,6 +8,8 @@
 @import url("./components/Button.css");
 @import url("./components/Filter.css");
 @import url("./pages/CategoryPage.css");
+@import url("./pages/StoresPage.css");
+@import url("./pages/HomePage.css");
 
 @font-face {
   font-family: "Raleway";
