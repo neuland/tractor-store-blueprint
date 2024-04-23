@@ -19,7 +19,8 @@ export default ({ c }) => {
             alt="Micro Frontends - Tractor Store"
           />
         </a>
-        ${Navigation()} ${MiniCart({ c })}
+        <div class="e_Header__navigation">${Navigation()}</div>
+        <div class="e_Header__cart">${MiniCart({ c })}</div>
       </div>
     </div>
   </header>`;

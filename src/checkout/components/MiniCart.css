@@ -1,5 +1,6 @@
 .c_MiniCart {
   position: relative;
+  margin-right: 1.5rem;
 }
 
 .c_MiniCart__quantity {

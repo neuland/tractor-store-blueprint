@@ -32,8 +32,24 @@
 }
 
 .c_Button--rounded {
-  --button-height: 66px;
+  @media (max-width: 499px) {
+    --button-height: 40px;
+  }
+  @media (min-width: 500px) {
+    --button-height: 66px;
+  }
   width: var(--button-height);
+}
+
+.c_Button--rounded .c_Button__inner {
+  padding: 0;
+}
+
+@media (max-width: 499px) {
+  .c_Button--rounded svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .c_Button[disabled] {
