@@ -10,15 +10,17 @@ import { html, IMAGE_SERVER } from "../utils.js";
  */
 export default ({ c }) => {
   return html`<header class="e_Header" data-boundary="explore-header">
-    <div class="e_Header__inner">
-      <a class="e_Header__link" href="/">
-        <img
-          class="e_Header__logo"
-          src="${IMAGE_SERVER}/cdn/img/logo.svg"
-          alt="Micro Frontends - Tractor Store"
-        />
-      </a>
-      ${Navigation()} ${MiniCart({ c })}
+    <div class="e_Header__cutter">
+      <div class="e_Header__inner">
+        <a class="e_Header__link" href="/">
+          <img
+            class="e_Header__logo"
+            src="${IMAGE_SERVER}/cdn/img/logo.svg"
+            alt="Micro Frontends - Tractor Store"
+          />
+        </a>
+        ${Navigation()} ${MiniCart({ c })}
+      </div>
     </div>
   </header>`;
 };
