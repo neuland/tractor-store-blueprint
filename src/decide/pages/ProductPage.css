@@ -9,8 +9,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
-  min-height: 450px;
-  height: calc(100vh - 400px);
+  min-height: calc(100vh - 400px);
   max-height: 650px;
 }
 
