@@ -7,7 +7,7 @@ export default ({ filters }) => {
       ${filters
         .map((f) =>
           f.active
-            ? `<li>${f.name}</li>`
+            ? `<li class="e_Filter__filter--active">${f.name}</li>`
             : `<li><a href="${f.url}">${f.name}</a></li>`,
         )
         .join("")}

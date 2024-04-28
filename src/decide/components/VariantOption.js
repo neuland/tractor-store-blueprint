@@ -10,8 +10,8 @@ import { html } from "../utils.js";
  * @returns {string} The VariantOption component markup.
  */
 export default ({ sku, name, selected, color }) => {
-  return html`<li class="d_VariantOption">
-    <i class="d_VariantOption__color" style="--background-color: ${color}"></i>
+  return html`<li class="d_VariantOption" style="--variant-color: ${color}">
+    <i class="d_VariantOption__color"></i>
     ${selected
       ? html`<strong>${name}</strong>`
       : html`<a href="?sku=${sku}">${name}</a>`}

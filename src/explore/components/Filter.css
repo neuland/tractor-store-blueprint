@@ -13,6 +13,29 @@
   margin: 0;
 }
 
+.e_Filter li {
+  position: relative;
+}
+
 .e_Filter a {
   color: inherit;
+  text-decoration: none;
+}
+
+.e_Filter__filter--active::before,
+.e_Filter a:hover::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  position: absolute;
+}
+
+.e_Filter__filter--active::before {
+  background-color: black;
+}
+
+.e_Filter a:hover::before {
+  background-color: #ff5a55;
 }
