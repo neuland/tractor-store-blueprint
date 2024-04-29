@@ -4,7 +4,16 @@
 }
 
 .e_Recommendations_list {
-  display: flex;
+  @media (max-width: 999px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  position: relative;
+  display: grid;
   gap: 40px;
   padding: 0;
   list-style-type: none;
