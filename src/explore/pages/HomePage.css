@@ -2,4 +2,20 @@
   max-width: calc(1000px + var(--outer-space) * 2);
   padding: 0 var(--outer-space);
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.e_HomePage__categoryLink {
+  display: block;
+  position: relative;
+}
+
+.e_HomePage__categoryLink img {
+  width: 100%;
+}
+
+.e_HomePage__recommendations {
+  grid-column: span 2;
 }

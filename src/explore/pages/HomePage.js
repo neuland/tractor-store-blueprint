@@ -1,5 +1,6 @@
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
+import Recommendations from "../components/Recommendations.js";
 import { html } from "../utils.js";
 
 /**
@@ -21,7 +22,15 @@ export default ({ c }) => {
       <body data-boundary="explore-page">
         ${Header({ c })}
         <main class="e_HomePage">
-          <h2>Welcome!</h2>
+          <a class="e_HomePage__categoryLink" href="/products/classic"
+            ><img src="/cdn/img/scene/classics.jpg" alt="Classic Tractor"
+          /></a>
+          <a class="e_HomePage__categoryLink" href="/products/autonomous"
+            ><img src="/cdn/img/scene/autonomous.jpg" alt="Autonomous Tractor"
+          /></a>
+          <div class="e_HomePage__recommendations">
+            ${Recommendations({ skus: ["sku-1", "sku-2", "sku-3", "sku-4"] })}
+          </div>
         </main>
         ${Footer()}
         <script src="/explore/static/scripts.js" type="module"></script>
