@@ -29,7 +29,9 @@ export default ({ c }) => {
             ><img src="/cdn/img/scene/autonomous.jpg" alt="Autonomous Tractor"
           /></a>
           <div class="e_HomePage__recommendations">
-            ${Recommendations({ skus: ["sku-1", "sku-2", "sku-3", "sku-4"] })}
+            ${Recommendations({
+              skus: ["CL-01-GY", "AU-07-MT"],
+            })}
           </div>
         </main>
         ${Footer()}
