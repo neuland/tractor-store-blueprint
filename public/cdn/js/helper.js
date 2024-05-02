@@ -334,14 +334,98 @@ function showToggleButton() {
     toggleBoundaries(e.target.checked),
   );
 
+  const checkboxView = document.createElement("div");
+  checkboxView.classList.add("toggleView");
+
   const label = document.createElement("label");
   label.appendChild(checkbox);
+  label.appendChild(checkboxView);
   label.appendChild(document.createTextNode(" show team boundaries"));
 
   const container = document.createElement("div");
+  container.classList.add("showBoundariesToggle");
+
+  const style = document.createElement("style");
+  style.innerHTML = `
+    .showBoundariesToggle {
+      position: fixed; 
+      bottom: 10px; 
+      left: 10px; 
+      border-radius: 10px;
+      display: flex;
+      background-color: rgba(255, 255, 255, 0.8); 
+      -webkit-user-select: none; 
+      user-select: none;
+      box-shadow: 0 0 20px 10px rgba(235, 91, 89, 0.05);  
+      border: 1px solid #eeebe2;
+      backdrop-filter: blur(5px);
+    }
+
+    .showBoundariesToggle input {
+      display: none;
+    }
+
+    .showBoundariesToggle label {
+      cursor: pointer;
+      padding: 20px; 
+      display: flex;
+    }
+
+    .toggleView {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-right: 10px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    .toggleView::before {
+      content: "";
+      display: block;
+      width: 18px;
+      height: 18px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, width 0.3s;
+    }
+
+    .toggleView::after {
+      top: 1px;
+      left: 1px;
+      position: absolute;
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 10px;
+      background-color: #000;
+      opacity: 0.5;
+      transition: transform 0.3s;
+    }
+
+    .showBoundariesToggle label:hover .toggleView::after {
+      opacity: 1;
+    }
+
+    .showBoundariesToggle input:checked + .toggleView::before {
+      width: 38px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+      background-color: rgba(255, 90, 85, 1);
+    }
+
+    .showBoundariesToggle input:checked + .toggleView::after {
+      transform: translateX(20px);
+      opacity: 1;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+  `;
+  container.appendChild(style);
   container.appendChild(label);
-  container.style.cssText =
-    "position: fixed; bottom: 0; left: 0; background-color: rgba(255, 255, 255, 0.8); padding: 10px; -webkit-user-select: none; user-select: none;";
   document.body.appendChild(container);
 }
 
