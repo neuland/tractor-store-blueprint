@@ -32,7 +32,7 @@ export default ({ c }) => {
           </a>
           <a class="e_HomePage__categoryLink" href="/products/autonomous"
             ><img
-              src="/cdn/img/scene/autonomous.jpg"
+              src="${IMAGE_SERVER}/cdn/img/scene/autonomous.jpg"
               alt="Autonomous Tractor"
             />
             Autonomous Tractors</a
