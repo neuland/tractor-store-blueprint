@@ -1,4 +1,4 @@
-import { html } from "../utils.js";
+import { html, IMAGE_SERVER } from "../utils.js";
 
 export default () => {
   return html`<footer class="e_Footer" data-boundary="explore-footer">
@@ -6,7 +6,7 @@ export default () => {
       <div class="e_Footer__inner">
         <div class="e_Footer__initiative">
           <img
-            src="/cdn/img/neulandlogo.svg"
+            src="${IMAGE_SERVER}/cdn/img/neulandlogo.svg"
             alt="neuland - Büro für Informatik"
           />
           <p>
@@ -23,7 +23,7 @@ export default () => {
           <p>
             build by
             <img
-              src="/cdn/img/neulandlogo.svg"
+              src="${IMAGE_SERVER}/cdn/img/neulandlogo.svg"
               alt="neuland - Büro für Informatik"
             />
             <a href="https://neuland-bfi.de"> neuland</a>
