@@ -24,11 +24,16 @@ export default ({ c }) => {
         ${Header({ c })}
         <main class="e_HomePage">
           <a class="e_HomePage__categoryLink" href="/products/classic"
-            ><img src="/cdn/img/scene/classics.jpg" alt="Classic Tractor"
-          /></a>
+            ><img src="/cdn/img/scene/classics.jpg" alt="Classic Tractor" />
+            Classic Tractors
+          </a>
           <a class="e_HomePage__categoryLink" href="/products/autonomous"
-            ><img src="/cdn/img/scene/autonomous.jpg" alt="Autonomous Tractor"
-          /></a>
+            ><img
+              src="/cdn/img/scene/autonomous.jpg"
+              alt="Autonomous Tractor"
+            />
+            Autonomous Tractors</a
+          >
           <div class="e_HomePage__recommendations">
             ${Recommendations({
               skus: ["CL-01-GY", "AU-07-MT"],

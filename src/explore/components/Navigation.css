@@ -35,7 +35,7 @@
   content: "";
   position: absolute;
   width: 20px;
-  height: 26 px;
+  height: calc(100% + 1px);
   top: 0;
 }
 

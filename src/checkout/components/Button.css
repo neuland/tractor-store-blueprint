@@ -111,7 +111,8 @@
   white-space: nowrap;
 }
 
-.c_Button:hover .c_Button__inner {
+.c_Button:hover .c_Button__inner,
+.c_Button:focus .c_Button__inner {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
     var(--accent-color);
 }
