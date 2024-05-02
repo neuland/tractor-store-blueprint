@@ -31,6 +31,8 @@
 
 .d_ProductPage__productImage {
   grid-area: image;
+  width: 100%;
+  height: auto;
 }
 
 .d_ProductPage__productInformation {
