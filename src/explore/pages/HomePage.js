@@ -1,7 +1,7 @@
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import Recommendations from "../components/Recommendations.js";
-import { html } from "../utils.js";
+import { html, IMAGE_SERVER } from "../utils.js";
 import Meta from "../components/Meta.js";
 
 /**
@@ -24,7 +24,10 @@ export default ({ c }) => {
         ${Header({ c })}
         <main class="e_HomePage">
           <a class="e_HomePage__categoryLink" href="/products/classic"
-            ><img src="/cdn/img/scene/classics.jpg" alt="Classic Tractor" />
+            ><img
+              src="${IMAGE_SERVER}/cdn/img/scene/classics.jpg"
+              alt="Classic Tractor"
+            />
             Classic Tractors
           </a>
           <a class="e_HomePage__categoryLink" href="/products/autonomous"
