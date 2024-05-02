@@ -108,7 +108,7 @@ const database = {
     },
     {
       id: "store-b",
-      name: "Big Mirco Machines",
+      name: "Big Micro Machines",
       street: "Broadway 2",
       city: "Burlington",
       image: "/cdn/img/store/[size]/store-2.webp",
