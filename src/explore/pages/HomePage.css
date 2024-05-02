@@ -1,7 +1,7 @@
 .e_HomePage {
   max-width: calc(1000px + var(--outer-space) * 2);
   padding: 0 var(--outer-space);
-  margin: 0 auto;
+  margin: 3rem auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
