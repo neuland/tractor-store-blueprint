@@ -86,7 +86,10 @@
 .e_Button:focus .e_Button__inner {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
     var(--accent-color);
-  outline: 1px transparent solid;
+}
+
+.e_Button:focus {
+  /* outline: none; */
 }
 
 .e_Button:active::before {

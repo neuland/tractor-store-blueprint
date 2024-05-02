@@ -112,12 +112,12 @@
     width: 270px;
   }
   display: block;
-  margin-left: 1.5rem;
 }
 
 .e_Header__link {
   grid-area: logo;
   display: flex;
+  margin-left: var(--outer-space);
   align-items: center;
 }
 
