@@ -19,24 +19,14 @@
   gap: 3rem;
   list-style-type: none;
   padding: 0;
-}
-
-@media screen and (max-width: 599px) {
-  .e_StorePicker_list {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .e_StorePicker_list {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .e_StorePicker_image {
   display: block;
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
+  width: auto;
+  height: auto;
 }
 
 .e_StorePicker_address {

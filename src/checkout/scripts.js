@@ -64,6 +64,11 @@ if ($addToCart) {
     });
     if (res.ok) {
       document.dispatchEvent(new Event("checkout:cart-updated"));
+      console.log($addToCart.querySelector(".c_AddToCart__confirmed"));
+
+      $addToCart
+        .querySelector(".c_AddToCart__confirmed")
+        .classList.remove("c_AddToCart__confirmed--hidden");
     }
   });
 }

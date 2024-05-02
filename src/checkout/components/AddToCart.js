@@ -34,5 +34,9 @@ export default ({ sku }) => {
       children: html`add to basket`,
       variant: "primary",
     })}
+    <div class="c_AddToCart__confirmed c_AddToCart__confirmed--hidden">
+      <p>Tractor was added.</p>
+      <a href="/checkout/cart" class="c_AddToCart__link">View in basket.</a>
+    </div>
   </form>`;
 };
