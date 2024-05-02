@@ -9,7 +9,8 @@
 
 .c_CompactHeader__inner {
   display: flex;
-  max-width: 1000px;
+  max-width: calc(1000px + (2 * var(--outer-space)));
+  padding: 0 var(--outer-space);
   margin: 0 auto;
   align-items: center;
   flex: 1;
