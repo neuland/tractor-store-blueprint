@@ -359,6 +359,8 @@ function showToggleButton() {
       box-shadow: 0 0 20px 10px rgba(235, 91, 89, 0.05);  
       border: 1px solid #eeebe2;
       backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      margin-right: 10px;
     }
 
     .showBoundariesToggle input {
@@ -381,6 +383,7 @@ function showToggleButton() {
       margin-right: 10px;
       box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
       background-color: #fff;
+      flex-shrink: 0;
     }
 
     .toggleView::before {
