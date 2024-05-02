@@ -9,6 +9,12 @@
   padding: 0;
 }
 
+.c_CartPage hr {
+  border: 0;
+  height: 2px;
+  background-color: black;
+}
+
 .c_CartPage__total {
   margin: 2rem 0 3rem;
   text-align: right;
@@ -16,11 +22,8 @@
 }
 
 .c_CartPage__buttons {
-  @media (max-width: 499px) {
-    flex-direction: column-reverse;
-  }
-
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 4rem;

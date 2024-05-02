@@ -40,14 +40,14 @@ export default ({ c }) => {
 
       <div class="c_CartPage__buttons">
         ${Button({
-          href: "/",
-          children: "Continue Shopping",
-          variant: "secondary",
-        })}
-        ${Button({
           href: "/checkout/checkout",
           children: "Checkout",
           variant: "primary",
+        })}
+        ${Button({
+          href: "/",
+          children: "Continue Shopping",
+          variant: "secondary",
         })}
       </div>
 
