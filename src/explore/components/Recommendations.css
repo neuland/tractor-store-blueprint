@@ -4,8 +4,12 @@
 }
 
 .e_Recommendations_list {
-  @media (max-width: 999px) {
+  @media (max-width: 499px) {
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 500px) and (max-width: 999px) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   @media (min-width: 1000px) {
