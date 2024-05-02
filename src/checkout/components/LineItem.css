@@ -29,3 +29,7 @@
   flex-basis: 100px;
   text-align: end;
 }
+
+.c_LineItem__removeIcon {
+  width: 33px;
+}

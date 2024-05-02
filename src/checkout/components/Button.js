@@ -12,6 +12,8 @@ import { html } from "../utils.js";
  * @param {string} [props.children] - The content inside the button.
  * @param {string} [props.dataId] - The data-id attribute of the button.
  * @param {('primary'|'secondary')} [props.variant] - The variant of the button. Valid options are 'primary' and 'secondary'.
+ * @param {string} [props.title] - The title attribute of the button.
+ * @param {('small'|'normal')} [props.size] - The size of the button. Valid options are 'small' and 'normalx'.
  * @returns {string} The button markup.
  */
 export default ({
@@ -23,7 +25,9 @@ export default ({
   className = "",
   children,
   dataId,
+  size = "normal",
   variant = "secondary",
+  title,
 }) => {
   const tag = href ? "a" : "button";
   return html` <${tag}
@@ -32,7 +36,8 @@ export default ({
     ${type ? `type="${type}"` : ""}
     ${value ? `value="${value}"` : ""}
     ${dataId ? `data-id="${dataId}"` : ""}
-    class="c_Button c_Button--${variant} ${className} ${rounded ? "c_Button--rounded" : ""}"
+    ${title ? `title="${title}"` : ""}
+    class="c_Button c_Button--${variant} ${className} ${rounded ? "c_Button--rounded" : ""} c_Button--size-${size}"
     ontouchstart
   >
     <div class="c_Button__inner">${children}</div>

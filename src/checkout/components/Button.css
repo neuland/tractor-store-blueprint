@@ -1,5 +1,12 @@
-.c_Button {
+.c_Button--size-normal {
   --button-height: 50px;
+}
+
+.c_Button--size-small {
+  --button-height: 40px;
+}
+
+.c_Button {
   display: block;
   height: var(--button-height);
   width: 100%;
@@ -31,13 +38,19 @@
   color: #000;
 }
 
-.c_Button--rounded {
+.c_Button--rounded.c_Button--size-normal {
   @media (max-width: 499px) {
     --button-height: 40px;
   }
   @media (min-width: 500px) {
     --button-height: 66px;
   }
+  width: var(--button-height);
+}
+
+.c_Button--rounded.c_Button--size-small {
+  --button-height: 40px;
+
   width: var(--button-height);
 }
 
