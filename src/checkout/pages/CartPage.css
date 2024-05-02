@@ -16,7 +16,12 @@
 }
 
 .c_CartPage__buttons {
+  @media (max-width: 499px) {
+    flex-direction: column-reverse;
+  }
+
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 4rem;
   gap: 2rem;

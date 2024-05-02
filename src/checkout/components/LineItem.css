@@ -1,6 +1,7 @@
 .c_LineItem {
   display: flex;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
 }
