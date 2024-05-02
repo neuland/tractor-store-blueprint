@@ -3,6 +3,7 @@ import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import Store from "../components/Store.js";
 import { html } from "../utils.js";
+import Meta from "../components/Meta.js";
 
 /**
  * StoresPage component.
@@ -19,7 +20,7 @@ export default ({ c }) => {
         <link rel="stylesheet" href="/explore/static/styles.css" />
         <link rel="stylesheet" href="/decide/static/styles.css" />
         <link rel="stylesheet" href="/checkout/static/styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        ${Meta()}
       </head>
       <body data-boundary="explore-page">
         ${Header({ c })}

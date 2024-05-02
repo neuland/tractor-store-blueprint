@@ -5,6 +5,7 @@ import AddToCart from "../../checkout/components/AddToCart.js";
 import Recommendations from "../../explore/components/Recommendations.js";
 import { html, src, srcset } from "../utils.js";
 import data from "../database/index.js";
+import Meta from "../components/Meta.js";
 
 /**
  * ProductPage component.
@@ -29,7 +30,7 @@ export default ({ id, sku, c }) => {
         <link rel="stylesheet" href="/explore/static/styles.css" />
         <link rel="stylesheet" href="/decide/static/styles.css" />
         <link rel="stylesheet" href="/checkout/static/styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        ${Meta()}
       </head>
       <body data-boundary="decide-page">
         ${Header({ c })}

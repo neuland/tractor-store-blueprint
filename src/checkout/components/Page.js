@@ -1,4 +1,5 @@
 import { html } from "../utils.js";
+import Meta from "./Meta.js";
 
 export default ({ content }) => {
   return html`<!doctype html>
@@ -8,7 +9,7 @@ export default ({ content }) => {
         <link rel="stylesheet" href="/explore/static/styles.css" />
         <link rel="stylesheet" href="/decide/static/styles.css" />
         <link rel="stylesheet" href="/checkout/static/styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        ${Meta()}
       </head>
       <body data-boundary="checkout-page">
         ${content}
