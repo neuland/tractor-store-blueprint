@@ -26,6 +26,7 @@
 
 .e_HomePage__categoryLink img {
   width: 100%;
+  aspect-ratio: 1000 / 560;
   margin-bottom: 0.75rem;
 }
 
