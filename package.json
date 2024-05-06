@@ -5,6 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "dev": "npm run build && node --watch --es-module-specifier-resolution=node --no-warnings src/server.node.js",
+    "dev:local-images": "USE_LOCAL_IMAGES=true npm run dev",
     "watch": "node esbuild.js --watch",
     "build": "node esbuild.js",
     "lint": "eslint .",

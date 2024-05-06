@@ -1,7 +1,7 @@
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import Recommendations from "../components/Recommendations.js";
-import { html, IMAGE_SERVER } from "../utils.js";
+import { html, src, srcset } from "../utils.js";
 import Meta from "../components/Meta.js";
 
 /**
@@ -11,6 +11,19 @@ import Meta from "../components/Meta.js";
  * @returns {string} The HomePage component markup.
  */
 export default ({ c }) => {
+  const teaser = [
+    {
+      title: "Classic Tractors",
+      image: "/cdn/img/scene/[size]/classics.webp",
+      url: "/products/classic",
+    },
+    {
+      title: "Autonomous Tractors",
+      image: "/cdn/img/scene/[size]/autonomous.webp",
+      url: "/products/autonomous",
+    },
+  ];
+
   return html`<!doctype html>
     <html>
       <head>
@@ -23,20 +36,20 @@ export default ({ c }) => {
       <body data-boundary="explore-page">
         ${Header({ c })}
         <main class="e_HomePage">
-          <a class="e_HomePage__categoryLink" href="/products/classic"
-            ><img
-              src="${IMAGE_SERVER}/cdn/img/scene/classics.jpg"
-              alt="Classic Tractor"
-            />
-            Classic Tractors
-          </a>
-          <a class="e_HomePage__categoryLink" href="/products/autonomous"
-            ><img
-              src="${IMAGE_SERVER}/cdn/img/scene/autonomous.jpg"
-              alt="Autonomous Tractor"
-            />
-            Autonomous Tractors</a
-          >
+          ${teaser
+            .map(
+              ({ title, image, url }) =>
+                html`<a class="e_HomePage__categoryLink" href="${url}">
+                  <img
+                    src="${src(image, 500)}"
+                    srcet="${srcset(image, [500, 1000])}"
+                    sizes="100vw, (min-width: 500px) 50vw"
+                    alt="${title}"
+                  />
+                  ${title}
+                </a>`,
+            )
+            .join("")}
           <div class="e_HomePage__recommendations">
             ${Recommendations({
               skus: ["CL-01-GY", "AU-07-MT"],
