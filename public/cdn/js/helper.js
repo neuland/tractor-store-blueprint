@@ -36,13 +36,13 @@ function setBasicStyles() {
   display: block;
   content: attr(data-boundary);
   position: absolute;
-  bottom: -1.2rem;
-  right: 1rem;
+  bottom: -0.8rem;
+  right: 50%;
+  transform: translateX(50%);
   padding: 0 0.5rem;
   line-height: 1.5;
   font-weight: bold;
   pointer-events: none;
-  color: rgba(0,0,0,0.5);
   font-family: "Pangolin", cursive;
   font-weight: 400;
   font-style: normal;
