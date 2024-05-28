@@ -20,7 +20,7 @@
   @media (min-width: 1000px) {
     grid-template: "image information" 1fr / 4fr 5fr;
     gap: 10%;
-    height: clamp(400px, calc(70vh - 400px), 650px);
+    min-height: clamp(400px, calc(70vh - 400px), 650px);
   }
 
   display: grid;
