@@ -1,4 +1,4 @@
-import { html, src, srcset } from "../utils.js";
+import { html, src, srcset, fmtprice } from "../utils.js";
 
 /**
  * Product component.
@@ -17,7 +17,7 @@ export default ({ name, url, image, startPrice }) => {
         height="200"
       />
       <span class="e_Product_name">${name}</span>
-      <span class="e_Product_price">${startPrice},00 Ø</span>
+      <span class="e_Product_price">${fmtprice(startPrice)}</span>
     </a>
   </li>`;
 };

@@ -27,3 +27,12 @@ export function src(image, size) {
 export function srcset(image, sizes = []) {
   return sizes.map((size) => `${src(image, size)} ${size}w`).join(", ");
 }
+
+/**
+ * Formats a price value.
+ * @param {number} price - The price value to format.
+ * @returns {string} - The formatted price.
+ */
+export function fmtprice(price) {
+  return `${price},00 Ø`;
+}

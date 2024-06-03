@@ -23,7 +23,6 @@ function averageColor(colors) {
  * @returns {number[][]} The array of colors.
  */
 function skusToColors(skus) {
-  console.log({ skus });
   return skus.filter((sku) => r[sku]).map((sku) => r[sku].rgb);
 }
 

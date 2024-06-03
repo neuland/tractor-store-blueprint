@@ -98,12 +98,18 @@
 }
 
 .e_Footer__initiative {
-  grid-area: initiave;
   display: flex;
   gap: 1rem;
   align-items: flex-start;
   flex: 1;
   margin-bottom: 2rem;
+}
+
+.e_Footer__initiative,
+.e_Footer__credits {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50%;
 }
 
 .e_Footer__initiative img {
@@ -113,10 +119,6 @@
 
 .e_Footer__initiative p {
   margin: 0;
-}
-
-.e_Footer__credits {
-  grid-area: credits;
 }
 
 .e_Footer__credits h4 {
