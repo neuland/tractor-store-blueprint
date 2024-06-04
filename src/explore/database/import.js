@@ -76,6 +76,18 @@ function toRecoItem(product, variant) {
  * @type {Database}
  */
 const database = {
+  teaser: [
+    {
+      title: "Classic Tractors",
+      image: "/cdn/img/scene/[size]/classics.webp",
+      url: "/products/classic",
+    },
+    {
+      title: "Autonomous Tractors",
+      image: "/cdn/img/scene/[size]/autonomous.webp",
+      url: "/products/autonomous",
+    },
+  ],
   categories: [
     {
       key: "classic",

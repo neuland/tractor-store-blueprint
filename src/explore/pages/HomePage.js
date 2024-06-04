@@ -1,3 +1,4 @@
+import data from "../database/index.js";
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
 import Recommendations from "../components/Recommendations.js";
@@ -11,19 +12,6 @@ import Meta from "../components/Meta.js";
  * @returns {string} The HomePage component markup.
  */
 export default ({ c }) => {
-  const teaser = [
-    {
-      title: "Classic Tractors",
-      image: "/cdn/img/scene/[size]/classics.webp",
-      url: "/products/classic",
-    },
-    {
-      title: "Autonomous Tractors",
-      image: "/cdn/img/scene/[size]/autonomous.webp",
-      url: "/products/autonomous",
-    },
-  ];
-
   return html`<!doctype html>
     <html>
       <head>
@@ -36,7 +24,7 @@ export default ({ c }) => {
       <body data-boundary="explore-page">
         ${Header({ c })}
         <main class="e_HomePage">
-          ${teaser
+          ${data.teaser
             .map(
               ({ title, image, url }) =>
                 html`<a class="e_HomePage__categoryLink" href="${url}">
