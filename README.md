@@ -84,10 +84,9 @@ The goal of this project is to provide a central place, where different micro fr
 - Potential client-side interactions (variant change, remove from cart, form validation)
 - Nested integration (page > header > mini cart)
 - [Bonus] Shared UI components / pattern library (button)
-- [Bonus] Login / authentication
 
 ### Infrastructure 🏗️
 
 - Deployment
 - Integration service
-- Ende-zu-Ende-Tests
+- Ende-zu-Ende-Tests (planned)
