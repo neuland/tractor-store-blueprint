@@ -60,20 +60,21 @@ The goal of this project is to provide a central place, where different micro fr
 ### Boundaries 📄
 
 - 🔴 Explore
-  - 📄 Home / Category
+  - 📄 Home
+  - 📄 Category
   - 📄 Stores
-  - 🧩 Header (🔴🔵🟢 every page, except checkout)
-  - 🧩 Footer (🔴🔵🟢 every page)
-  - 🧩 Recommendations (🔵 product details, 🔴 cart)
-  - 🧩 Store Picker (🟢 checkout)
-- 🔵 Decide
-  - 📄 Product Details
-- 🟢 Buy
+  - 🧩 Header (🔴🟢🟡 every page, except checkout)
+  - 🧩 Footer (🔴🟢🟡 every page)
+  - 🧩 Recommendations (🔴 home, 🟢 product, 🟡 cart)
+  - 🧩 Store Picker (🟡 checkout)
+- 🟢 Decide
+  - 📄 Product detail
+- 🟡 Buy
   - 📄 Cart
   - 📄 Checkout
   - 📄 Thank you
   - 🧩 Mini Cart (🔴 header)
-  - 🧩 Buy Button (🔵 product details)
+  - 🧩 Add To Cart Button (🟢 product details)
 
 ### Concepts 🧠
 
