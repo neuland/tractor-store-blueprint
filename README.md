@@ -9,7 +9,11 @@ The idea is similar to [TodoMVC](http://todomvc.com/) or [Movies](https://tastej
 
 ## About this project
 
-- Three systems: Explore, Decide, Buy along the customer journey (buying process)
+- Three systems: Explore, Decide, Checkout are established along the customer journey (buying process)
+- Team missions
+  - Explore: Helps the customer to explore and navigate through the broad tractor catalog.
+  - Decide: Helps the customer to make an informed buying decision by presenting all necessary details.
+  - Checkout: Provides an easy and straight forward checkout process.
 - Store that sells tractors
 - E-commerce platform (homepage, catalog, product details, cart, checkout, thank you page)
 - Special features: Add to cart animation, recommendations, store picker, thank you confetti
@@ -27,13 +31,14 @@ The idea is similar to [TodoMVC](http://todomvc.com/) or [Movies](https://tastej
 
 ## Implementation choices
 
-- All described features must be implemented (user stories). End-to-end tests are provided to verify the implementation.
+- All described features must be implemented.
 - The concrete implementation is up to you (frontend framework, style handling, etc.)
 - Communication between systems can be achieved with different techniques (client, server, shared state, events, event-bus, etc.)
 - Server- and/or client-rendering is possible
 - An application shell is not required, but can be implemented if desired
 - Deployment can be done with different techniques (container, serverless, static, etc.)
-- Optional feature: extract shared UI components into a pattern library (button, ...)
+- Bonus objective #1: Extract shared UI components (e.g. the Button) into a shared pattern library.
+- Bonus objective #2: The Explore team is getting too big. A new "Inspire" team should be created to take care of product recommendations. Migrate this function to a standalone fourth system.
 
 ## Goal of the project
 
