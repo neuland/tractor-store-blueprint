@@ -11,7 +11,7 @@ import Button from "./Button.js";
 export default ({ c }) => {
   const lineItems = readFromCookie(c);
   const quantity = lineItems.reduce((t, { quantity }) => t + quantity, 0);
-  return html`<div class="c_MiniCart" data-boundary="checkout-minicart">
+  return html`<div class="c_MiniCart" data-boundary="checkout">
     ${Button({
       variant: "secondary",
       rounded: true,

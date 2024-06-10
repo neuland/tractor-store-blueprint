@@ -22,7 +22,7 @@ export default ({ c }) => {
         <link rel="stylesheet" href="/checkout/static/styles.css" />
         ${Meta()}
       </head>
-      <body data-boundary="explore-page">
+      <body data-boundary-page="explore">
         ${Header({ c })}
         <main class="e_StoresPage">
           <h2>Our Stores</h2>

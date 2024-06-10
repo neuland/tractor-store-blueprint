@@ -70,10 +70,7 @@ function recosForSkus(skus, length = 4) {
 export default ({ skus }) => {
   const recos = recosForSkus(skus);
   return recos.length
-    ? html`<div
-        class="e_Recommendations"
-        data-boundary="explore-recommendations"
-      >
+    ? html`<div class="e_Recommendations" data-boundary="explore">
         <h2>Recommendations</h2>
         <ul class="e_Recommendations_list">
           ${recos.map(Recommendation).join("")}

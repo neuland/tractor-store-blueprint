@@ -1,7 +1,7 @@
 import { html, IMAGE_SERVER } from "../utils.js";
 
 export default () => {
-  return html`<footer class="e_Footer" data-boundary="explore-footer">
+  return html`<footer class="e_Footer" data-boundary="explore">
     <div class="e_Footer__cutter">
       <div class="e_Footer__inner">
         <div class="e_Footer__initiative">

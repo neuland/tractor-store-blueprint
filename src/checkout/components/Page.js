@@ -11,7 +11,7 @@ export default ({ content }) => {
         <link rel="stylesheet" href="/checkout/static/styles.css" />
         ${Meta()}
       </head>
-      <body data-boundary="checkout-page">
+      <body data-boundary-page="checkout">
         ${content}
         <script src="/explore/static/scripts.js" type="module"></script>
         <script src="/decide/static/scripts.js" type="module"></script>

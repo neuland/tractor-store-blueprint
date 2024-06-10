@@ -5,17 +5,14 @@ const config = {
   explore: {
     fill: "rgba(255, 90, 84, 0.1)",
     stroke: "rgba(255, 90, 84, 1)",
-    hachureAngle: 30,
   },
   decide: {
     fill: "rgba(84, 255, 144, 0.1)",
     stroke: "rgba(84, 255, 144, 1)",
-    hachureAngle: 60,
   },
   checkout: {
     fill: "rgba(255, 222, 84, 0.1)",
     stroke: "rgba(255, 222, 84, 1)",
-    hachureAngle: 90,
   },
 };
 
@@ -27,12 +24,14 @@ function setBasicStyles() {
   style.innerHTML = `
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 
-[data-boundary] {
+[data-boundary],
+[data-boundary-page] {
   position: relative;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
-[data-boundary]::after {
+[data-boundary]::after,
+[data-boundary-page]::after {
   display: block;
   content: attr(data-boundary);
   position: absolute;
@@ -47,21 +46,40 @@ function setBasicStyles() {
   font-weight: 400;
   font-style: normal;
 }
-[data-boundary$="-page"]::after {
+[data-boundary-page]::after {
   top: 250px;
   left: 0rem;
   bottom: auto;
   right: auto;
   transform: rotate(-90deg);
   transform-origin: 0 0;
+  content: attr(data-boundary-page);
 }
-[data-boundary^="explore-"]::after { background-color: ${config.explore.stroke}; color: white }
-[data-boundary^="decide-"]::after { background-color: ${config.decide.stroke}; }
-[data-boundary^="checkout-"]::after { background: ${config.checkout.stroke}; }
+[data-boundary=explore]::after,
+[data-boundary-page=explore]::after {
+  background-color: ${config.explore.stroke};
+  color: white;
+}
+[data-boundary=decide]::after,
+[data-boundary-page=decide]::after {
+  background-color: ${config.decide.stroke};
+}
+[data-boundary=checkout]::after,
+[data-boundary-page=checkout]::after {
+  background: ${config.checkout.stroke};
+}
 
-html:not(.showBoundaries) [data-boundary] { background-image: none !important;}
-html:not(.showBoundaries) [data-boundary]:after { display: none; }
-html.showBoundaries img { mix-blend-mode: multiply; }
+html:not(.showBoundaries) [data-boundary],
+html:not(.showBoundaries) [data-boundary-page] {
+  background-image: none !important;
+}
+html:not(.showBoundaries) [data-boundary]:after,
+html:not(.showBoundaries) [data-boundary-page]:after{
+  display: none;
+}
+html.showBoundaries img {
+  mix-blend-mode: multiply;
+}
 `;
   document.head.appendChild(style);
 }
@@ -158,26 +176,26 @@ function generateRoundedRectangle({
 /**
  * Writes the SVG node to the cache for the given boundary, width, and height.
  * @param {SVGElement} svgNode - The SVG node to be cached.
- * @param {string} boundary - The boundary identifier.
+ * @param {string} pathId - The boundary identifier.
  * @param {number} width - The width of the boundary.
  * @param {number} height - The height of the boundary.
  */
-function writeBoundaryToCache(svgNode, boundary, width, height) {
+function writeBoundaryToCache(svgNode, pathId, width, height) {
   const serializer = new XMLSerializer();
   const svgStr = serializer.serializeToString(svgNode);
   const entry = { width, height, svg: svgStr };
-  window.sessionStorage.setItem(`boundary-${boundary}`, JSON.stringify(entry));
+  window.sessionStorage.setItem(pathId, JSON.stringify(entry));
 }
 
 /**
  * Reads the SVG string from the cache for the given boundary, width, and height.
- * @param {string} boundary - The boundary identifier.
+ * @param {string} pathId - The boundary identifier.
  * @param {number} width - The width of the boundary.
  * @param {number} height - The height of the boundary.
  * @returns {SVGElement|null} - The parsed SVG element or null if not found or dimensions don't match.
  */
-function readBoundaryFromCache(boundary, width, height) {
-  const svgStr = window.sessionStorage.getItem(`boundary-${boundary}`);
+function readBoundaryFromCache(pathId, width, height) {
+  const svgStr = window.sessionStorage.getItem(pathId);
   if (!svgStr) {
     return null;
   }
@@ -195,23 +213,23 @@ function readBoundaryFromCache(boundary, width, height) {
 
 /**
  * Sets the CSS background for the given boundary using the SVG node.
- * @param {string} boundary - The boundary identifier.
  * @param {SVGElement} svgNode - The SVG node.
+ * @param {string} path - The CSS path.
+ * @param {string} pathId - The boundary identifier.
  */
-function setCssBackground(boundary, svgNode) {
+function setCssBackground(svgNode, path, pathId) {
   const serializer = new XMLSerializer();
   const svgStr = serializer.serializeToString(svgNode);
   const encodedSvg = encodeURIComponent(svgStr);
   const url = `url("data:image/svg+xml,${encodedSvg}")`;
 
-  const id = `${boundary}-style`;
-  let style = document.getElementById(id);
+  let style = document.getElementById(pathId);
   if (!style) {
     style = document.createElement("style");
-    style.id = id;
+    style.id = pathId;
     document.head.appendChild(style);
   }
-  style.innerHTML = `[data-boundary="${boundary}"] { background-image: ${url}; }`;
+  style.innerHTML = `${path} { background-image: ${url}; }`;
 }
 
 /**
@@ -224,6 +242,30 @@ function generateWhiteBackground(rectangle) {
   bgNode.setAttribute("d", rectangle);
   bgNode.setAttribute("fill", "white");
   return bgNode;
+}
+
+/**
+ * Generates a short hash for the given selector.
+ * @param {string} selector - The selector to generate the hash for.
+ * @returns {string} The generated hash.
+ */
+function generateHash(selector) {
+  // eslint-disable-next-line jsdoc/require-jsdoc
+  function simpleHash(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = (hash << 5) - hash + str.charCodeAt(i);
+      hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+  }
+
+  // eslint-disable-next-line jsdoc/require-jsdoc
+  function toHex(hash) {
+    return ("00000000" + (hash >>> 0).toString(16)).slice(-8);
+  }
+
+  return "id-" + toHex(simpleHash(selector));
 }
 
 /**
@@ -253,6 +295,42 @@ function generateBoundary(svg, rectangle, team, isPage) {
 }
 
 /**
+ * Generate a unique CSS selector path for a given element
+ * @param {Element} element - The element to generate the path for
+ * @returns {string} - The unique CSS path
+ */
+function generateUniqueCSSPath(element) {
+  if (!(element instanceof Element)) return "";
+
+  let path = [];
+
+  while (element) {
+    let selector = element.nodeName.toLowerCase();
+
+    if (element.id) {
+      selector += `#${element.id}`;
+      path.unshift(selector);
+      break;
+    } else {
+      let sibling = element;
+      let nth = 1;
+
+      while (sibling.previousElementSibling) {
+        sibling = sibling.previousElementSibling;
+        if (sibling.nodeName.toLowerCase() === selector) nth++;
+      }
+
+      if (nth !== 1) selector += `:nth-of-type(${nth})`;
+    }
+
+    path.unshift(selector);
+    element = element.parentElement;
+  }
+
+  return path.join(" > ");
+}
+
+/**
  * Generates a rough boundary for the given element.
  * @param {HTMLElement} el - The element to generate the boundary for.
  */
@@ -261,9 +339,11 @@ function generateRoughBoundary(el) {
   const width = Math.round(clientRect.width);
   const height = Math.round(clientRect.height);
 
-  const boundary = el.dataset.boundary;
-  const team = boundary.split("-")[0];
-  const isPage = boundary.endsWith("-page");
+  const path = generateUniqueCSSPath(el);
+  const isPage = el.hasAttribute("data-boundary-page");
+  const team = isPage
+    ? el.getAttribute("data-boundary-page")
+    : el.getAttribute("data-boundary");
 
   // basic shape and position of the boundary
   const inset = isPage ? -2 : 10;
@@ -286,22 +366,25 @@ function generateRoughBoundary(el) {
   svg.appendChild(generateWhiteBackground(rectangle));
 
   // rough rectangle
-  let node = readBoundaryFromCache(boundary, width, height);
+  let pathId = generateHash(path);
+  let node = readBoundaryFromCache(pathId, width, height);
   if (!node) {
     node = generateBoundary(svg, rectangle, team, isPage);
-    writeBoundaryToCache(node, boundary, width, height);
+    writeBoundaryToCache(node, pathId, width, height);
   }
   svg.appendChild(node);
 
   // apply to DOM
-  setCssBackground(boundary, svg);
+  setCssBackground(svg, path, pathId);
 }
 
 /**
  * Generate rough boundaries for all elements with the data-boundary attribute.
  */
 function generateRoughBoundaries() {
-  const boundaries = document.querySelectorAll("[data-boundary]");
+  const boundaries = document.querySelectorAll(
+    "[data-boundary], [data-boundary-page]",
+  );
   [...boundaries].forEach(generateRoughBoundary);
 }
 

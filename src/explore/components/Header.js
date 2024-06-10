@@ -9,7 +9,7 @@ import { html, IMAGE_SERVER } from "../utils.js";
  * @returns {string} The Header component markup.
  */
 export default ({ c }) => {
-  return html`<header class="e_Header" data-boundary="explore-header">
+  return html`<header class="e_Header" data-boundary="explore">
     <div class="e_Header__cutter">
       <div class="e_Header__inner">
         <a class="e_Header__link" href="/">

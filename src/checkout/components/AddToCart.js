@@ -15,7 +15,7 @@ export default ({ sku }) => {
     action="/checkout/cart/add"
     method="POST"
     class="c_AddToCart"
-    data-boundary="checkout-button"
+    data-boundary="checkout"
   >
     <input type="hidden" name="sku" value="${sku}" />
     <div class="c_AddToCart__information">

@@ -32,7 +32,7 @@ export default ({ id, sku, c }) => {
         <link rel="stylesheet" href="/checkout/static/styles.css" />
         ${Meta()}
       </head>
-      <body data-boundary="decide-page">
+      <body data-boundary-page="decide">
         ${Header({ c })}
         <main class="d_ProductPage">
           <div class="d_ProductPage__details">
