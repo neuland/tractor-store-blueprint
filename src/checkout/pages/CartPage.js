@@ -31,7 +31,7 @@ export default ({ c }) => {
   const content = html`
     ${Header({ c })}
     <main class="c_CartPage">
-      <h2>Warenkorb</h2>
+      <h2>Basket</h2>
       <ul class="c_CartPage__lineItems">
         ${lineItems.map(LineItem).join("")}
       </ul>
