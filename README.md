@@ -95,4 +95,4 @@ The goal of this project is to provide a central place, where different micro fr
 
 - Deployment
 - Integration service
-- Ende-zu-Ende-Tests (planned)
+- End-to-end tests (planned)
