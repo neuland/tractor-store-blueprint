@@ -1,9 +1,8 @@
 .c_CompactHeader {
-  height: 135px;
+  height: 80px;
   display: flex;
-  margin: 0 0 2rem;
+  margin: 1rem 0 2rem;
   border-bottom: 1px solid #eeebe2;
-  box-shadow: 0 0 20px 10px #eb5b5920;
   align-items: center;
 }
 
@@ -18,5 +17,5 @@
 
 .c_CompactHeader__logo {
   display: block;
-  width: 270px;
+  width: 175px;
 }
