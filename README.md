@@ -19,7 +19,7 @@ The idea is similar to [TodoMVC](http://todomvc.com/) or [Movies](https://tastej
 - Special features: Add to cart animation, recommendations, store picker, thank you confetti
 - Focus on frontend aspects. Backend and database are mocked with static data.
 - Styling is provided in the blueprint. It's not the focus of this project.
-- Static assets (images, fonts, helpers, ...) are provided. They can be copied or linked to directly (CDN).
+- Static assets (images, fonts, helpers, ...) are provided. They can be copied or linked to directly ([CDN](https://blueprint.the-tractor.store)).
 
 ## Design principals
 

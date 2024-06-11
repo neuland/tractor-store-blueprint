@@ -5,7 +5,7 @@ export const html = String.raw;
 // use the image server if not using local images
 export const IMAGE_SERVER =
   typeof process === "undefined" || process.env.USE_LOCAL_IMAGES !== "true"
-    ? "https://cdn.the-tractor.store"
+    ? "https://blueprint.the-tractor.store"
     : "";
 
 /**
