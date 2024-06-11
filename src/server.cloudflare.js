@@ -4,12 +4,11 @@ import manifest from "__STATIC_CONTENT_MANIFEST";
 
 const app = createServer();
 
-const setCacheAndCors = (req, res, next) => {
-  res.setHeader("Cache-Control", "public, max-age=3600"); // 1 hour cache
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  next();
+const setCacheAndCors = async (c, next) => {
+  await next();
+  c.res.headers.append("Cache-Control", "public, max-age=3600"); // 1 hour cache
+  c.res.headers.append("Access-Control-Allow-Origin", "*");
+  c.res.headers.append("Access-Control-Allow-Methods", "GET,OPTIONS");
 };
 
 app.use("/cdn/*", setCacheAndCors);
