@@ -18,4 +18,5 @@
 .c_CompactHeader__logo {
   display: block;
   width: 175px;
+  aspect-ratio: 3.5;
 }

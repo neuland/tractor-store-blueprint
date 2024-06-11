@@ -12,6 +12,7 @@ export default ({ image, url, name }) => {
         class="e_Recommendation_image"
         src="${src(image, 200)}"
         srcet="${srcset(image, [200, 400])}"
+        alt=""
         sizes="200px"
         width="200"
         height="200"

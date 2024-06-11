@@ -9,6 +9,8 @@ export default () => {
           <img
             src="${IMAGE_SERVER}/cdn/img/neulandlogo.svg"
             alt="neuland - Büro für Informatik"
+            width="45"
+            height="40"
           />
           <p>
             based on
@@ -26,7 +28,7 @@ export default () => {
 
         <div class="e_Footer__credits">
           <!-- replace this details about your implementation and organization -->
-          <h4>techstack</h4>
+          <h3>techstack</h3>
           <p>
             ssr-only, modular monolith, template strings, esbuild, hono,
             cloudflare workers
@@ -36,6 +38,8 @@ export default () => {
             <img
               src="${IMAGE_SERVER}/cdn/img/neulandlogo.svg"
               alt="neuland - Büro für Informatik"
+              width="15"
+              height="13"
             />
             <a href="https://neuland-bfi.de" target="_blank">neuland</a>
             /

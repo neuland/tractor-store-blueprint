@@ -17,6 +17,7 @@ export default ({ c }) => {
       rounded: true,
       href: "/checkout/cart",
       className: "c_MiniCart__button",
+      title: "View Cart",
       children: html`
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -111,6 +111,7 @@
   @media (min-width: 500px) {
     width: 270px;
   }
+  aspect-ratio: 3.5;
   display: block;
 }
 

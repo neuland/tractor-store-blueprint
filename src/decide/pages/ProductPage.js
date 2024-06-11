@@ -24,9 +24,14 @@ export default ({ id, sku, c }) => {
   const variant = variants.find((v) => v.sku === sku) || variants[0];
 
   return html`<!doctype html>
-    <html>
+    <html lang="en">
       <head>
+        <meta charset="utf-8" />
         <title>Tractor Store</title>
+        <meta
+          name="description"
+          content="a non-trivial micro frontends example project"
+        />
         <link rel="stylesheet" href="/explore/static/styles.css" />
         <link rel="stylesheet" href="/decide/static/styles.css" />
         <link rel="stylesheet" href="/checkout/static/styles.css" />
@@ -43,6 +48,7 @@ export default ({ id, sku, c }) => {
               sizes="400px"
               width="400"
               height="400"
+              alt="${name} - ${variant.name}"
             />
             <div class="d_ProductPage__productInformation">
               <h2 class="d_ProductPage__title">${name}</h2>

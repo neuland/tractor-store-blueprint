@@ -19,7 +19,6 @@ export default ({
     ${value ? `value="${value}"` : ""}
     ${dataId ? `data-id="${dataId}"` : ""}
     class="e_Button e_Button--${variant} ${className} ${rounded ? "e_Button--rounded" : ""}"
-    ontouchstart
   >
     <div class="e_Button__inner">${children}</div>
   </${tag}>`;

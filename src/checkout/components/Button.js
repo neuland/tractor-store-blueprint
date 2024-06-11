@@ -38,7 +38,6 @@ export default ({
     ${dataId ? `data-id="${dataId}"` : ""}
     ${title ? `title="${title}"` : ""}
     class="c_Button c_Button--${variant} ${className} ${rounded ? "c_Button--rounded" : ""} c_Button--size-${size}"
-    ontouchstart
   >
     <div class="c_Button__inner">${children}</div>
   </${tag}>`;
