@@ -18,7 +18,6 @@ function setBasicStyles() {
 }
 [data-boundary]::after,
 [data-boundary-page]::after {
-  display: block;
   content: attr(data-boundary);
   position: absolute;
   bottom: -1.4em;
@@ -32,6 +31,7 @@ function setBasicStyles() {
   border-radius: 0 0 0.5rem 0.5rem;
   color: #fff;
   background-color: #999;
+  display: none;
 }
 [data-boundary-page]::after {
   top: 250px;
@@ -50,14 +50,15 @@ function setBasicStyles() {
   border: 4px solid #999;
   border-radius: 1rem;
   pointer-events: none;
+  display: none;
 }
 [data-boundary-page]::before {
   inset: -1rem 0 -2rem;
-  display: block;
   position: absolute;
   content: "";
   pointer-events: none;
   border: 6px solid #999;
+  display: none;
 }
 
 ${["explore", "decide", "checkout", "inspire"]
@@ -76,13 +77,15 @@ ${["explore", "decide", "checkout", "inspire"]
   )
   .join("")}
 
-html:not(.showBoundaries) [data-boundary]::before,
-html:not(.showBoundaries) [data-boundary-page]::before {
-  display: none;
-}
-html:not(.showBoundaries) [data-boundary]::after,
-html:not(.showBoundaries) [data-boundary-page]::after{
-  display: none;
+.showBoundaries [data-boundary]::before,
+.showBoundaries [data-boundary]::after,
+.showBoundaries [data-boundary-page]::before,
+.showBoundaries [data-boundary-page]::after,
+:host(.showBoundaries) [data-boundary]::before,
+:host(.showBoundaries) [data-boundary]::after,
+:host(.showBoundaries) [data-boundary-page]::before,
+:host(.showBoundaries) [data-boundary-page]::after  {
+  display: block;
 }
 `;
   document.head.appendChild(style);
