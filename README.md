@@ -76,6 +76,34 @@ The goal of this project is to provide a central place, where different micro fr
   - 🧩 Mini Cart (🔴 header)
   - 🧩 Add To Cart Button (🟢 product details)
 
+### Boundary toggle ☑️
+
+The project comes with an extra script that highlights that add a small toggle in the bottom right to show the team boundaries.
+You can [hotlink](https://blueprint.the-tractor.store/cdn/js/helper.js) the script or host it yourself.
+
+The script looks for elements with `data-boundary` attribute in the DOM and adds a colored box and team label to it. The color is based on the team name.
+
+```html
+<!-- 🟥 red outline -->
+<div data-boundary="explore">...</div>
+
+<!-- 🟩 green outline -->
+<div data-boundary="decide">...</div>
+
+<!-- 🟨 yellow outline -->
+<div data-boundary="checkout">...</div>
+
+<!-- 🟪 purple outline (bonus task) -->
+<div data-boundary="inspire">...</div>
+
+<!-- ⬛ gray outline (neutral component) -->
+<div data-boundary="appshell,...">...</div>
+```
+
+On top-level, you can use `data-boundary-page="..."` to highlight the entire page.
+
+The exact boundary positions are not important as long as your final result looks the same to the end-user and feature responsibility stays as described.
+
 ### Concepts 🧠
 
 - Inter-team navigation (server- and/or client-side)
