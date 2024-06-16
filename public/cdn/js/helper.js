@@ -40,8 +40,7 @@ function setBasicStyles() {
   content: attr(data-boundary-page);
 }
 
-[data-boundary]::before,
-[data-boundary-page]::before {
+[data-boundary]::before {
   inset: 0;
   position: absolute;
   content: "";
@@ -50,19 +49,14 @@ function setBasicStyles() {
   pointer-events: none;
 }
 [data-boundary-page]::before {
-  --visible-width: 0.5rem;
-  --inner-radius: 1rem;
-  --inset: -2rem;
-  --outer-radius: calc(var(--visible-width) + var(--inner-radius) - var(--inset));
-  --border-width: calc(var(--visible-width) - var(--inset));
-  border-width: var(--border-width);
-  border-radius: var(--outer-radius) var(--outer-radius) 0 0;
-  border-bottom-width: var(--visible-width);
-  top: calc(-1rem + var(--inset));
-  bottom: var(--inset);
-  left: var(--inset);
-  right: var(--inset);
+  inset: -1rem 0 -2rem;
+  display: block;
+  position: absolute;
+  content: "";
+  pointer-events: none;
+  border: 6px solid transparent;
 }
+
 ${["explore", "decide", "checkout"]
   .map(
     (team) => `
