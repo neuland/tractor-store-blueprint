@@ -1,7 +1,8 @@
 const teamColors = {
-  explore: { stroke: "rgba(255, 90, 84, 1)", text: "#fff" },
-  decide: { stroke: "rgba(84, 255, 144, 1)", text: "#000" },
-  checkout: { stroke: "rgba(255, 222, 84, 1)", text: "#000" },
+  explore: { stroke: "#FF5A54", text: "#fff" },
+  decide: { stroke: "#53FF90", text: "#000" },
+  checkout: { stroke: "#FFDE54", text: "#000" },
+  inspire: { stroke: "#F64DFF", text: "#fff" },
 };
 
 /**
@@ -29,6 +30,8 @@ function setBasicStyles() {
   font-weight: 400;
   font-style: normal;
   border-radius: 0 0 0.5rem 0.5rem;
+  color: #fff;
+  background-color: #999;
 }
 [data-boundary-page]::after {
   top: 250px;
@@ -44,7 +47,7 @@ function setBasicStyles() {
   inset: 0;
   position: absolute;
   content: "";
-  border: 4px solid transparent;
+  border: 4px solid #999;
   border-radius: 1rem;
   pointer-events: none;
 }
@@ -54,10 +57,10 @@ function setBasicStyles() {
   position: absolute;
   content: "";
   pointer-events: none;
-  border: 6px solid transparent;
+  border: 6px solid #999;
 }
 
-${["explore", "decide", "checkout"]
+${["explore", "decide", "checkout", "inspire"]
   .map(
     (team) => `
 [data-boundary=${team}]::before,
