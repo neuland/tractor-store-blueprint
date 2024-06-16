@@ -12,6 +12,13 @@ function setBasicStyles() {
   const style = document.createElement("style");
   style.id = "boundaries";
   style.innerHTML = `
+:root {
+  --boundary-display: none;
+}
+html.showBoundaries {
+  --boundary-display: block;
+}
+
 [data-boundary],
 [data-boundary-page] {
   position: relative;
@@ -31,7 +38,7 @@ function setBasicStyles() {
   border-radius: 0 0 0.5rem 0.5rem;
   color: #fff;
   background-color: #999;
-  display: none;
+  display: var(--boundary-display);
 }
 [data-boundary-page]::after {
   top: 250px;
@@ -50,7 +57,7 @@ function setBasicStyles() {
   border: 4px solid #999;
   border-radius: 1rem;
   pointer-events: none;
-  display: none;
+  display: var(--boundary-display);
 }
 [data-boundary-page]::before {
   inset: -1rem 0 -2rem;
@@ -58,7 +65,7 @@ function setBasicStyles() {
   content: "";
   pointer-events: none;
   border: 6px solid #999;
-  display: none;
+  display: var(--boundary-display);
 }
 
 ${["explore", "decide", "checkout", "inspire"]
@@ -77,16 +84,6 @@ ${["explore", "decide", "checkout", "inspire"]
   )
   .join("")}
 
-.showBoundaries [data-boundary]::before,
-.showBoundaries [data-boundary]::after,
-.showBoundaries [data-boundary-page]::before,
-.showBoundaries [data-boundary-page]::after,
-:host(.showBoundaries) [data-boundary]::before,
-:host(.showBoundaries) [data-boundary]::after,
-:host(.showBoundaries) [data-boundary-page]::before,
-:host(.showBoundaries) [data-boundary-page]::after  {
-  display: block;
-}
 `;
   document.head.appendChild(style);
 }
