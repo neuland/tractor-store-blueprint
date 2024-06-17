@@ -35,7 +35,7 @@ export default ({ c }) => {
                 html`<a class="e_HomePage__categoryLink" href="${url}">
                   <img
                     src="${src(image, 500)}"
-                    srcet="${srcset(image, [500, 1000])}"
+                    srcset="${srcset(image, [500, 1000])}"
                     sizes="100vw, (min-width: 500px) 50vw"
                     alt=""
                   />
