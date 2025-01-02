@@ -1,5 +1,5 @@
 /**
  * @type {Database}
  */
-import data from "./database.json" assert { type: "json" };
+import data from "./database.json" with { type: "json" };
 export default data;
